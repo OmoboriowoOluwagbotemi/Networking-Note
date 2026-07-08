@@ -1,0 +1,13 @@
+# Microsoft Office temporary lock files
+~$*
+
+# Local Codex/agent metadata
+.agents/
+.codex/
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak

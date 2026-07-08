@@ -1,0 +1,1924 @@
+# Course Memory: Professional Networking Course
+
+## Source Curriculum Map
+
+| Lesson | Title |
+|---|---|
+| 1 | How Networks Work and Why They Fail |
+| 2 | Network Devices and Appliances |
+| 3 | How Data Travels Through a Network |
+| 4 | OSI Model Deep Dive |
+| 5 | TCP/IP Protocol Suite |
+| 6 | Common Ports, Protocols, and Traffic Types |
+| 7 | Cabling and Physical Media |
+| 8 | Ethernet Fundamentals |
+| 9 | Enterprise Switching Fundamentals |
+| 10 | IPv4 Addressing Fundamentals |
+| 11 | Subnetting Mastery |
+| 12 | IPv6 Addressing and Practical Subnetting |
+| 13 | VLAN Fundamentals and Design |
+| 14 | VLAN Configuration and Trunking |
+| 15 | Spanning Tree Protocol |
+| 16 | Inter-VLAN Routing |
+| 17 | How Routers Work, Static and Default Routing |
+| 18 | Dynamic Routing and NAT/PAT |
+| 19 | DHCP and DNS Fundamentals |
+| 20 | Wireless Fundamentals and Deployment |
+| 21 | Wireless and Network Security Foundations |
+| 22 | Access Control, Hardening, and Essential Services |
+| 23 | VPNs and Remote Access Security |
+| 24 | Power and Resilience |
+| 25 | Diagnose, Document, Decide |
+
+## Remaining Lesson Notes From User Curriculum
+
+### Lesson 3: How Data Travels Through a Network
+
+- Data Communication Process
+- Unicast, Broadcast, Multicast
+- Encapsulation and Decapsulation, including PDU at each layer
+- Packet Journey from Source to Destination
+
+### Lesson 4: OSI Model Deep Dive
+
+- All Seven Layers and Their Functions
+- PDU Names per Layer
+- Real-World Examples Mapped to Each Layer
+
+### Lesson 5: TCP/IP Protocol Suite
+
+- TCP
+- UDP, including reliability and use cases
+- IP, including IPv4/IPv6 overview
+- ICMP
+- ARP and the ARP Process
+- The TCP Three-Way Handshake
+
+### Lesson 6: Common Ports, Protocols, and Traffic Types
+
+- Well-Known Ports: FTP, SSH, Telnet, SMTP, DNS, DHCP, TFTP, HTTP, NTP, SNMP, LDAP, HTTPS, SMB, Syslog, SMTPS, LDAPS, SQL Server, RDP, SIP
+
+### Lesson 7: Cabling and Physical Media
+
+- UTP
+- STP
+- CAT5e and CAT6
+- RJ45 Wiring Standards, including T568A and T568B
+- Cable Testing Tools, including cable tester
+- Single-mode fiber
+- Multi-mode fiber
+- Choosing media for cost, distance, and local realities
+
+### Lesson 8: Ethernet Fundamentals
+
+- Ethernet Frame Structure
+- MAC Addressing
+- Collision Domains
+- Broadcast Domains
+- Duplex and Speed / Auto-Negotiation
+
+### Lesson 9: Enterprise Switching Fundamentals
+
+- MAC Address Table / CAM Table
+- Frame Switching Process: flood, forward, filter
+- Switch Port Modes
+- Basic Port Security Concepts
+
+### Lesson 10: IPv4 Addressing Fundamentals
+
+- Binary, Decimal, and Hex Conversion
+- IPv4 Structure, including network vs. host portion
+- Public vs. Private Addressing, APIPA
+- Class of IP Address
+
+### Lesson 11: Subnetting Mastery
+
+- Network, Broadcast, and Host Addresses
+- CIDR Notation
+- Fast Subnetting Techniques, including block-size / "magic number" method
+- VLSM Fundamentals
+
+### Lesson 12: IPv6 Addressing and Practical Subnetting (basic)
+
+- IPv6 Address Structure and Abbreviation Rules
+- Address Types: Global Unicast, Link-Local, Multicast, Anycast
+- SLAAC and DHCPv6 Concepts, basic
+
+### Lesson 13: VLAN Fundamentals and Design
+
+- VLAN Design and Broadcast Control
+- Enterprise Segmentation Strategy
+- Voice VLANs and Native VLAN Concepts
+- Case Study: Segmenting shop floor, back office, and guest Wi-Fi
+
+### Lesson 14: VLAN Configuration and Trunking
+
+- Access Ports vs. Trunk Ports
+- 802.1Q Tagging
+- Trunk Negotiation and Allowed-VLAN Lists
+- Verification Commands
+
+### Lesson 15: Spanning Tree Protocol
+
+- Why Layer 2 Loops Occur
+- Root Bridge Election and BPDUs
+- Port States and Roles
+
+### Lesson 16: Inter-VLAN Routing
+
+- Router-on-a-Stick
+- Switch Virtual Interfaces / Layer 3 Switching
+- Troubleshooting Inter-VLAN Connectivity
+
+### Lesson 17: How Routers Work, Static and Default Routing
+
+- Routing Table Components
+- Administrative Distance
+- Longest-Prefix Match and Route Selection
+- Static Routes, Default Routes, Floating Static Routes
+
+### Lesson 18: Dynamic Routing and NAT/PAT
+
+- RIP, brief
+- OSPF vs. BGP Overview
+- How Nigerian ISPs Peer via IXPN, real-world context
+- Static NAT, Dynamic NAT, PAT / NAT Overload
+- Getting a Whole Office Online on One Public IP
+
+### Lesson 19: DHCP and DNS Fundamentals
+
+- DHCP Operation: Discover, Offer, Request, Ack
+- Scope Design, Reservations, Lease Time, Exclusions
+- DHCP Relay / IP Helper
+- Name Resolution Process
+- Record Types: A, AAAA, CNAME, MX, TXT, NS, PTR
+- Forward vs. Reverse Zones
+- Authoritative vs. Recursive
+
+### Lesson 20: Wireless Fundamentals and Deployment
+
+- RF Basics
+- 2.4GHz, 5GHz, and 6GHz Bands
+- 802.11 Standards: a/b/g/n/ac/ax/be
+- Channel Planning and Overlap
+- Autonomous vs. Lightweight APs, WLAN Controllers
+- Site Survey Concepts, SSID Design and Guest Networks
+
+### Lesson 21: Wireless and Network Security Foundations
+
+- WPA2 vs. WPA3
+- Enterprise 802.1X Authentication
+- CIA Triad and Defense-in-Depth
+- Common Attack Types: DoS/DDoS, MITM, Spoofing, Social Engineering
+- Malware Categories
+
+### Lesson 22: Access Control, Hardening, and Essential Services
+
+- Standard vs. Extended ACLs
+- Wildcard Masks
+- Placement Logic
+- AAA Concepts
+- Port Security
+- DHCP Snooping
+- Dynamic ARP Inspection
+- Device Hardening, including disabling unused services and using SSH over Telnet
+- NTP, Syslog, SNMP, SSH
+
+### Lesson 23: VPNs and Remote Access Security
+
+- Site-to-Site VPN
+- Client-to-Site VPN
+- IPsec Basics
+- Network Access Control Concepts
+
+### Lesson 24: Power and Resilience
+
+- Keeping Network Gear Alive on Unstable Power: UPS, inverter, and solar integration
+- Disaster Recovery and Business Continuity Concepts
+
+### Lesson 25: Diagnose, Document, Decide
+
+- Full end-to-end troubleshooting case study, Layer 1-3 combined fault
+- Network Documentation Standards and Diagramming
+- Baseline Metrics and Performance Monitoring
+- Change and Configuration Management
+- Handover writeup and portfolio piece for job/internship applications
+- Guided career branch point: Network Engineering, Cybersecurity, IT Support, or Cloud
+
+## Completed Lessons
+
+| Lesson | Title | Status | Notes |
+|---|---|---|---|
+| 1 | How Networks Work and Why They Fail | Revised to match technical in-depth style | Foundation lesson introducing network purpose, network types, architecture models, topologies, Windows basic troubleshooting commands, and why networks fail. |
+| 2 | Network Devices and Appliances | Completed | Expanded end devices, servers, switches, routers, APs/WLCs, firewalls, IDS/IPS, load balancers, proxies/content filters, NICs, transceivers, placement, troubleshooting scope, and practical commands. |
+| 3 | How Data Travels Through a Network | Completed | Explained data communication process, source/destination addressing, unicast/broadcast/multicast, encapsulation/decapsulation, PDU names, packet journey, device inspection behavior, and troubleshooting the data path. |
+| 4 | OSI Model Deep Dive | Completed | Explained all seven OSI layers, functions, PDU names, OSI troubleshooting, OSI-to-TCP/IP mapping, real-world layer examples, cybersecurity relevance, cloud relevance, and practical commands. |
+| 5 | TCP/IP Protocol Suite | Completed | Explained TCP/IP suite, IP with IPv4/IPv6 overview, TCP reliability, TCP three-way handshake, UDP reliability tradeoffs and use cases, ICMP diagnostics, ARP process, troubleshooting, security, and cloud relevance. |
+| 6 | Common Ports, Protocols, and Traffic Types | Completed | Explained common service ports and traffic types: FTP, SSH, Telnet, SMTP/SMTPS, DNS, DHCP, TFTP, HTTP/HTTPS, NTP, SNMP, LDAP/LDAPS, SMB, Syslog, SQL Server, RDP, SIP, secure alternatives, troubleshooting, and cloud/security relevance. |
+| 7 | Cabling and Physical Media | Completed | Explained UTP, STP, CAT5e, CAT6, RJ45/T568A/T568B, straight-through and crossover cabling, cable testing tools, single-mode and multi-mode fiber, media selection, physical troubleshooting, and local installation realities. |
+| 8 | Ethernet Fundamentals | Completed | Explained Ethernet standards, frame structure, MAC addressing, local delivery, collision domains, broadcast domains, duplex, speed, auto-negotiation, Ethernet troubleshooting, cybersecurity relevance, and cloud relevance. |
+| 9 | Enterprise Switching Fundamentals | Completed | Explained enterprise switch roles, MAC/CAM tables, dynamic and static MAC entries, frame switching process, flood/forward/filter behavior, access and trunk port modes, basic port security, violation modes, troubleshooting, cybersecurity relevance, and cloud relevance. |
+| 10 | IPv4 Addressing Fundamentals | Completed | Explained binary, decimal, hexadecimal, IPv4 address structure, octets, network vs. host portions, subnet mask basics, local vs. remote destination decisions, public and private addressing, APIPA, special IPv4 addresses, classful addressing, host configuration, troubleshooting, cybersecurity relevance, and cloud relevance. |
+| 11 | Subnetting Mastery | Completed | Explained subnetting, network addresses, broadcast addresses, valid host ranges, CIDR notation, subnet mask binary logic, block-size/magic-number method, host subnet identification, /27 and /30 worked examples, borrowing bits, subnet size selection, VLSM fundamentals, enterprise subnet design, troubleshooting, cybersecurity relevance, and cloud relevance. |
+| 12 | IPv6 Addressing and Practical Subnetting | Completed | Explained IPv6 structure, hextets, hexadecimal notation, abbreviation and expansion rules, prefix length, /64 LAN subnetting, global unicast, link-local, multicast, anycast, SLAAC, DHCPv6, Neighbor Discovery, ICMPv6, configuration, troubleshooting, cybersecurity relevance, and cloud relevance. |
+| 13 | VLAN Fundamentals and Design | Completed | Explained VLANs as logical Layer 2 networks, VLANs as broadcast domains, VLAN-to-subnet mapping, VLAN membership, access VLANs, trunks in design, VLAN IDs and names, VLAN 1/default VLAN, voice VLANs, native VLAN concept, enterprise segmentation strategy, DHCP/gateway relationships, wireless SSID mapping, shop floor/back office/guest Wi-Fi case study, troubleshooting, cybersecurity relevance, and cloud relevance. |
+| 14 | VLAN Configuration and Trunking | Completed | Explained VLAN creation, access port configuration, voice VLAN configuration, trunk ports, IEEE 802.1Q tagging, native VLAN behavior, allowed VLAN lists, trunk negotiation/DTP, two-switch VLAN configuration, verification commands, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
+| 15 | Spanning Tree Protocol | Completed | Explained why Layer 2 loops occur, broadcast storms, MAC flapping, STP design goal, BPDUs, Bridge ID, root bridge election, path cost, STP port roles, STP port states, STP loop prevention process, STP variants, PortFast, BPDU Guard, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
+| 16 | Inter-VLAN Routing | Completed | Explained why devices in different VLANs need Layer 3 routing, default gateways per VLAN, router-on-a-stick, router subinterfaces, 802.1Q encapsulation, packet journey, router-on-a-stick limitations, SVIs, Layer 3 switching, firewall policy, IPv6 inter-VLAN routing, troubleshooting, verification commands, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
+| 17 | How Routers Work, Static and Default Routing | Completed | Explained routing, router packet forwarding, routing table components, connected and local routes, static routes, default routes, longest-prefix match, administrative distance, route selection order, floating static routes, static routing use cases, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
+| 18 | Dynamic Routing and NAT/PAT | Completed | Explained dynamic routing, routing protocols, convergence, RIP, OSPF, BGP, OSPF vs. BGP, Nigerian ISP peering through IXPN, NAT terminology, static NAT, dynamic NAT, PAT/NAT overload, office internet access using one public IP, NAT verification and troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
+| 19 | DHCP and DNS Fundamentals | Completed | Explained DHCP and DNS purpose, DHCP DORA, scope design, reservations, lease time, exclusions, DHCP options, DHCP relay/IP helper, Cisco IOS DHCP basics, Windows/Linux verification, DNS hierarchy, record types, forward and reverse zones, authoritative vs. recursive DNS, caching/TTL, DHCP-DNS integration, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
+| 20 | Wireless Fundamentals and Deployment | Completed | Explained WLAN purpose, RF basics, signal strength, noise, SNR, interference, 2.4/5/6 GHz bands, channels and channel width, channel planning, 802.11 a/b/g/n/ac/ax/be, SSID/BSSID, wireless association, APs, autonomous vs. lightweight APs, WLCs, SSID design, guest networks, SSID-to-VLAN mapping, roaming, site surveys, capacity planning, AP placement, Windows/Linux/Cisco verification, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
+| 21 | Wireless and Network Security Foundations | Completed | Explained network security, risk terminology, CIA triad, security control categories, defense-in-depth, Zero Trust, least privilege, wireless security evolution, WPA2 vs. WPA3, Personal vs. Enterprise authentication, 802.1X, EAP, RADIUS, wireless attacks, DoS/DDoS, MITM, spoofing, social engineering, password attacks, malware categories, indicators of compromise, logging, incident response, Windows/Linux/Cisco verification, enterprise case study, Packet Tracer labs, career relevance, and cloud security. |
+| 22 | Access Control, Hardening, and Essential Services | Completed | Explained standard and extended ACLs, wildcard masks, placement and direction, AAA, RADIUS vs. TACACS+, port security, DHCP snooping, DAI, device hardening, SSH, NTP, Syslog, SNMPv3, troubleshooting, labs, and enterprise operations. |
+| 23 | VPNs and Remote Access Security | Completed | Explained VPN purpose, tunneling, site-to-site and client-to-site designs, full vs. split tunnel, IPsec, ESP/AH, IKEv2, SAs, cryptography, NAT-T, policy- vs. route-based VPNs, routing/NAT/DNS/MTU, MFA, NAC, posture, troubleshooting, labs, cloud, and career relevance. |
+| 24 | Power and Resilience | Completed | Explained electrical and power-quality fundamentals, load measurement, PoE demand, UPS topologies and runtime, batteries, inverters, solar and generator integration, PDUs, cooling, monitoring, graceful shutdown, availability, SPOFs, high availability, BIA, RTO/RPO/MTD, backups, recovery sites, runbooks, testing, and business continuity. |
+| 25 | Diagnose, Document, Decide | Completed | Integrated the course through a Layer 1-3 troubleshooting case, structured diagnosis, packet evidence, escalation, physical/logical documentation, IPAM and source of truth, baselines and performance metrics, monitoring, capacity planning, change/configuration management, RCA, incident reporting, handover, portfolio development, and guided Network Engineering, Cybersecurity, IT Support, and Cloud career branches. |
+
+## Concepts Already Introduced
+
+- Structured troubleshooting from problem definition through hypothesis, implementation, verification, prevention, and documentation.
+- Bottom-up, top-down, divide-and-conquer, follow-the-path, and baseline-comparison troubleshooting.
+- Evidence preservation, safe hypothesis testing, complete validation, and technical escalation.
+- Integrated Layer 1-3 diagnosis involving cabling, access VLAN, DHCP, trunk, route, DNS, application, and security tests.
+- Packet capture scope, authorization, capture-point limits, and sensitive-data handling.
+- Physical diagrams, logical diagrams, rack elevations, interface descriptions, naming standards, and diagram quality.
+- IPAM, authoritative source of truth, configuration drift, and controlled documentation.
+- Baselines across utilization, latency, jitter, packet loss, errors, CPU, memory, wireless, power, and applications.
+- Bandwidth, throughput, goodput, counter-rate interpretation, and service-level monitoring.
+- ICMP, SNMPv3, Syslog, flow telemetry, packet capture, APIs, agents, and synthetic transactions.
+- Thresholds, actionable alerts, alert fatigue, time correlation, log retention, and capacity planning.
+- Standard, normal, and emergency changes; maintenance windows; test criteria; rollback; and communication.
+- Golden configurations, automated backups, version control, secure secret handling, and drift detection.
+- Root Cause Analysis, contributing causes, Five Whys, and blameless prevention.
+- Incident reports, timelines, shift/project handovers, verification matrices, and professional escalation.
+- Portfolio case-study structure, sanitization, reproducibility, and evidence valued by employers.
+- Career branch guidance for Network Engineering, Cybersecurity, IT Support, and Cloud.
+- Evidence-based 90-day development planning and STAR interview communication.
+- Network power resilience and complete service-path dependency analysis.
+- Voltage, current, watts, VA, watt-hours, power factor, AC/DC conversion, and preliminary energy calculations.
+- Blackouts, brownouts, sags, surges, transients, noise, frequency variation, earthing, and surge protection.
+- Critical, essential, and nonessential load classification with measured power and design headroom.
+- PoE demand as part of switch, UPS, inverter, and battery sizing.
+- Standby, line-interactive, and online double-conversion UPS designs.
+- UPS runtime objectives, manufacturer runtime data, and controlled shutdown.
+- Battery capacity, depth of discharge, state of charge, state of health, chemistry, charging compatibility, and safety.
+- Inverter capacity, waveform, efficiency, and preliminary battery-bank sizing.
+- Solar generation, peak sun hours, system losses, anti-islanding, and hybrid backup architecture.
+- Generator, ATS, maintenance bypass, recharge load, and fuel/maintenance considerations.
+- Rack PDUs, separate power paths, cooling, environmental monitoring, and power alerts.
+- Availability, reliability, resilience, redundancy, fault tolerance, and single points/shared domains of failure.
+- Disaster recovery compared with business continuity.
+- Business Impact Analysis and service-dependency prioritization.
+- Recovery Time Objective, Recovery Point Objective, and Maximum Tolerable Downtime.
+- Full, incremental, differential, off-site, offline, and immutable backup concepts.
+- Cold, warm, and hot recovery sites.
+- Recovery runbooks, tabletop exercises, simulations, parallel tests, full-interruption tests, and after-action review.
+- VPNs as protected logical overlays across untrusted networks.
+- VPN confidentiality, integrity, authentication, anti-replay, and authorization.
+- Tunneling, encapsulation, and encryption as related but separate functions.
+- Site-to-site and client-to-site VPN architectures and use cases.
+- Full-tunnel and split-tunnel remote access.
+- IPsec framework, unidirectional Security Associations, ESP, AH, tunnel mode, and transport mode.
+- IKE/IKEv2 negotiation, key establishment, and child security associations.
+- Symmetric encryption, asymmetric cryptography, HMAC, Diffie-Hellman, and Perfect Forward Secrecy in VPN context.
+- NAT Traversal using UDP 4500.
+- Interesting traffic and the distinction between crypto selection and firewall permission.
+- Policy-based and route-based VPN design.
+- VPN routing, NAT exemption, internal DNS, overlapping subnets, MTU, and fragmentation.
+- Remote access using MFA, certificates, AAA, role-based authorization, and endpoint controls.
+- Network Access Control components, pre-admission/post-admission checks, endpoint posture, remediation, and quarantine.
+- Layered VPN troubleshooting from underlay reachability through application services.
+- Hybrid cloud VPN requirements, redundancy, and route/security policy.
+- ACL top-down first-match processing, implicit deny, direction, placement, configuration, verification, and troubleshooting.
+- Standard and extended IPv4 ACL capabilities and numbered ranges.
+- Wildcard mask calculation and the `host` and `any` keywords.
+- IPv6 ACL overview and the operational importance of ICMPv6.
+- AAA, including local and centralized authentication, authorization, and accounting.
+- RADIUS and TACACS+ roles and differences.
+- Port security with static, dynamic, and sticky MAC addresses and protect, restrict, and shutdown modes.
+- DHCP snooping trusted ports, rate limiting, and binding tables.
+- Dynamic ARP Inspection using DHCP snooping bindings, including static-IP design considerations.
+- Device hardening, unused-port shutdown, parking VLANs, service reduction, and management-plane restriction.
+- Secure device administration using SSH version 2.
+- NTP hierarchy and synchronized time for operations and investigations.
+- Syslog severity levels and centralized event collection.
+- SNMP managers, agents, MIBs, OIDs, polling, traps, and SNMPv3.
+- Network as a system that allows devices to share data, services, applications, and resources.
+- Endpoint/end device, server, client, switch, router, wireless access point, firewall, and ISP at a high level.
+- LAN, WAN, WLAN, MAN, Internet, intranet, and extranet.
+- PAN and CAN as additional network scope categories introduced for technical completeness.
+- Client-server networking and peer-to-peer networking.
+- Physical and logical topology.
+- Bus, star, ring, mesh, and hybrid topologies.
+- Three-tier enterprise network model: access, distribution, and core layers.
+- Collapsed core design for smaller organizations.
+- Basic Windows network inspection and troubleshooting: `ipconfig`, `ipconfig /all`, adapter settings, `ping`, and `tracert`.
+- Basic troubleshooting logic: identify the scope, test local configuration, test gateway, test remote reachability, test path.
+- Network devices vs. network appliances.
+- End devices as traffic sources and destinations.
+- Servers as service providers in client-server architecture.
+- Layer 2 switches forward frames using MAC addresses.
+- Layer 3 switches combine switching and routing, commonly for inter-VLAN routing and distribution/collapsed core designs.
+- Routers connect different IP networks using routing tables and destination IP addresses.
+- Wireless access points provide Wi-Fi access; WLAN controllers centrally manage APs.
+- Firewalls enforce traffic policy and may perform NAT, VPN, logging, and threat inspection.
+- IDS detects and alerts; IPS detects and can block.
+- Load balancers distribute traffic across server pools using health checks.
+- Proxy servers act as intermediaries; content filters enforce web/content policy.
+- NICs connect devices to networks and have MAC addresses.
+- Transceivers transmit and receive signals, commonly on fiber uplinks.
+- Data communication as a source-to-destination process.
+- Source, destination, MAC address, IP address, port number, and DNS name roles in communication.
+- Unicast as one-to-one traffic.
+- Broadcast as one-to-all local broadcast domain traffic.
+- Multicast as one-to-selected-group traffic.
+- Encapsulation as adding protocol information while data moves down the layers.
+- Decapsulation as removing protocol information while data moves up the layers.
+- PDU names: data, segment/datagram, packet, frame, bits.
+- Packet journey through end device, NIC, switch, default gateway/router, firewall, load balancer, and server.
+- Layer 2 MAC addresses change at routed hops while Layer 3 IP addresses usually remain end-to-end unless NAT is used.
+- OSI model as a seven-layer reference model and troubleshooting framework.
+- Layer 1 Physical: bits, media, signals, cables, fiber, wireless radio, transceivers.
+- Layer 2 Data Link: frames, MAC addresses, switches, VLANs, trunks, local delivery.
+- Layer 3 Network: packets, IP addressing, routing, gateways, ICMP, TTL.
+- Layer 4 Transport: TCP/UDP, ports, reliability behavior, service reachability.
+- Layer 5 Session: session establishment, management, timeouts, VPN/login sessions.
+- Layer 6 Presentation: formatting, encryption, compression, TLS, certificates, encoding.
+- Layer 7 Application: network services such as DNS, DHCP, HTTP/HTTPS, SMTP, SSH, SMB, RDP.
+- Bottom-up and top-down OSI troubleshooting methods.
+- OSI vs TCP/IP model mapping.
+- TCP/IP protocol suite as the practical protocol family behind modern networking.
+- IP as a connectionless logical addressing and routing protocol.
+- IPv4 32-bit addressing overview and IPv6 128-bit addressing overview.
+- TCP as reliable, connection-oriented transport using sequence numbers, acknowledgments, retransmissions, flow control, and handshake.
+- TCP three-way handshake: SYN, SYN-ACK, ACK.
+- TCP flags introduced: SYN, ACK, FIN, RST, PSH, URG.
+- UDP as connectionless, low-overhead transport with no built-in reliability.
+- ICMP as diagnostics and control messaging, including Echo Request, Echo Reply, Destination Unreachable, and Time Exceeded.
+- ARP maps IPv4 addresses to MAC addresses on the local network.
+- ARP process: check cache, broadcast ARP Request, receive ARP Reply, store mapping.
+- For remote destinations, hosts ARP for the default gateway MAC address, not the remote server MAC address.
+- IPv6 does not use ARP; it uses Neighbor Discovery with ICMPv6.
+- Ports identify services on hosts; protocols define communication rules.
+- Well-known ports are 0-1023; registered ports are 1024-49151; dynamic/ephemeral ports are commonly 49152-65535.
+- Common protocol ports introduced: FTP 20/21 TCP, SSH 22 TCP, Telnet 23 TCP, SMTP 25 TCP, DNS 53 UDP/TCP, DHCP 67/68 UDP, TFTP 69 UDP, HTTP 80 TCP, NTP 123 UDP, SNMP 161/162 UDP, LDAP 389 TCP/UDP, HTTPS 443 TCP, SMB 445 TCP, Syslog 514 UDP/TCP, SMTPS 465 TCP, LDAPS 636 TCP, SQL Server 1433 TCP, RDP 3389 TCP/UDP, SIP 5060/5061 TCP/UDP.
+- Secure alternatives: SSH over Telnet, HTTPS over HTTP, LDAPS over LDAP, SNMPv3 over SNMPv1/v2c, secure file transfer over FTP/TFTP where possible.
+- Successful ping does not prove an application service is working because applications require specific ports, server processes, authentication, certificates, and policies.
+- Enterprise traffic categories introduced: web, email, name/address services, file transfer/sharing, remote administration, monitoring/logging, directory/identity, database, voice/video signaling.
+- Physical media as Layer 1 signal pathways.
+- UTP as common unshielded twisted-pair Ethernet copper cabling.
+- STP as shielded twisted-pair cabling for high-EMI environments when correctly grounded.
+- CAT5e and CAT6 copper categories and their common enterprise roles.
+- RJ45 termination and T568A/T568B wiring standards.
+- Straight-through cable uses the same wiring standard on both ends; crossover uses T568A on one end and T568B on the other.
+- Basic cable testers check wire map and continuity; cable certifiers test standards-based performance.
+- Single-mode fiber for long-distance backbone, campus, ISP, and building-to-building links.
+- Multi-mode fiber for shorter high-speed links in buildings and data centers.
+- Media selection should consider cost, distance, EMI, PoE, outdoor runs, documentation, power realities, and installation quality.
+- Ethernet as the dominant IEEE 802.3 wired LAN technology that uses frames and MAC addresses for local delivery.
+- Ethernet frame fields: preamble/SFD, destination MAC address, source MAC address, EtherType/Length, payload/data, and FCS.
+- MAC address as a 48-bit Layer 2 address used for local Ethernet delivery.
+- OUI as the vendor-identifying portion of a MAC address.
+- Unicast, broadcast, and multicast MAC address behavior.
+- Broadcast MAC address `FF:FF:FF:FF:FF:FF`.
+- MAC addresses support local delivery; IP addresses support logical end-to-end addressing and routing.
+- Ethernet MAC addresses usually change at routed hops, while the original IP packet remains logically end-to-end unless NAT changes it.
+- Collision domains as areas where collisions can occur, especially in legacy shared-media or hub-based Ethernet.
+- Each switch port is its own collision domain in modern switched Ethernet.
+- Broadcast domains as areas where Layer 2 broadcasts are forwarded.
+- VLANs define broadcast domains inside switched networks; routers separate broadcast domains.
+- Half-duplex communication sends or receives but not both at the same time.
+- Full-duplex communication sends and receives simultaneously and is standard in modern switched Ethernet.
+- Auto-negotiation lets Ethernet devices agree on speed and duplex.
+- Duplex mismatch, CRC errors, FCS errors, and late collisions as Ethernet troubleshooting clues.
+- Enterprise switching as the use of switches to connect, segment, and manage LAN traffic.
+- MAC address table maps MAC addresses to switch ports and VLANs.
+- CAM table as hardware-based memory used for fast MAC address lookup.
+- Switches learn source MAC addresses and use destination MAC addresses for forwarding decisions.
+- Dynamic MAC entries are learned automatically; static MAC entries are manually configured.
+- MAC aging removes inactive dynamic MAC entries.
+- Known unicast frames are forwarded only to the correct port.
+- Broadcast and unknown unicast frames are flooded within the appropriate VLAN.
+- Filtering prevents unnecessary forwarding, such as sending a frame back out the incoming port.
+- Access ports carry one VLAN and usually connect end devices.
+- Trunk ports carry multiple VLANs and commonly connect switches, routers, firewalls, or virtualization hosts.
+- DTP can negotiate trunking on some Cisco switches, but production ports should usually be explicitly configured.
+- Port security limits which MAC addresses are allowed on a switch port.
+- Sticky MAC learning dynamically learns secure MAC addresses.
+- Port security violation modes introduced: protect, restrict, and shutdown.
+- Error-disabled state can occur when strict port security shuts down a violating port.
+- IPv4 as a 32-bit Layer 3 logical addressing system.
+- Dotted-decimal notation as four decimal octets separated by periods.
+- Octet as an 8-bit section of an IPv4 address.
+- Binary place values in one octet: 128, 64, 32, 16, 8, 4, 2, 1.
+- Decimal-to-binary and binary-to-decimal conversion basics.
+- Hexadecimal as base-16 using 0-9 and A-F, commonly seen in MAC addresses, IPv6, and packet analysis.
+- IPv4 address structure: four octets, each ranging from 0 to 255.
+- Network portion identifies the IP network or subnet; host portion identifies the device inside that network.
+- Subnet mask separates the network portion from the host portion.
+- Basic CIDR recognition introduced, including `/24` as equivalent to `255.255.255.0`.
+- Local vs. remote destination decision using IP address and subnet mask.
+- Default gateway as the router address used to reach remote networks.
+- Public IPv4 addresses are globally routable on the internet.
+- Private IPv4 ranges introduced: `10.0.0.0/8`, `172.16.0.0/12`, and `192.168.0.0/16`.
+- APIPA range `169.254.0.0/16` indicates self-assigned addressing when DHCP fails.
+- Special IPv4 addresses introduced: `127.0.0.1`, `127.0.0.0/8`, `0.0.0.0`, `0.0.0.0/0`, and `255.255.255.255`.
+- Classful IPv4 addressing history: Class A, B, C, D, and E.
+- Host IPv4 settings: IP address, subnet mask, default gateway, and DNS server.
+- Subnetting as the process of dividing a larger IP network into smaller logical networks.
+- Network address identifies the subnet itself and is created when host bits are all 0.
+- Broadcast address is the last address in a subnet and is created when host bits are all 1.
+- Valid host range contains usable addresses between the network and broadcast addresses.
+- Standard usable host formula: `2^host bits - 2`.
+- CIDR notation as slash-prefix notation showing network bits.
+- Common subnet prefixes and capacities: `/24`, `/25`, `/26`, `/27`, `/28`, `/29`, and `/30`.
+- Block-size or magic-number method: `256 - interesting octet`.
+- Interesting octet as the subnet mask octet where subnet increments occur.
+- Broadcast address is one less than the next subnet.
+- First usable host is network address plus 1; last usable host is broadcast address minus 1.
+- Borrowing host bits creates more subnets while reducing hosts per subnet.
+- VLSM as Variable Length Subnet Mask, allowing different subnet sizes inside one larger address block.
+- VLSM allocation should start from largest host requirement to smallest.
+- Default gateway must be inside the host's own subnet.
+- Overlapping subnets cause routing, DHCP, firewall, and documentation problems.
+- IPv6 as a 128-bit Layer 3 addressing system.
+- IPv6 addresses use eight hexadecimal hextets separated by colons.
+- Each IPv6 hextet is 16 bits.
+- IPv6 abbreviation rules: remove leading zeros and compress one continuous all-zero sequence with `::`.
+- `::` can be used only once in an IPv6 address.
+- IPv6 prefix length notation identifies network bits.
+- `/64` is the standard IPv6 LAN subnet size and is expected by SLAAC.
+- `2001:db8::/32` is reserved for documentation examples.
+- Global unicast addresses are globally routable and commonly fall within `2000::/3`.
+- Link-local addresses begin with `fe80::/10` and are used only on the local link.
+- IPv6 does not use broadcast.
+- IPv6 multicast begins with `ff00::/8`.
+- `ff02::1` identifies all nodes on the local link; `ff02::2` identifies all routers on the local link.
+- Anycast uses the same address on multiple devices and routing delivers to the nearest or best destination.
+- SLAAC lets hosts form IPv6 addresses using Router Advertisements.
+- DHCPv6 can be stateless or stateful.
+- IPv6 hosts learn default gateway information from Router Advertisements.
+- Neighbor Discovery Protocol uses ICMPv6 instead of ARP.
+- NDP functions introduced: Router Solicitation, Router Advertisement, Neighbor Solicitation, Neighbor Advertisement, and Duplicate Address Detection.
+- Blocking all ICMPv6 can break IPv6 because ICMPv6 is required for normal neighbor discovery and router discovery.
+- VLAN as a Virtual Local Area Network and logical Layer 2 network created on a switch.
+- Each VLAN is a separate broadcast domain.
+- VLANs usually map to IP subnets in enterprise design.
+- VLAN membership can be static port-based, dynamic policy-based, wireless SSID mapped, or voice VLAN based.
+- Access VLAN as the VLAN assigned to an access port.
+- Trunks carry multiple VLANs between switches or network devices.
+- VLAN IDs identify VLANs; clear VLAN names improve troubleshooting and documentation.
+- VLAN 1 is commonly the Cisco default VLAN and should not be relied on for normal production user traffic.
+- Voice VLANs separate IP phone traffic from normal data traffic.
+- Native VLAN carries untagged traffic on an 802.1Q trunk.
+- Native VLAN mismatches can cause traffic leaks and confusing troubleshooting symptoms.
+- Enterprise VLAN segmentation should reflect business function, risk, device ownership, traffic needs, DHCP requirements, and security policy.
+- VLAN design should document VLAN ID, name, subnet, gateway, purpose, DHCP scope, access policy, and trunk placement.
+- Wireless SSIDs often map to VLANs for staff, guest, voice, or IoT segmentation.
+- Case study introduced VLAN segmentation for back office, voice, shop floor, CCTV, guest Wi-Fi, and network management.
+- VLANs separate at Layer 2; routers, Layer 3 switches, firewalls, and ACLs control inter-VLAN access.
+- VLAN configuration workflow: create VLANs, name VLANs, configure access ports, configure trunks, set allowed VLANs, verify, and test.
+- Cisco IOS VLAN creation using `vlan <id>` and `name <name>`.
+- Access port configuration using `switchport mode access` and `switchport access vlan <id>`.
+- Voice VLAN configuration using `switchport voice vlan <id>`.
+- Trunk configuration using `switchport mode trunk`.
+- IEEE 802.1Q tags identify VLAN membership on trunk links.
+- Native VLAN carries untagged traffic on an 802.1Q trunk.
+- Native VLANs should match on both ends of a trunk.
+- Allowed VLAN lists control which VLANs may cross a trunk.
+- DTP can negotiate trunks, but production networks often force access or trunk mode explicitly.
+- `switchport nonegotiate` disables DTP negotiation on supported Cisco platforms.
+- Key verification commands introduced: `show vlan brief`, `show interfaces status`, `show interfaces switchport`, `show interfaces trunk`, `show running-config interface`, and `show mac address-table vlan`.
+- Missing allowed VLANs, wrong access VLANs, native VLAN mismatch, and uncontrolled trunk negotiation as common VLAN/trunk troubleshooting problems.
+- STP as a Layer 2 loop-prevention protocol.
+- Ethernet frames do not have TTL, so Layer 2 loops can persist and multiply traffic.
+- Broadcast storms occur when broadcast frames loop and multiply.
+- MAC flapping occurs when the same MAC address is repeatedly learned on different switch ports.
+- BPDUs are Bridge Protocol Data Units used by switches to exchange STP information.
+- Bridge ID includes bridge priority and MAC address.
+- Root bridge is the central reference point for STP calculations.
+- Lowest Bridge ID becomes root bridge; lower priority wins, then lower MAC address if priority ties.
+- STP path cost identifies the preferred path toward the root bridge; lower cost is preferred.
+- STP port roles introduced: root port, designated port, and alternate/non-designated port.
+- Classic STP port states introduced: blocking, listening, learning, forwarding, and disabled.
+- RSTP state mapping introduced: discarding, learning, and forwarding.
+- STP variants introduced: STP, RSTP, PVST+, Rapid PVST+, and MST.
+- PortFast allows endpoint access ports to move to forwarding quickly.
+- BPDU Guard disables protected access ports that receive BPDUs.
+- Root bridge placement should be planned, not left to lowest MAC address.
+- Inter-VLAN routing as routing traffic between different VLANs/subnets.
+- Devices in different VLANs require Layer 3 routing to communicate.
+- Each VLAN/subnet needs a default gateway if devices must reach remote networks.
+- Router-on-a-stick uses one router physical interface with subinterfaces over an 802.1Q trunk.
+- Router subinterfaces act as default gateways for VLANs.
+- `encapsulation dot1Q <vlan-id>` maps a router subinterface to a VLAN tag.
+- Router-on-a-stick can become a bottleneck because inter-VLAN traffic crosses the router trunk.
+- Switch Virtual Interface (SVI) as a logical Layer 3 interface for a VLAN on a Layer 3 switch.
+- Layer 3 switches can route between VLANs using SVIs.
+- `ip routing` enables IPv4 routing on Cisco Layer 3 switches.
+- `ipv6 unicast-routing` enables IPv6 routing on Cisco devices.
+- SVI routing requires VLAN existence, correct SVI addressing, active VLAN state, host gateway configuration, and routing enabled.
+- Routing enables communication; firewall/ACL policy controls communication.
+- Inter-VLAN troubleshooting depends on VLAN membership, trunks, gateway interfaces, routing state, and policy.
+- Routing as forwarding packets between IP networks using destination IP addresses.
+- Router forwarding process: receive frame, decapsulate Layer 2, inspect destination IP, check routing table, select best route, re-encapsulate, and forward.
+- Routing table components introduced: route source, destination prefix, administrative distance, metric, next hop, and outgoing interface.
+- Connected routes are automatically added when interfaces are up with IP addresses.
+- Local routes identify the router's own interface IP addresses.
+- Static routes are manually configured routes.
+- Default route is `0.0.0.0/0` in IPv4 and is used when no more specific route matches.
+- IPv6 default route introduced as `::/0`.
+- Longest-prefix match chooses the most specific matching route.
+- Administrative distance is Cisco route-source trust; lower AD is preferred.
+- Route selection order: longest-prefix match, administrative distance, metric, then equal-cost behavior.
+- Floating static routes use higher administrative distance as backup routes.
+- Routing must work in both directions; return path matters.
+- `show ip route`, `show ip route static`, `show ip route connected`, `route print`, and `ip route` introduced for route inspection.
+- Dynamic routing as automatic route learning through routing protocols.
+- Routing protocols exchange reachability information, select best paths, detect failures, and converge after topology changes.
+- RIP as a simple distance-vector routing protocol that uses hop count and has a 15-hop usable maximum.
+- OSPF as a link-state interior gateway protocol that uses cost and areas, commonly inside enterprise networks.
+- BGP as a path-vector exterior gateway protocol used between autonomous systems, ISPs, cloud providers, and large networks.
+- OSPF vs. BGP: OSPF is internal and cost-based; BGP is external and policy-based.
+- IXPN as a Nigerian Internet Exchange Point that enables direct peering, keeps local traffic local, reduces latency and transit cost, and improves resilience.
+- Official IXPN figures verified during Lesson 18 preparation: 130+ connected networks, 170 connected ports, 13 POPs, and 2.5 Tbps peak traffic.
+- NAT as translation of IP address information between private/internal addressing and public/external addressing.
+- NAT terminology introduced: inside local, inside global, outside local, and outside global.
+- Static NAT as a fixed one-to-one mapping between an internal private address and a public address.
+- Dynamic NAT as temporary mapping from internal private addresses to a pool of public addresses.
+- PAT/NAT overload as many-to-one translation that allows many private hosts to share one public IP address using port numbers.
+- A whole office commonly gets online through PAT, a default route toward the ISP, and correct inside/outside NAT interface marking.
+- NAT depends on working routing in both directions; NAT does not fix a missing default route or wrong return route.
+- Key NAT verification commands introduced: `show ip nat translations`, `show ip nat statistics`, `show access-lists`, and `clear ip nat translation *`.
+- NAT is not the same as firewall security policy; NAT changes address information while firewalls permit, deny, inspect, and log traffic.
+- DHCP automatically assigns IP configuration to clients.
+- DNS resolves names and other DNS records.
+- DHCP DORA process introduced: Discover, Offer, Request, Acknowledge.
+- DHCP uses UDP ports 67 and 68.
+- DNS commonly uses UDP/TCP port 53.
+- DHCP scope as an address range and option set for a subnet.
+- DHCP reservation as a DHCP-managed fixed assignment for a specific device.
+- DHCP exclusion as an address or range DHCP must not dynamically assign.
+- DHCP lease as temporary permission to use an IP address.
+- DHCP options introduced: subnet mask, default gateway, DNS server, domain name, lease time, NTP, and TFTP.
+- DHCP relay forwards DHCP requests between client VLANs and centralized DHCP servers.
+- Cisco `ip helper-address` introduced for DHCP relay.
+- APIPA as a common sign that DHCP failed.
+- DNS resolution flow introduced: local cache, hosts file, configured resolver, resolver cache, recursive lookup, returned answer.
+- DNS hierarchy introduced: root, top-level domain, domain, subdomain, and host/service name.
+- DNS record types introduced: A, AAAA, CNAME, MX, TXT, NS, and PTR.
+- Forward lookup zones resolve names to IP addresses.
+- Reverse lookup zones resolve IP addresses to names.
+- Authoritative DNS stores official zone records.
+- Recursive DNS performs lookups for clients.
+- DNS caching and TTL introduced.
+- DHCP and DNS often integrate through DHCP-provided DNS server options and dynamic DNS registration.
+- DHCP/DNS troubleshooting should separate IP configuration, gateway reachability, name resolution, routing, NAT, and security policy.
+- WLAN as wireless access to the LAN using radio frequency instead of Ethernet cabling.
+- Wireless client connectivity path introduced: SSID discovery, association, authentication, VLAN mapping, DHCP, DNS, routing, NAT, and policy.
+- RF basics introduced: frequency, channel, signal strength, noise, SNR, interference, attenuation, absorption, reflection, and multipath.
+- 2.4 GHz band as longer range but more crowded and limited in clean channel capacity.
+- 5 GHz band as common enterprise workhorse band with more channels and better capacity than 2.4 GHz.
+- 6 GHz band as newer, cleaner spectrum for Wi-Fi 6E/Wi-Fi 7 where supported and allowed.
+- Channel width tradeoffs introduced: wider channels increase peak throughput but reduce channel reuse.
+- 2.4 GHz non-overlapping channel plan commonly uses channels 1, 6, and 11.
+- Co-channel interference and adjacent-channel interference introduced.
+- 802.11 standards introduced: a, b, g, n, ac, ax, and be.
+- Wi-Fi generation names introduced: Wi-Fi 4, Wi-Fi 5, Wi-Fi 6, Wi-Fi 6E, and Wi-Fi 7.
+- SSID as wireless network name and BSSID as the MAC address of a specific AP radio/WLAN instance.
+- AP as the device that bridges wireless clients into the wired LAN.
+- Autonomous APs are individually managed; lightweight APs are centrally managed by a WLC or cloud platform.
+- WLC functions introduced: AP registration, WLAN configuration, RF management, roaming support, monitoring, firmware management, and security integration.
+- SSID design should be limited, purposeful, mapped to VLANs, and aligned with security policy.
+- Guest Wi-Fi should be separated from internal networks using VLANs, policy, isolation, and appropriate DHCP/DNS design.
+- Roaming as client movement between APs while staying on the same WLAN.
+- Site survey types introduced: predictive, passive, active, spectrum analysis, and post-deployment validation.
+- Capacity planning distinguished from coverage planning.
+- AP placement and transmit power must support two-way client communication, not only AP signal coverage.
+- Wireless troubleshooting domains introduced: RF, association, authentication, VLAN, DHCP, DNS, routing, NAT, and firewall policy.
+- Network security as coordinated protection of devices, services, communications, identities, and data.
+- Security risk terms introduced: asset, threat, vulnerability, exploit, risk, and control.
+- CIA triad introduced: confidentiality, integrity, and availability.
+- Security controls categorized as administrative, technical, and physical.
+- Control functions introduced: preventive, detective, corrective, deterrent, compensating, and recovery.
+- Defense-in-depth as multiple coordinated layers of security.
+- Zero Trust as explicit verification rather than automatic trust based on network location.
+- Least privilege as granting only the access required.
+- Wireless security evolution introduced: open, WEP, WPA/TKIP, WPA2, and WPA3.
+- WEP and original WPA/TKIP identified as obsolete for modern deployments.
+- WPA2 Personal uses a pre-shared key; WPA2 Enterprise uses 802.1X/EAP and RADIUS.
+- WPA3 Personal uses SAE and requires Protected Management Frames.
+- WPA2/WPA3 transition modes improve compatibility but do not provide all benefits of WPA3-only operation.
+- 802.1X roles introduced: supplicant, authenticator, and authentication server.
+- EAP as an authentication framework and RADIUS as centralized authentication, authorization, and accounting transport.
+- EAP-TLS, PEAP, and EAP-TTLS introduced at a practical level.
+- RADIUS commonly uses UDP ports 1812 and 1813.
+- RADIUS can return dynamic VLAN or role policy.
+- Wireless attacks introduced: evil twin, rogue AP, deauthentication, weak PSK attacks, eavesdropping, WPS abuse, and jamming.
+- DoS vs. DDoS introduced.
+- MITM attacks and supporting techniques introduced: evil twin, ARP spoofing, DNS spoofing, rogue DHCP, and certificate deception.
+- Spoofing categories introduced: IP, MAC, ARP, DNS, email, caller ID, and website spoofing.
+- Social engineering categories introduced: phishing, spear phishing, whaling, vishing, smishing, pretexting, baiting, and tailgating.
+- Password attacks introduced: brute force, dictionary attack, password spraying, credential stuffing, keylogging, phishing, and offline cracking.
+- Malware categories introduced: virus, worm, Trojan, ransomware, spyware, adware, rootkit, keylogger, bot, backdoor, logic bomb, and fileless malware.
+- Ransomware can affect confidentiality, integrity, and availability.
+- Indicators of compromise introduced.
+- Security logging sources and NTP log correlation introduced.
+- Incident response lifecycle introduced: preparation, detection/analysis, containment, eradication, recovery, and lessons learned.
+
+## Terminology Already Introduced
+
+- Network
+- Node
+- Host
+- Client
+- Server
+- Peer-to-peer
+- LAN
+- WAN
+- WLAN
+- MAN
+- Internet
+- Intranet
+- Extranet
+- Topology
+- Physical topology
+- Logical topology
+- Bus topology
+- Star topology
+- Ring topology
+- Mesh topology
+- Hybrid topology
+- Access layer
+- Distribution layer
+- Core layer
+- Collapsed core
+- Default gateway
+- IP address
+- Subnet mask
+- DNS server
+- Latency
+- Packet loss
+- Hop
+- Network appliance
+- Infrastructure device
+- Layer 2 switch
+- Layer 3 switch
+- Router
+- Access point
+- WLAN controller
+- Firewall
+- IDS
+- IPS
+- Load balancer
+- Proxy server
+- Content filter
+- NIC
+- Transceiver
+- SFP
+- SFP+
+- QSFP
+- PoE
+- Virtual IP
+- Health check
+- Data communication
+- Source
+- Destination
+- PDU
+- Encapsulation
+- Decapsulation
+- Data
+- Segment
+- Datagram
+- Packet
+- Frame
+- Bits
+- Unicast
+- Broadcast
+- Multicast
+- Port number
+- ARP
+- TTL
+- OSI model
+- Application layer
+- Presentation layer
+- Session layer
+- Transport layer
+- Network layer
+- Data Link layer
+- Physical layer
+- TLS
+- TCP/IP protocol suite
+- IP
+- IPv4
+- IPv6
+- TCP
+- UDP
+- ICMP
+- Three-way handshake
+- SYN
+- ACK
+- FIN
+- RST
+- Hop limit
+- ARP cache
+- Echo Request
+- Echo Reply
+- Destination Unreachable
+- Time Exceeded
+- Port number
+- Traffic type
+- Well-known port
+- Registered port
+- Ephemeral port
+- FTP
+- SSH
+- Telnet
+- SMTP
+- SMTPS
+- DHCP
+- TFTP
+- HTTP
+- HTTPS
+- NTP
+- SNMP
+- LDAP
+- LDAPS
+- SMB
+- Syslog
+- SQL Server
+- RDP
+- SIP
+- Physical media
+- UTP
+- STP
+- EMI
+- Crosstalk
+- CAT5e
+- CAT6
+- RJ45
+- T568A
+- T568B
+- Straight-through cable
+- Crossover cable
+- Auto-MDIX
+- Cable tester
+- Cable certifier
+- Tone generator and probe
+- Single-mode fiber
+- Multi-mode fiber
+- Bend radius
+- Ethernet
+- IEEE 802.3
+- Ethernet frame
+- MAC address
+- OUI
+- Preamble
+- Start Frame Delimiter
+- EtherType
+- Payload
+- FCS
+- Broadcast MAC
+- Collision domain
+- Broadcast domain
+- Hub
+- CSMA/CD
+- Half-duplex
+- Full-duplex
+- Auto-negotiation
+- CRC error
+- Late collision
+- Enterprise switching
+- MAC address table
+- CAM table
+- Dynamic MAC entry
+- Static MAC entry
+- MAC aging
+- Forward
+- Flood
+- Filter
+- Unknown unicast
+- Access port
+- Trunk port
+- DTP
+- Port security
+- Sticky MAC
+- Violation mode
+- Error-disabled
+- IPv4
+- IP address
+- Octet
+- Bit
+- Binary
+- Decimal
+- Hexadecimal
+- Dotted decimal
+- Network portion
+- Host portion
+- Subnet mask
+- CIDR
+- Public IP address
+- Private IP address
+- RFC 1918
+- APIPA
+- Loopback
+- Limited broadcast
+- Classful addressing
+- Subnetting
+- Subnet
+- Network address
+- Broadcast address
+- Valid host range
+- Prefix length
+- Host bits
+- Block size
+- Magic number
+- Interesting octet
+- VLSM
+- Overlapping subnets
+- Usable hosts
+- Point-to-point link
+- Hextet
+- Interface ID
+- Global unicast address
+- Link-local address
+- Multicast address
+- Anycast address
+- Unspecified address
+- SLAAC
+- DHCPv6
+- Stateful DHCPv6
+- Stateless DHCPv6
+- Neighbor Discovery
+- ICMPv6
+- Router Advertisement
+- Router Solicitation
+- Neighbor Solicitation
+- Neighbor Advertisement
+- Duplicate Address Detection
+- VLAN
+- Segmentation
+- Access VLAN
+- VLAN ID
+- VLAN name
+- Default VLAN
+- Voice VLAN
+- Native VLAN
+- Guest VLAN
+- Management VLAN
+- VLAN-to-subnet mapping
+- Flat network
+- Parking VLAN
+- VLAN configuration
+- 802.1Q
+- VLAN tag
+- Allowed VLAN list
+- Dynamic auto
+- Dynamic desirable
+- Native VLAN mismatch
+- Tagged frame
+- Untagged frame
+- STP
+- Layer 2 loop
+- Broadcast storm
+- BPDU
+- Bridge ID
+- Bridge priority
+- Root bridge
+- Root port
+- Designated port
+- Alternate port
+- Blocking state
+- Forwarding state
+- Topology change
+- PortFast
+- BPDU Guard
+- MAC flapping
+- RSTP
+- PVST+
+- Rapid PVST+
+- Inter-VLAN routing
+- Router-on-a-stick
+- Subinterface
+- SVI
+- Layer 3 switch
+- Connected route
+- Gateway VLAN
+- Policy control
+- Routing
+- Routing table
+- Route
+- Next hop
+- Outgoing interface
+- Local route
+- Static route
+- Default route
+- Gateway of last resort
+- Longest-prefix match
+- Administrative distance
+- Metric
+- Floating static route
+- Return path
+- Dynamic routing
+- Routing protocol
+- Convergence
+- RIP
+- OSPF
+- BGP
+- IGP
+- EGP
+- Autonomous system
+- Peering
+- IXP
+- NAT
+- PAT
+- NAT overload
+- Static NAT
+- Dynamic NAT
+- Inside local
+- Inside global
+- Outside local
+- Outside global
+- DHCP
+- DNS
+- DORA
+- Scope
+- Reservation
+- Lease
+- Exclusion
+- DHCP relay
+- IP helper
+- Resolver
+- Authoritative DNS
+- Recursive DNS
+- Forward lookup zone
+- Reverse lookup zone
+- A record
+- AAAA record
+- CNAME record
+- MX record
+- TXT record
+- NS record
+- PTR record
+- TTL
+- APIPA
+- WLAN
+- RF
+- Frequency
+- Channel
+- Channel width
+- Signal strength
+- Noise
+- SNR
+- Interference
+- Attenuation
+- SSID
+- BSSID
+- AP
+- WLC
+- Autonomous AP
+- Lightweight AP
+- Roaming
+- Site survey
+- Co-channel interference
+- Adjacent-channel interference
+- Guest network
+- Captive portal
+- Client isolation
+- Band steering
+- Network security
+- Asset
+- Threat
+- Vulnerability
+- Exploit
+- Risk
+- Control
+- CIA triad
+- Confidentiality
+- Integrity
+- Availability
+- Defense-in-depth
+- Least privilege
+- Zero Trust
+- WPA2
+- WPA3
+- SAE
+- PMF
+- 802.1X
+- Supplicant
+- Authenticator
+- RADIUS
+- EAP
+- EAP-TLS
+- Evil twin
+- Rogue AP
+- DoS
+- DDoS
+- MITM
+- Spoofing
+- Social engineering
+- Phishing
+- Malware
+- Ransomware
+- Trojan
+- Worm
+- Virus
+- Spyware
+- Rootkit
+- Botnet
+- IOC
+- Incident response
+
+## Tables Created
+
+- Course foundations mapped to capstone use table.
+- Troubleshooting approach selection table.
+- Physical and analysis tool table.
+- Layer 1-3 root-cause table.
+- Network documentation-set table.
+- IPAM field example table.
+- Performance monitoring method table.
+- Change-type comparison table.
+- Incident timeline table.
+- Career decision scorecard.
+- Verification matrix.
+- Common professional mistakes and better practices table.
+- Physical vs. logical diagram table.
+- Bandwidth vs. throughput vs. goodput table.
+- Incident vs. problem vs. change table.
+- Monitoring methods strengths and limitations table.
+- Career branch comparison table.
+- Electrical quantities and units table.
+- Power-quality problems and effects table.
+- Network load inventory table.
+- Standby vs. line-interactive vs. online UPS table.
+- Battery chemistry comparison table.
+- Availability/reliability/resilience/redundancy definitions table.
+- Availability percentage and approximate annual downtime table.
+- BIA service-priority example table.
+- RTO vs. RPO vs. MTD table.
+- Full vs. incremental vs. differential backup table.
+- Cold vs. warm vs. hot site table.
+- Recovery testing methods table.
+- Power troubleshooting symptoms table.
+- Watts vs. VA vs. watt-hours table.
+- UPS vs. inverter vs. generator vs. solar table.
+- Disaster recovery vs. business continuity table.
+- VPN components table.
+- Site-to-site VPN benefits and limitations table.
+- Full-tunnel vs. split-tunnel table.
+- IPsec protocols and supporting ports table.
+- Transport mode vs. tunnel mode table.
+- Policy-based vs. route-based VPN table.
+- MFA factor-category table.
+- NAC component and enforcement concepts tables.
+- VPN security risks and controls table.
+- VPN troubleshooting symptoms table.
+- Site-to-site vs. client-to-site VPN table.
+- ESP vs. AH table.
+- VPN vs. NAC table.
+- Security controls and network-plane protection table.
+- Wildcard-mask reference table.
+- ACL placement and troubleshooting tables.
+- RADIUS vs. TACACS+ table.
+- Port-security violation-mode table.
+- Syslog severity-level table.
+- SNMP component and version tables.
+- Standard vs. extended ACL table.
+- Port security vs. 802.1X table.
+- DHCP snooping vs. DAI table.
+- SSH vs. Telnet table.
+- NTP vs. Syslog vs. SNMP table.
+- Network types comparison table.
+- Client-server vs. peer-to-peer comparison table.
+- Topology comparison table.
+- Three-tier model summary table.
+- Windows troubleshooting command table.
+- Common network failure symptoms and likely causes table.
+- Common network devices comparison table.
+- Layer 2 switch vs. Layer 3 switch vs. router table.
+- Firewall vs. IDS vs. IPS table.
+- Physical vs. virtual vs. cloud appliances table.
+- Device failure scope table.
+- Encapsulation vs. decapsulation table.
+- PDU names by OSI layer table.
+- Address types in data communication table.
+- Device inspection behavior table.
+- Unicast vs. broadcast vs. multicast table.
+- OSI layers summary table.
+- OSI troubleshooting table.
+- OSI vs TCP/IP mapping table.
+- Common devices by OSI layer table.
+- TCP/IP core protocols table.
+- TCP vs UDP comparison table.
+- TCP handshake steps table.
+- ARP process table.
+- ICMP diagnostic uses table.
+- Common ports master table.
+- Secure vs insecure alternatives table.
+- TCP vs UDP services table.
+- Troubleshooting by symptom and protocol/port table.
+- UTP vs STP table.
+- CAT5e vs CAT6 table.
+- T568A vs T568B pinout table.
+- Single-mode vs multi-mode fiber table.
+- Cable testing tools table.
+- Ethernet frame fields table.
+- MAC address vs. IP address table.
+- Collision domain vs. broadcast domain table.
+- Half-duplex vs. full-duplex table.
+- Common Ethernet symptoms table.
+- Enterprise switching roles table.
+- MAC address table example.
+- Flood, forward, and filter summary table.
+- Switch learning sequence table.
+- Switch port mode comparison table.
+- Port security violation modes table.
+- Enterprise switching troubleshooting table.
+- Hub vs. switch table.
+- Dynamic vs. static MAC entries table.
+- Access port vs. trunk port table.
+- Number system comparison table.
+- Binary octet place values table.
+- Decimal to binary examples table.
+- Hexadecimal letter value table.
+- Binary to hexadecimal relationship table.
+- IPv4 octet/binary structure table.
+- Network vs. host portion example table.
+- Subnet mask examples table.
+- Private IPv4 address ranges table.
+- APIPA troubleshooting table.
+- Special IPv4 address examples table.
+- IPv4 address classes table.
+- Common IPv4 misconfiguration symptoms table.
+- IPv4 troubleshooting table.
+- MAC address vs. IPv4 address table.
+- Public vs. private IPv4 addresses table.
+- IPv4 host settings table.
+- Classful address summary table.
+- Subnetting vocabulary summary table.
+- Common CIDR prefixes table.
+- Common last-octet masks table.
+- /26 subnet table.
+- Host subnet identification example table.
+- /27 subnet table.
+- /30 subnet table.
+- Borrowing bits from a /24 table.
+- Subnet size selection table.
+- VLSM planning table.
+- VLSM allocation example table.
+- Enterprise subnetting example table.
+- Common subnetting mistakes table.
+- Subnetting troubleshooting table.
+- CIDR, mask, and host capacity table.
+- Fixed-length subnetting vs. VLSM table.
+- Network vs. broadcast vs. host address table.
+- Subnetting design choices table.
+- IPv6 hextet structure table.
+- Hexadecimal review table for IPv6.
+- IPv6 abbreviation examples table.
+- Basic IPv6 subnet example table.
+- Important IPv6 multicast examples table.
+- IPv6 address types summary table.
+- SLAAC vs. stateless DHCPv6 vs. stateful DHCPv6 table.
+- IPv4 ARP vs. IPv6 Neighbor Discovery table.
+- Common IPv6 troubleshooting symptoms table.
+- Cloud IPv6 segment example table.
+- IPv4 vs. IPv6 comparison table.
+- IPv6 address types comparison table.
+- SLAAC vs. DHCPv6 comparison table.
+- IPv4 ARP vs. IPv6 NDP comparison table.
+- Broadcast control by VLAN table.
+- VLAN-to-IPv4 subnet mapping table.
+- VLAN-to-IPv6 prefix mapping table.
+- VLAN membership types table.
+- VLAN naming table.
+- Voice VLAN benefits table.
+- Enterprise VLAN categories table.
+- VLAN design checklist table.
+- VLAN DHCP and gateway table.
+- Wireless SSID to VLAN mapping table.
+- Shop floor/back office/guest Wi-Fi VLAN design table.
+- Shop floor/back office/guest Wi-Fi IPv6 prefix table.
+- Common VLAN problems table.
+- Cloud segmentation comparison table.
+- Flat network vs. VLAN-segmented network table.
+- VLAN vs. IP subnet table.
+- Access port vs. trunk port table.
+- Data VLAN vs. voice VLAN table.
+- VLAN design documentation table.
+- VLAN configuration workflow table.
+- VLAN creation verification example table.
+- Access port configuration summary table.
+- Voice port design table.
+- Trunk configuration summary table.
+- 802.1Q tagging behavior table.
+- Allowed VLAN list examples table.
+- Trunking modes table.
+- Two-switch office VLAN design table.
+- Verification command table.
+- VLAN and trunk troubleshooting table.
+- Access port vs. trunk port configuration table.
+- Tagged vs. untagged traffic table.
+- Static trunking vs. dynamic trunking table.
+- Native VLAN and allowed VLAN list table.
+- Layer 2 loop symptoms table.
+- BPDU information table.
+- Bridge ID decision table.
+- Root bridge election example table.
+- STP path cost concept table.
+- STP port roles table.
+- Classic STP port states table.
+- RSTP state mapping table.
+- STP variant summary table.
+- Common STP troubleshooting table.
+- Redundancy without STP vs. redundancy with STP table.
+- Root port vs. designated port vs. alternate port table.
+- STP variants table.
+- PortFast and BPDU Guard table.
+- VLAN/subnet/default gateway mapping table.
+- Default gateway design table.
+- Router-on-a-stick summary table.
+- Router-on-a-stick packet journey steps.
+- Router-on-a-stick advantages and limitations table.
+- Router-on-a-stick vs. Layer 3 switching table.
+- Inter-VLAN firewall policy examples table.
+- Common inter-VLAN routing problems table.
+- Layer 2 VLAN vs. Layer 3 gateway table.
+- Common inter-VLAN faults table.
+- Router forwarding process table.
+- Routing table route component table.
+- Common Cisco route codes table.
+- Static route components table.
+- Static route two-router addressing table.
+- Default route summary table.
+- Longest-prefix match example table.
+- Common administrative distance values table.
+- Route selection order table.
+- Floating static route summary table.
+- Static routing design use cases table.
+- Common static route mistakes table.
+- Routing troubleshooting table.
+- Cloud route table example.
+- Connected vs. static vs. default routes table.
+- Longest-prefix match vs. administrative distance table.
+- Static route vs. floating static route table.
+- Routing troubleshooting tools table.
+- Static routing vs. dynamic routing table.
+- Routing protocol functions table.
+- RIP summary table.
+- OSPF vs. BGP table.
+- IXPN real-world context table.
+- NAT terminology table.
+- Static NAT summary table.
+- PAT translation example table.
+- PAT summary table.
+- Static NAT vs. dynamic NAT vs. PAT table.
+- Common NAT problems table.
+- Cloud NAT design table.
+- RIP vs. OSPF vs. BGP table.
+- Dynamic routing vs. static routing comparison table.
+- NAT troubleshooting commands table.
+- DHCP and DNS placement table.
+- DHCP DORA process table.
+- DHCP scope design table.
+- DHCP reservation example table.
+- Lease time design table.
+- DHCP exclusion planning table.
+- Common DHCP options table.
+- DHCP relay process table.
+- Windows DHCP/DNS command table.
+- Linux DHCP/DNS command table.
+- DNS resolution flow table.
+- DNS hierarchy table.
+- Common DNS record types table.
+- Forward vs. reverse zones table.
+- Authoritative vs. recursive DNS table.
+- DNS cache troubleshooting table.
+- DHCP and DNS relationship table.
+- Multi-VLAN DHCP/DNS design table.
+- DHCP troubleshooting flow table.
+- Common DHCP problems table.
+- DNS troubleshooting flow table.
+- Common DNS problems table.
+- DHCP/DNS cybersecurity threat tables.
+- Cloud DNS/DHCP relationship table.
+- DHCP vs. DNS table.
+- DHCP scope vs. reservation vs. exclusion table.
+- Forward vs. reverse lookup table.
+- DHCP and DNS troubleshooting commands table.
+- Wireless client connectivity path table.
+- RF concepts table.
+- Signal strength guide table.
+- SNR example table.
+- Frequency band comparison table.
+- Channel width tradeoff table.
+- 2.4 GHz channel planning table.
+- Wi-Fi standards summary table.
+- Wi-Fi generation comparison table.
+- SSID concepts table.
+- Wireless join process table.
+- Access point functions table.
+- Autonomous vs. lightweight AP table.
+- WLC functions table.
+- SSID design table.
+- Guest Wi-Fi design principles table.
+- SSID-to-VLAN mapping table.
+- Roaming problems table.
+- Wireless survey types table.
+- Capacity planning factors table.
+- AP placement guidelines table.
+- Local wireless deployment considerations table.
+- Windows wireless commands table.
+- Linux wireless commands table.
+- Cisco switching checks for APs table.
+- Wireless troubleshooting table.
+- Wireless security risks table.
+- Cloud wireless concepts table.
+- 2.4 GHz vs. 5 GHz vs. 6 GHz table.
+- Coverage vs. capacity table.
+- Co-channel vs. adjacent-channel interference table.
+- Wireless troubleshooting domains table.
+- Enterprise security impact examples table.
+- Security risk terms table.
+- Confidentiality controls table.
+- Integrity controls table.
+- Availability controls table.
+- Security control types table.
+- Security control functions table.
+- Defense-in-depth layers table.
+- Least privilege examples table.
+- Wireless security evolution table.
+- WPA2 modes table.
+- WPA3 features table.
+- WPA2 vs. WPA3 table.
+- Personal vs. Enterprise wireless table.
+- 802.1X roles table.
+- Common EAP methods table.
+- Enterprise 802.1X process table.
+- RADIUS dynamic policy example table.
+- Wireless attack types table.
+- DoS/DDoS target table.
+- Common spoofing types table.
+- Social engineering types table.
+- Password attack types table.
+- Malware categories table.
+- Virus vs. worm table.
+- Ransomware CIA impact table.
+- Common indicators of compromise table.
+- Important security log sources table.
+- Incident response lifecycle table.
+- Windows security commands table.
+- Linux security commands table.
+- Cisco security checks table.
+- Enterprise network security case-study table.
+- Cloud security examples table.
+- CIA comparison table.
+- DoS vs. DDoS comparison table.
+- Virus vs. worm vs. Trojan table.
+- Preventive vs. detective vs. corrective controls table.
+
+## Glossary Terms Defined
+
+- Troubleshooting
+- Problem Statement
+- Scope
+- Hypothesis
+- Bottom-Up
+- Top-Down
+- Divide-and-Conquer
+- Follow-the-Path
+- Baseline
+- Root Cause
+- Contributing Cause
+- RCA
+- Five Whys
+- Escalation
+- Physical Diagram
+- Logical Diagram
+- Rack Elevation
+- IPAM
+- Source of Truth
+- Configuration Drift
+- Bandwidth
+- Throughput
+- Goodput
+- Latency
+- Jitter
+- Packet Loss
+- Utilization
+- Synthetic Transaction
+- Alert Fatigue
+- Capacity Planning
+- Change Management
+- Standard Change
+- Normal Change
+- Emergency Change
+- Maintenance Window
+- Rollback
+- Golden Configuration
+- Incident Report
+- Handover
+- Verification Matrix
+- Portfolio
+- STAR
+- Power Resilience
+- Voltage
+- Current
+- Watt
+- Volt-Ampere
+- Watt-Hour
+- Power Factor
+- Blackout
+- Brownout
+- Sag
+- Surge
+- Transient
+- UPS
+- Standby UPS
+- Line-Interactive UPS
+- Online UPS
+- Runtime
+- Battery Capacity
+- Depth of Discharge
+- State of Charge
+- State of Health
+- Inverter
+- Pure Sine Wave
+- Charge Controller
+- Peak Sun Hours
+- ATS
+- Maintenance Bypass
+- PDU
+- Availability
+- Reliability
+- Resilience
+- Redundancy
+- Fault Tolerance
+- SPOF
+- Disaster Recovery
+- Business Continuity
+- BIA
+- RTO
+- RPO
+- MTD
+- Full Backup
+- Incremental Backup
+- Differential Backup
+- Immutable Backup
+- Cold Site
+- Warm Site
+- Hot Site
+- Runbook
+- Tabletop Exercise
+- VPN
+- Tunnel
+- Encapsulation
+- Encryption
+- Ciphertext
+- Peer Authentication
+- Anti-Replay
+- Site-to-Site VPN
+- Client-to-Site VPN
+- Remote Access
+- VPN Concentrator
+- Full Tunnel
+- Split Tunnel
+- IPsec
+- Security Association
+- ESP
+- AH
+- Tunnel Mode
+- Transport Mode
+- IKE
+- IKEv2
+- Symmetric Encryption
+- Asymmetric Cryptography
+- Digital Certificate
+- PKI
+- HMAC
+- Diffie-Hellman
+- Perfect Forward Secrecy
+- NAT-T
+- Interesting Traffic
+- Policy-Based VPN
+- Route-Based VPN
+- MFA
+- NAC
+- Posture Assessment
+- Remediation Network
+- Quarantine
+- ACL
+- ACE
+- Implicit Deny
+- Standard ACL
+- Extended ACL
+- Wildcard Mask
+- AAA
+- Authentication
+- Authorization
+- Accounting
+- TACACS+
+- Port Security
+- Sticky MAC
+- Err-disabled
+- DHCP Snooping
+- Trusted Port
+- DAI
+- ARP Spoofing
+- Device Hardening
+- Attack Surface
+- Management Plane
+- SSH
+- NTP
+- Stratum
+- Syslog
+- SNMP
+- NMS
+- MIB
+- OID
+- Trap
+- SNMPv3
+- Parking VLAN
+- Network
+- Host
+- Client
+- Server
+- LAN
+- WAN
+- WLAN
+- Intranet
+- Extranet
+- Topology
+- Access layer
+- Distribution layer
+- Core layer
+- Collapsed core
+- Default gateway
+- DNS
+- Ping
+- Traceroute/tracert
+- End device
+- Network appliance
+- Layer 2 switch
+- Layer 3 switch
+- Router
+- Access point
+- WLAN controller
+- Firewall
+- IDS
+- IPS
+- Load balancer
+- Proxy server
+- Content filter
+- NIC
+- Transceiver
+- PDU
+- Encapsulation
+- Decapsulation
+- Segment
+- Datagram
+- Packet
+- Frame
+- Bits
+- Unicast
+- Broadcast
+- Multicast
+- ARP
+- TTL
+- OSI model
+- Application layer
+- Presentation layer
+- Session layer
+- Transport layer
+- Network layer
+- Data Link layer
+- Physical layer
+- TLS
+- TCP/IP protocol suite
+- IP
+- IPv4
+- IPv6
+- TCP
+- UDP
+- ICMP
+- Three-way handshake
+- SYN
+- ACK
+- FIN
+- RST
+- ARP cache
+- Echo Request
+- Echo Reply
+- Destination Unreachable
+- Time Exceeded
+- Port number
+- Traffic type
+- Well-known port
+- Registered port
+- Ephemeral port
+- FTP
+- SSH
+- Telnet
+- SMTP
+- SMTPS
+- DHCP
+- TFTP
+- HTTP
+- HTTPS
+- NTP
+- SNMP
+- LDAP
+- LDAPS
+- SMB
+- Syslog
+- SQL Server
+- RDP
+- SIP
+- Physical media
+- UTP
+- STP
+- EMI
+- Crosstalk
+- CAT5e
+- CAT6
+- RJ45
+- T568A
+- T568B
+- Straight-through cable
+- Crossover cable
+- Auto-MDIX
+- Cable tester
+- Cable certifier
+- Single-mode fiber
+- Multi-mode fiber
+- Bend radius
+- Ethernet
+- IEEE 802.3
+- Ethernet frame
+- MAC address
+- OUI
+- Preamble
+- Start Frame Delimiter
+- EtherType
+- Payload
+- FCS
+- Collision domain
+- Broadcast domain
+- Hub
+- CSMA/CD
+- Half-duplex
+- Full-duplex
+- Auto-negotiation
+- CRC error
+- Late collision
+- Broadcast MAC
+- Switch
+- Enterprise Switching
+- MAC Address Table
+- CAM Table
+- Dynamic MAC Entry
+- Static MAC Entry
+- MAC Aging
+- Forward
+- Flood
+- Filter
+- Unknown Unicast
+- Access Port
+- Trunk Port
+- DTP
+- Port Security
+- Sticky MAC
+- Violation Mode
+- Error-Disabled
+- IPv4
+- IP Address
+- Octet
+- Bit
+- Binary
+- Decimal
+- Hexadecimal
+- Dotted Decimal
+- Network Portion
+- Host Portion
+- Subnet Mask
+- CIDR
+- Public IP Address
+- Private IP Address
+- RFC 1918
+- APIPA
+- Loopback
+- Limited Broadcast
+- Classful Addressing
+- Subnetting
+- Subnet
+- Network Address
+- Broadcast Address
+- Valid Host Range
+- Prefix Length
+- Host Bits
+- Block Size
+- Magic Number
+- Interesting Octet
+- VLSM
+- Overlapping Subnets
+- Usable Hosts
+- Point-to-Point Link
+- Hextet
+- Interface ID
+- Global Unicast Address
+- Link-Local Address
+- Multicast Address
+- Anycast Address
+- Unspecified Address
+- SLAAC
+- DHCPv6
+- Stateful DHCPv6
+- Stateless DHCPv6
+- Neighbor Discovery
+- Router Advertisement
+- Router Solicitation
+- Neighbor Solicitation
+- Neighbor Advertisement
+- Duplicate Address Detection
+- VLAN
+- Segmentation
+- Access VLAN
+- VLAN ID
+- VLAN Name
+- Default VLAN
+- Voice VLAN
+- Native VLAN
+- Guest VLAN
+- Management VLAN
+- VLAN-to-Subnet Mapping
+- Flat Network
+- Parking VLAN
+- VLAN Configuration
+- 802.1Q
+- VLAN Tag
+- Allowed VLAN List
+- DTP
+- Dynamic Auto
+- Dynamic Desirable
+- Native VLAN Mismatch
+- Tagged Frame
+- Untagged Frame
+- STP
+- Layer 2 Loop
+- Broadcast Storm
+- BPDU
+- Bridge ID
+- Bridge Priority
+- Root Bridge
+- Root Port
+- Designated Port
+- Alternate Port
+- Blocking State
+- Forwarding State
+- Topology Change
+- PortFast
+- BPDU Guard
+- MAC Flapping
+- RSTP
+- PVST+
+- Rapid PVST+
+- Inter-VLAN Routing
+- Router-on-a-Stick
+- Subinterface
+- SVI
+- Layer 3 Switch
+- Connected Route
+- Gateway VLAN
+- Policy Control
+- Routing
+- Routing Table
+- Route
+- Next Hop
+- Outgoing Interface
+- Local Route
+- Static Route
+- Default Route
+- Gateway of Last Resort
+- Longest-Prefix Match
+- Administrative Distance
+- Metric
+- Floating Static Route
+- Return Path
+- Dynamic Routing
+- Routing Protocol
+- Convergence
+- RIP
+- OSPF
+- BGP
+- IGP
+- EGP
+- Autonomous System
+- Peering
+- IXP
+- NAT
+- PAT
+- NAT Overload
+- Static NAT
+- Dynamic NAT
+- Inside Local
+- Inside Global
+- Outside Local
+- Outside Global
+- DHCP
+- DNS
+- DORA
+- Scope
+- Reservation
+- Lease
+- Exclusion
+- DHCP Relay
+- IP Helper
+- Resolver
+- Authoritative DNS
+- Recursive DNS
+- Forward Lookup Zone
+- Reverse Lookup Zone
+- A Record
+- AAAA Record
+- CNAME Record
+- MX Record
+- TXT Record
+- NS Record
+- PTR Record
+- TTL
+- APIPA
+- WLAN
+- RF
+- Frequency
+- Channel
+- Channel Width
+- Signal Strength
+- Noise
+- SNR
+- Interference
+- Attenuation
+- SSID
+- BSSID
+- AP
+- WLC
+- Autonomous AP
+- Lightweight AP
+- Roaming
+- Site Survey
+- Co-Channel Interference
+- Adjacent-Channel Interference
+- Guest Network
+- Captive Portal
+- Client Isolation
+- Band Steering
+- Network Security
+- Asset
+- Threat
+- Vulnerability
+- Exploit
+- Risk
+- Control
+- CIA Triad
+- Confidentiality
+- Integrity
+- Availability
+- Defense-in-Depth
+- Least Privilege
+- Zero Trust
+- WPA2
+- WPA3
+- SAE
+- PMF
+- 802.1X
+- Supplicant
+- Authenticator
+- RADIUS
+- EAP
+- Evil Twin
+- Rogue AP
+- DoS
+- DDoS
+- MITM
+- Spoofing
+- Social Engineering
+- Phishing
+- Malware
+- Ransomware
+- Trojan
+- Worm
+- Virus
+- Spyware
+- Rootkit
+- Botnet
+- IOC
+- Incident Response
+
+## Continuity Notes For Future Lessons
+
+- All 25 curriculum lessons are complete. Lesson 25 integrates the textbook through diagnosis, documentation, monitoring, controlled change, handover, portfolio evidence, and career planning. Future work should focus on whole-course editorial consistency, cross-reference review, print formatting, lab-answer separation, instructor resources, or assessment development rather than adding unplanned curriculum topics.
+- Avoid re-explaining all network types in detail unless used as revision or comparison.
+- Maintain the term "end device" alongside "host" because both appear in CCNA and Network+ contexts.
+- When discussing VLANs later, reference that each VLAN is a separate broadcast domain and that switches forward broadcasts only within the relevant VLAN.
+- When discussing routing later, avoid full routing table depth until Lesson 17, but reference that routers forward packets using destination IP addresses and routing tables.
