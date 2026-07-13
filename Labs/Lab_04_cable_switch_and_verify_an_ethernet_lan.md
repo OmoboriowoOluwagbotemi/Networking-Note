@@ -116,6 +116,45 @@ The switch ports connected to PCs should show connected or up. After traffic is 
 
 If a MAC address does not appear, generate traffic from that PC. Switches learn source MAC addresses from frames entering a port; they do not learn all addresses just because cables are connected.
 
+
+## Copy-Friendly Command Blocks
+
+### SW-ACCESS-1 CLI
+
+```text
+enable
+```
+
+```text
+show interfaces status
+```
+
+```text
+show ip interface brief
+```
+
+```text
+show mac address-table
+```
+
+```text
+show mac address-table dynamic
+```
+
+### PC1 Command Prompt
+
+```text
+ping 192.168.20.12
+```
+
+```text
+ping 192.168.20.13
+```
+
+```text
+ping 192.168.20.14
+```
+
 ## Student Deliverable
 
 Submit the topology, switch port status output, dynamic MAC address table, and a short explanation of how the switch learned the MAC addresses.
