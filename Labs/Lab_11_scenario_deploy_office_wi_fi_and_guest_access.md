@@ -1,8 +1,6 @@
 # FEMTECT NETWORKING PRACTICAL HANDS-ON LAB 11
 
-This lab is part of the 15-lab practical companion to the 25-lesson FEMTECT Professional Networking Course.
-
-## Lab Title: SCENARIO - DEPLOY OFFICE WI-FI AND GUEST ACCESS
+## Lab Title: Scenario - Deploy Office Wi-Fi and Guest Access
 
 ## Aligned Lessons
 
@@ -12,49 +10,111 @@ This lab aligns with Lesson 20, Wireless Fundamentals and Deployment.
 
 Cisco Packet Tracer.
 
-## Lab Goal
-
-Students will deploy wireless clients using SSIDs, security settings, IP addressing, and guest network separation.
-
 ## Important Why
 
-This lab matters because wireless is now an access-layer network, not a convenience feature. Students must understand SSIDs, security, client addressing, guest separation, and basic wireless validation.
+This lab is important because wireless networks are still part of the access layer. Wireless clients need SSIDs, security settings, IP addressing, and separation between staff and guest users. A guest device should not automatically have the same access as an employee device.
 
 ## Important How
 
-Students finish this lab by configuring staff and guest SSIDs, applying WPA2 security, connecting wireless clients, validating IP settings, and testing allowed connectivity.
+Students will create a Packet Tracer wireless topology using two wireless routers or access devices to represent staff and guest wireless networks. This is Packet Tracer-safe because some Packet Tracer wireless devices support only limited SSID behavior.
 
-## Scenario
+## Packet Tracer Accuracy Note
 
-FEMTECT wants one staff wireless network and one guest wireless network. Staff users should reach internal resources. Guest users should only receive internet-style access in the simulation.
+Real enterprise networks often use lightweight APs and WLAN controllers with multiple SSIDs mapped to VLANs. Packet Tracer support depends on the device model. This lab uses two wireless routers/APs as a beginner-friendly simulation of separate staff and guest WLANs.
 
 ## Wireless Plan
 
-| SSID | Purpose | Security | Subnet |
-|---|---|---|---|
-| FEMTECT-STAFF | Employee Wi-Fi | WPA2-PSK | 192.168.60.0/24 |
-| FEMTECT-GUEST | Visitor Wi-Fi | WPA2-PSK | 192.168.70.0/24 |
+| Network | SSID | Subnet | Gateway | Security |
+|---|---|---|---|---|
+| Staff Wi-Fi | FEMTECT-STAFF | 192.168.60.0/24 | 192.168.60.1 | WPA2-PSK |
+| Guest Wi-Fi | FEMTECT-GUEST | 192.168.70.0/24 | 192.168.70.1 | WPA2-PSK |
 
-## Step-by-Step Tasks
+## Detailed Step-by-Step Procedure
 
-1. Place a wireless router or access point in Packet Tracer.
-2. Place two laptops or wireless PCs.
-3. Configure the first SSID as `FEMTECT-STAFF`.
-4. Set WPA2 security and choose a strong lab password.
-5. Configure staff addressing using DHCP or static IP addressing.
-6. Connect one wireless client to `FEMTECT-STAFF`.
-7. Confirm it receives an IP address in `192.168.60.0/24`.
-8. Configure a second SSID or second wireless device for `FEMTECT-GUEST`.
-9. Set WPA2 security with a different password.
-10. Connect the second wireless client to `FEMTECT-GUEST`.
-11. Confirm it receives an IP address in `192.168.70.0/24`.
-12. Test ping between wireless clients.
-13. Test ping from staff client to a server.
-14. Record the difference between staff and guest access.
+### Part A: Add Devices
+
+1. Open Cisco Packet Tracer.
+2. Add two wireless routers or two wireless access-capable devices.
+3. Rename them `WR-STAFF` and `WR-GUEST`.
+4. Add two laptops.
+5. Rename them `LAPTOP-STAFF` and `LAPTOP-GUEST`.
+6. If the laptop does not have a wireless adapter, click the laptop, go to Physical, power it off, remove the Ethernet module if required, insert a wireless module, then power it on.
+
+### Part B: Configure Staff Wireless Router
+
+1. Click WR-STAFF.
+2. Open the GUI or Config tab depending on the Packet Tracer device.
+3. Set the LAN IP address to `192.168.60.1`.
+4. Set subnet mask to `255.255.255.0`.
+5. Enable DHCP if available.
+6. Set DHCP start address to `192.168.60.100`.
+7. Set maximum users to a small number such as `50`.
+8. Set SSID to `FEMTECT-STAFF`.
+9. Set wireless security to WPA2 Personal if available.
+10. Set passphrase to `StaffLab123`.
+11. Save settings.
+
+### Part C: Configure Guest Wireless Router
+
+1. Click WR-GUEST.
+2. Open the GUI or Config tab.
+3. Set the LAN IP address to `192.168.70.1`.
+4. Set subnet mask to `255.255.255.0`.
+5. Enable DHCP if available.
+6. Set DHCP start address to `192.168.70.100`.
+7. Set SSID to `FEMTECT-GUEST`.
+8. Set wireless security to WPA2 Personal if available.
+9. Set passphrase to `GuestLab123`.
+10. Save settings.
+
+### Part D: Connect Staff Laptop
+
+1. Click LAPTOP-STAFF.
+2. Click Desktop.
+3. Click PC Wireless.
+4. Click Connect.
+5. Select SSID `FEMTECT-STAFF`.
+6. Click Connect.
+7. Enter passphrase `StaffLab123`.
+8. Wait for connection.
+9. Open IP Configuration.
+10. Choose DHCP.
+11. Confirm an address in `192.168.60.0/24` is received.
+12. Open Command Prompt.
+13. Type `ping 192.168.60.1` and press Enter.
+14. Confirm the staff gateway replies.
+
+### Part E: Connect Guest Laptop
+
+1. Click LAPTOP-GUEST.
+2. Click Desktop.
+3. Click PC Wireless.
+4. Select SSID `FEMTECT-GUEST`.
+5. Enter passphrase `GuestLab123`.
+6. Choose DHCP in IP Configuration.
+7. Confirm an address in `192.168.70.0/24` is received.
+8. Open Command Prompt.
+9. Type `ping 192.168.70.1` and press Enter.
+10. Confirm the guest gateway replies.
+
+### Part F: Compare Staff and Guest Networks
+
+1. From LAPTOP-STAFF, ping the guest laptop IP address.
+2. From LAPTOP-GUEST, ping the staff laptop IP address.
+3. If the two wireless routers are not connected to each other, the pings should fail.
+4. Explain that separation is expected in this beginner simulation.
+
+## Verification Table
+
+| Test | Correct Result |
+|---|---|
+| Staff laptop joins FEMTECT-STAFF | Connected |
+| Guest laptop joins FEMTECT-GUEST | Connected |
+| Staff receives 192.168.60.x | Correct |
+| Guest receives 192.168.70.x | Correct |
+| Staff pings 192.168.60.1 | Success |
+| Guest pings 192.168.70.1 | Success |
 
 ## Student Deliverable
 
-Submit SSID settings, wireless client IP settings, and a short note explaining why guest Wi-Fi should not share the same network as staff devices.
-
----
-
+Submit screenshots of SSID settings, laptop IP settings, and successful gateway pings.
