@@ -101,6 +101,37 @@ Use the Lab 1 topology with PC1, PC2, PC3, and SW1 in the same subnet.
 
 If ARP packets do not appear, PC1 may already know PC2's MAC address. Power cycle the PC or use a different destination PC. If ICMP fails, return to Lab 1 and verify IP addressing and cabling.
 
+
+## Copy-Friendly Command Blocks
+
+### PC1 Command Prompt
+
+```text
+ping 192.168.10.12
+```
+
+```text
+ping 192.168.10.13
+```
+
+```text
+arp -a
+```
+
+```text
+ping 192.168.10.12
+```
+
+### Packet Tracer Simulation Filters
+
+```text
+ARP
+```
+
+```text
+ICMP
+```
+
 ## Student Deliverable
 
 Submit a table with one ARP request and one ICMP echo request. Include source MAC, destination MAC, source IP, destination IP, and protocol name.
