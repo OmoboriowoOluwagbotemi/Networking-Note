@@ -136,6 +136,71 @@ traceroute
 
 If the routers can ping each other but PCs cannot communicate, check PC default gateways and return routes. Routing must work in both directions.
 
+
+## Copy-Friendly Command Blocks
+
+### R-LAGOS Configuration
+
+```text
+enable
+configure terminal
+hostname R-LAGOS
+interface gigabitEthernet0/0
+ description LAGOS_LAN
+ ip address 192.168.100.1 255.255.255.0
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description WAN_TO_ABUJA
+ ip address 10.10.10.1 255.255.255.252
+ no shutdown
+exit
+ip route 192.168.200.0 255.255.255.0 10.10.10.2
+end
+show ip interface brief
+show ip route
+```
+
+### R-ABUJA Configuration
+
+```text
+enable
+configure terminal
+hostname R-ABUJA
+interface gigabitEthernet0/0
+ description ABUJA_LAN
+ ip address 192.168.200.1 255.255.255.0
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description WAN_TO_LAGOS
+ ip address 10.10.10.2 255.255.255.252
+ no shutdown
+exit
+ip route 192.168.100.0 255.255.255.0 10.10.10.1
+end
+show ip interface brief
+show ip route
+```
+
+### PC-LAGOS Tests
+
+```text
+ping 192.168.100.1
+```
+
+```text
+ping 10.10.10.2
+```
+
+```text
+ping 192.168.200.10
+```
+
+```text
+tracert 192.168.200.10
+```
+
 ## Student Deliverable
 
 Submit both routing tables and successful PC-to-PC ping output.
