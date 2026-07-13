@@ -105,6 +105,43 @@ Students will divide `192.168.30.0/24` into `/26` subnets, assign host addresses
 
 If same-subnet pings fail, check the subnet mask carefully. A common mistake is using `255.255.255.0` instead of `255.255.255.192`, which changes the subnet boundary.
 
+
+## Copy-Friendly Command Blocks
+
+### Same-Subnet Tests
+
+```text
+ping 192.168.30.12
+```
+
+```text
+ping 192.168.30.72
+```
+
+```text
+ping 192.168.30.132
+```
+
+### Different-Subnet Tests
+
+```text
+ping 192.168.30.71
+```
+
+```text
+ping 192.168.30.131
+```
+
+### SW1 CLI Verification
+
+```text
+enable
+```
+
+```text
+show mac address-table dynamic
+```
+
 ## Student Deliverable
 
 Submit the subnet table, successful same-subnet ping results, failed different-subnet ping results, and one paragraph explaining why routing is required.
