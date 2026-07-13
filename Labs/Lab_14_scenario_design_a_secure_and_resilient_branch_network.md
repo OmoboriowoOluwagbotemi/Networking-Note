@@ -1,61 +1,179 @@
 # FEMTECT NETWORKING PRACTICAL HANDS-ON LAB 14
 
-This lab is part of the 15-lab practical companion to the 25-lesson FEMTECT Professional Networking Course.
-
-## Lab Title: SCENARIO - DESIGN A SECURE AND RESILIENT BRANCH NETWORK
+## Lab Title: Scenario - Design a Secure and Resilient Branch Network
 
 ## Aligned Lessons
 
 This lab aligns with Lesson 23, VPNs and Remote Access Security, and Lesson 24, Power and Resilience.
 
-## Main Tool
+## Main Tools
 
-Cisco Packet Tracer, with a written resilience worksheet.
-
-## Lab Goal
-
-Students will design a branch network with secure remote connectivity concepts, redundancy awareness, and power-resilience planning.
+Cisco Packet Tracer and a written resilience worksheet.
 
 ## Important Why
 
-This lab matters because real branches need both secure communication and operational resilience. A branch router, switch, AP, and WAN link are only useful if they remain secure and powered during business disruption.
+This lab is important because a branch network must be secure and available. Secure WAN design protects traffic between locations, while power resilience keeps the network alive during outages. A branch router, switch, access point, and modem are only useful if they remain powered and if the traffic path is protected.
 
 ## Important How
 
-Students finish this lab by building the HQ and branch topology, documenting VPN requirements, testing branch-to-HQ reachability, and completing a branch power-resilience worksheet.
+Students will build a headquarters-and-branch topology, configure normal routed reachability, label the WAN as untrusted, document VPN design parameters, and complete a power-resilience worksheet. This lab does not pretend that every Packet Tracer router image supports every production VPN feature.
 
-## Scenario
+## Packet Tracer Accuracy Note
 
-FEMTECT has a branch office that must connect securely to headquarters. The branch also experiences unstable power, so the network design must include backup power planning and business continuity thinking.
+Cisco Packet Tracer support for site-to-site VPN depends on device model, IOS image, and activity type. To keep this lab correct for all students, the required task is to build and verify the routed underlay and document the VPN overlay design. If the instructor provides a Packet Tracer file or router model that supports IPsec configuration, the instructor may add the VPN configuration as an extension.
 
-## Step-by-Step Packet Tracer Tasks
+## Addressing Plan
 
-1. Build a headquarters LAN with one router, one switch, one server, and one PC.
-2. Build a branch LAN with one router, one switch, and two PCs.
-3. Connect the HQ router and branch router through an ISP router or WAN cloud.
-4. Configure IP addressing on both LANs.
-5. Configure routing so HQ and branch can communicate.
-6. Label the WAN path as an untrusted network.
-7. Add notes in Packet Tracer showing that VPN encryption would protect branch-to-HQ traffic.
-8. If Packet Tracer VPN support is available in the selected devices, configure a basic site-to-site VPN.
-9. If VPN configuration is not available, document the VPN parameters that would be required: peer IP, interesting traffic, encryption, authentication, and tunnel endpoints.
-10. Test branch PC connectivity to the HQ server.
+| Area | Network | Gateway |
+|---|---|---|
+| HQ LAN | 10.10.10.0/24 | 10.10.10.1 |
+| Branch LAN | 10.20.20.0/24 | 10.20.20.1 |
+| HQ to ISP | 198.51.100.0/30 | HQ: 198.51.100.2, ISP: 198.51.100.1 |
+| Branch to ISP | 203.0.113.0/30 | Branch: 203.0.113.2, ISP: 203.0.113.1 |
+| ISP transit | Use ISP router routes | Not a user LAN |
 
-## Step-by-Step Resilience Worksheet
+## Detailed Step-by-Step Procedure
 
-1. List all network devices in the branch.
-2. Estimate the wattage for each device.
-3. Add the total wattage.
-4. Add 25 percent headroom.
-5. Decide which devices are critical during power failure.
-6. Choose a UPS runtime target, such as 30 minutes or 1 hour.
-7. Document what should stay on during outage: router, switch, AP, modem, and one admin workstation if needed.
-8. Write a startup and shutdown order.
-9. Write one business continuity risk and one mitigation.
+### Part A: Build the Topology
+
+1. Add three routers.
+2. Rename them `R-HQ`, `R-ISP`, and `R-BRANCH`.
+3. Add two switches.
+4. Rename them `SW-HQ` and `SW-BRANCH`.
+5. Add one server named `HQ-SERVER`.
+6. Add one PC named `HQ-PC`.
+7. Add two branch PCs named `BR-PC1` and `BR-PC2`.
+8. Connect HQ-PC and HQ-SERVER to SW-HQ.
+9. Connect SW-HQ to R-HQ G0/0.
+10. Connect BR-PC1 and BR-PC2 to SW-BRANCH.
+11. Connect SW-BRANCH to R-BRANCH G0/0.
+12. Connect R-HQ G0/1 to R-ISP G0/0.
+13. Connect R-BRANCH G0/1 to R-ISP G0/1.
+14. Add a Packet Tracer note near the ISP router that says `UNTRUSTED WAN / INTERNET SIMULATION`.
+
+### Part B: Configure R-HQ
+
+```text
+enable
+configure terminal
+hostname R-HQ
+interface gigabitEthernet0/0
+ description HQ_LAN
+ ip address 10.10.10.1 255.255.255.0
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description TO_ISP
+ ip address 198.51.100.2 255.255.255.252
+ no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 198.51.100.1
+end
+show ip interface brief
+show ip route
+```
+
+### Part C: Configure R-BRANCH
+
+```text
+enable
+configure terminal
+hostname R-BRANCH
+interface gigabitEthernet0/0
+ description BRANCH_LAN
+ ip address 10.20.20.1 255.255.255.0
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description TO_ISP
+ ip address 203.0.113.2 255.255.255.252
+ no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+end
+show ip interface brief
+show ip route
+```
+
+### Part D: Configure R-ISP
+
+```text
+enable
+configure terminal
+hostname R-ISP
+interface gigabitEthernet0/0
+ description TO_HQ
+ ip address 198.51.100.1 255.255.255.252
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description TO_BRANCH
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+exit
+ip route 10.10.10.0 255.255.255.0 198.51.100.2
+ip route 10.20.20.0 255.255.255.0 203.0.113.2
+end
+show ip route
+```
+
+### Part E: Configure End Devices
+
+1. Configure HQ-PC as `10.10.10.11/24`, gateway `10.10.10.1`.
+2. Configure HQ-SERVER as `10.10.10.100/24`, gateway `10.10.10.1`.
+3. Configure BR-PC1 as `10.20.20.11/24`, gateway `10.20.20.1`.
+4. Configure BR-PC2 as `10.20.20.12/24`, gateway `10.20.20.1`.
+
+### Part F: Verify Routed Underlay Connectivity
+
+1. From BR-PC1, ping `10.20.20.1`.
+2. Confirm the branch gateway responds.
+3. From BR-PC1, ping `203.0.113.1`.
+4. Confirm the ISP-side next hop responds.
+5. From BR-PC1, ping `10.10.10.100`.
+6. Confirm the HQ server responds.
+7. From BR-PC1, run `tracert 10.10.10.100`.
+8. Confirm the path crosses the branch router, ISP router, and HQ router.
+
+### Part G: Document VPN Overlay Requirements
+
+Create a table with these fields:
+
+| VPN Parameter | Value to Document |
+|---|---|
+| HQ peer public IP | 198.51.100.2 |
+| Branch peer public IP | 203.0.113.2 |
+| HQ protected network | 10.10.10.0/24 |
+| Branch protected network | 10.20.20.0/24 |
+| Encryption concept | IPsec ESP |
+| Authentication concept | Pre-shared key or certificates |
+| Interesting traffic | HQ LAN to Branch LAN |
+| NAT exemption needed? | Yes in many real NAT designs, not used in this simple underlay |
+
+### Part H: Complete Power-Resilience Worksheet
+
+1. List the branch router.
+2. List the branch switch.
+3. List the internet modem or ISP CPE.
+4. List the access point if branch Wi-Fi exists.
+5. Estimate wattage for each device.
+6. Add the total wattage.
+7. Add 25 percent headroom.
+8. Choose a target runtime, such as 30 minutes.
+9. Identify which devices must remain powered for remote access.
+10. Write a safe shutdown order.
+11. Write a startup order.
+12. Write one power failure risk and one mitigation.
+
+## Verification Commands
+
+```text
+show ip interface brief
+show ip route
+ping
+traceroute
+```
 
 ## Student Deliverable
 
-Submit the branch topology, VPN design notes, power worksheet, and one paragraph explaining why network security and power resilience must be planned together.
-
----
-
+Submit the topology, routing verification, VPN design table, and power-resilience worksheet.
