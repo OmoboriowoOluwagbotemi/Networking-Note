@@ -193,6 +193,83 @@ nslookup
 
 If clients do not receive DHCP addresses, check VLAN membership, trunking, router subinterfaces, `ip helper-address`, server gateway, and DHCP pool configuration.
 
+
+## Copy-Friendly Command Blocks
+
+### SW1 VLAN and Trunk Configuration
+
+```text
+enable
+configure terminal
+vlan 10
+ name ADMIN
+exit
+vlan 20
+ name SALES
+exit
+vlan 99
+ name SERVER
+exit
+interface fa0/1
+ switchport mode access
+ switchport access vlan 10
+exit
+interface fa0/2
+ switchport mode access
+ switchport access vlan 20
+exit
+interface fa0/3
+ switchport mode access
+ switchport access vlan 99
+exit
+interface fa0/24
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,99
+end
+show vlan brief
+show interfaces trunk
+```
+
+### R1 DHCP Relay Configuration
+
+```text
+enable
+configure terminal
+interface gigabitEthernet0/0
+ no shutdown
+exit
+interface gigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+ ip helper-address 192.168.99.10
+exit
+interface gigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+ ip helper-address 192.168.99.10
+exit
+interface gigabitEthernet0/0.99
+ encapsulation dot1Q 99
+ ip address 192.168.99.1 255.255.255.0
+exit
+end
+show ip interface brief
+```
+
+### PC Verification
+
+```text
+ipconfig /all
+```
+
+```text
+ping 192.168.99.10
+```
+
+```text
+nslookup intranet.femtect.local
+```
+
 ## Student Deliverable
 
 Submit DHCP pool screenshots, client `ipconfig /all`, router subinterface configuration, and DNS test result.
