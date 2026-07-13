@@ -145,6 +145,72 @@ ping
 
 If same-VLAN pings work but different-VLAN pings fail, check PC default gateways, router subinterface IP addresses, trunk allowed VLANs, and whether `no shutdown` was configured on the physical router interface.
 
+
+## Copy-Friendly Command Blocks
+
+### SW1 STP Root Configuration
+
+```text
+enable
+configure terminal
+spanning-tree vlan 10,20,30 priority 4096
+end
+show spanning-tree vlan 10
+show spanning-tree vlan 20
+show spanning-tree vlan 30
+```
+
+### SW1 Router Trunk Port
+
+```text
+enable
+configure terminal
+interface fa0/22
+ description TRUNK_TO_R1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30
+end
+show interfaces trunk
+```
+
+### R1 Router-on-a-Stick Configuration
+
+```text
+enable
+configure terminal
+interface gigabitEthernet0/0
+ no shutdown
+exit
+interface gigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+exit
+interface gigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+exit
+interface gigabitEthernet0/0.30
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+exit
+end
+show ip interface brief
+```
+
+### Inter-VLAN Ping Tests
+
+```text
+ping 192.168.20.11
+```
+
+```text
+ping 192.168.30.11
+```
+
+```text
+ping 192.168.10.11
+```
+
 ## Student Deliverable
 
 Submit STP output, router subinterface configuration, trunk verification, and successful inter-VLAN ping results.
