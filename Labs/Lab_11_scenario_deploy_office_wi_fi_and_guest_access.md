@@ -115,6 +115,43 @@ Real enterprise networks often use lightweight APs and WLAN controllers with mul
 | Staff pings 192.168.60.1 | Success |
 | Guest pings 192.168.70.1 | Success |
 
+
+## Copy-Friendly Command Blocks
+
+### Staff Wireless Values to Type
+
+```text
+SSID: FEMTECT-STAFF
+Security: WPA2 Personal
+Passphrase: StaffLab123
+LAN IP: 192.168.60.1
+Subnet Mask: 255.255.255.0
+DHCP Start IP: 192.168.60.100
+```
+
+### Guest Wireless Values to Type
+
+```text
+SSID: FEMTECT-GUEST
+Security: WPA2 Personal
+Passphrase: GuestLab123
+LAN IP: 192.168.70.1
+Subnet Mask: 255.255.255.0
+DHCP Start IP: 192.168.70.100
+```
+
+### Staff Laptop Test
+
+```text
+ping 192.168.60.1
+```
+
+### Guest Laptop Test
+
+```text
+ping 192.168.70.1
+```
+
 ## Student Deliverable
 
 Submit screenshots of SSID settings, laptop IP settings, and successful gateway pings.
