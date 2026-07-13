@@ -91,6 +91,49 @@ ip.addr == <your-ip-address>
 
 Some networks use encrypted DNS, local DNS proxies, firewall filtering, or ICMP blocking. If a packet type is not visible, students should document what they did see and explain possible reasons.
 
+
+## Copy-Friendly Command Blocks
+
+### Windows Command Prompt
+
+```text
+ipconfig
+```
+
+```text
+arp -d *
+```
+
+```text
+ping <default-gateway-ip>
+```
+
+```text
+nslookup example.com
+```
+
+### Wireshark Display Filters
+
+```text
+arp
+```
+
+```text
+icmp
+```
+
+```text
+dns
+```
+
+```text
+tcp.port == 443
+```
+
+```text
+ip.addr == <your-ip-address>
+```
+
 ## Student Deliverable
 
 Submit four screenshots with protocol filters and a short evidence explanation for each one.
