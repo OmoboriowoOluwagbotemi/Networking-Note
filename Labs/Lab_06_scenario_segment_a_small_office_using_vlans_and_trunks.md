@@ -200,6 +200,137 @@ show mac address-table dynamic
 
 Different VLANs should not communicate in this lab because no router or Layer 3 switch gateway has been configured. That failure is the correct result.
 
+
+## Copy-Friendly Command Blocks
+
+### SW1 VLAN Creation
+
+```text
+enable
+configure terminal
+vlan 10
+ name ADMIN
+exit
+vlan 20
+ name SALES
+exit
+vlan 30
+ name GUEST
+exit
+end
+show vlan brief
+```
+
+### SW2 VLAN Creation
+
+```text
+enable
+configure terminal
+vlan 10
+ name ADMIN
+exit
+vlan 20
+ name SALES
+exit
+vlan 30
+ name GUEST
+exit
+end
+show vlan brief
+```
+
+### SW1 Access Ports
+
+```text
+enable
+configure terminal
+interface fa0/1
+ switchport mode access
+ switchport access vlan 10
+ description PC-ADMIN-1
+exit
+interface fa0/2
+ switchport mode access
+ switchport access vlan 20
+ description PC-SALES-1
+exit
+interface fa0/3
+ switchport mode access
+ switchport access vlan 30
+ description PC-GUEST-1
+exit
+end
+show vlan brief
+```
+
+### SW2 Access Ports
+
+```text
+enable
+configure terminal
+interface fa0/1
+ switchport mode access
+ switchport access vlan 10
+ description PC-ADMIN-2
+exit
+interface fa0/2
+ switchport mode access
+ switchport access vlan 20
+ description PC-SALES-2
+exit
+interface fa0/3
+ switchport mode access
+ switchport access vlan 30
+ description PC-GUEST-2
+exit
+end
+show vlan brief
+```
+
+### SW1 Trunk Port
+
+```text
+enable
+configure terminal
+interface fa0/24
+ description TRUNK_TO_SW2
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30
+end
+show interfaces trunk
+```
+
+### SW2 Trunk Port
+
+```text
+enable
+configure terminal
+interface fa0/24
+ description TRUNK_TO_SW1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30
+end
+show interfaces trunk
+```
+
+### PC Ping Tests
+
+```text
+ping 192.168.10.12
+```
+
+```text
+ping 192.168.20.12
+```
+
+```text
+ping 192.168.30.12
+```
+
+```text
+ping 192.168.20.11
+```
+
 ## Student Deliverable
 
 Submit `show vlan brief`, `show interfaces trunk`, successful same-VLAN pings, and failed different-VLAN pings.
