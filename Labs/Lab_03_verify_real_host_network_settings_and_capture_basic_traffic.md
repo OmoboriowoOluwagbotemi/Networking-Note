@@ -123,6 +123,91 @@ Students will inspect host addressing, test the TCP/IP stack, test the default g
 
 Some networks block ping or traceroute. A blocked ICMP reply does not always mean the network is fully down. Use multiple tests before reaching a conclusion.
 
+
+## Copy-Friendly Command Blocks
+
+### Windows Command Prompt
+
+```text
+ipconfig /all
+```
+
+```text
+ping 127.0.0.1
+```
+
+```text
+ping <your-own-ip-address>
+```
+
+```text
+ping <default-gateway-ip>
+```
+
+```text
+ping 8.8.8.8
+```
+
+```text
+nslookup example.com
+```
+
+```text
+tracert 8.8.8.8
+```
+
+### Linux Terminal
+
+```text
+ip addr
+```
+
+```text
+ip route
+```
+
+```text
+ping -c 4 127.0.0.1
+```
+
+```text
+ping -c 4 <default-gateway-ip>
+```
+
+```text
+ping -c 4 8.8.8.8
+```
+
+```text
+dig example.com
+```
+
+```text
+nslookup example.com
+```
+
+```text
+traceroute 8.8.8.8
+```
+
+### Wireshark Display Filters
+
+```text
+arp
+```
+
+```text
+icmp
+```
+
+```text
+dns
+```
+
+```text
+tcp.port == 443
+```
+
 ## Student Deliverable
 
 Submit host IP settings, command results, and screenshots showing at least two Wireshark filters.
