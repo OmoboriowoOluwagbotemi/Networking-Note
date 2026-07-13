@@ -124,6 +124,79 @@ ping
 
 The documentation addresses `203.0.113.0/24` and `198.51.100.0/24` are reserved for examples. They are safe to use in labs and should not be used as real public assignments in production.
 
+
+## Copy-Friendly Command Blocks
+
+### R-OFFICE NAT/PAT Configuration
+
+```text
+enable
+configure terminal
+hostname R-OFFICE
+interface gigabitEthernet0/0
+ description INSIDE_LAN
+ ip address 192.168.50.1 255.255.255.0
+ ip nat inside
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description OUTSIDE_TO_ISP
+ ip address 203.0.113.2 255.255.255.252
+ ip nat outside
+ no shutdown
+exit
+access-list 1 permit 192.168.50.0 0.0.0.255
+ip nat inside source list 1 interface gigabitEthernet0/1 overload
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+end
+show ip interface brief
+show running-config | include nat
+```
+
+### R-ISP Configuration
+
+```text
+enable
+configure terminal
+hostname R-ISP
+interface gigabitEthernet0/0
+ description TO_OFFICE
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description SERVER_LAN
+ ip address 198.51.100.1 255.255.255.0
+ no shutdown
+exit
+end
+show ip interface brief
+```
+
+### PC Tests
+
+```text
+ping 192.168.50.1
+```
+
+```text
+ping 203.0.113.1
+```
+
+```text
+ping 198.51.100.10
+```
+
+### R-OFFICE NAT Verification
+
+```text
+show ip nat translations
+```
+
+```text
+show ip nat statistics
+```
+
 ## Student Deliverable
 
 Submit NAT configuration, NAT translation output, and successful pings from both PCs to the server.
