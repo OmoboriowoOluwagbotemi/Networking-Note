@@ -1,8 +1,6 @@
 # FEMTECT NETWORKING PRACTICAL HANDS-ON LAB 3
 
-This lab is part of the 15-lab practical companion to the 25-lesson FEMTECT Professional Networking Course.
-
-## Lab Title: VERIFY REAL HOST NETWORK SETTINGS AND CAPTURE BASIC TRAFFIC
+## Lab Title: Verify Real Host Network Settings and Capture Basic Traffic
 
 ## Aligned Lessons
 
@@ -12,71 +10,119 @@ This lab aligns with Lesson 4, OSI Model Deep Dive, Lesson 5, TCP/IP Protocol Su
 
 Windows Command Prompt or PowerShell, Linux terminal, and Wireshark.
 
-## Lab Goal
-
-Students will inspect real network configuration on a computer and use Wireshark to observe ARP, ICMP, DNS, and TCP/HTTPS traffic.
-
 ## Important Why
 
-This lab matters because real IT Support work starts on the user device. A technician who can read host IP settings, test the gateway, test DNS, and capture packets can separate user-device problems from network problems.
+This lab is important because real troubleshooting often begins on the user's computer, not on a router or switch. If a host has the wrong IP address, missing gateway, wrong DNS server, or failed local adapter, the wider network may be healthy but the user will still report that the network is down.
+
+Wireshark is included because packet evidence helps students avoid guessing. Seeing ARP, ICMP, DNS, TCP, and HTTPS traffic helps students connect command-line tests to actual packets.
 
 ## Important How
 
-Students finish this lab by collecting host configuration, testing loopback, gateway, internet IP, and DNS, then using Wireshark filters to connect command output with packet evidence.
+Students will inspect host addressing, test the TCP/IP stack, test the default gateway, test internet reachability by IP, test DNS by name, trace the path, and capture packet evidence in Wireshark. If internet access is unavailable in the classroom, students should still complete the loopback and gateway tests.
 
-## Scenario
+## Detailed Step-by-Step Procedure on Windows
 
-An IT Support technician must verify whether a user computer has valid network settings and whether traffic is leaving the computer correctly.
+### Part A: Identify Host Settings
 
-## Step-by-Step Tasks on Windows
+1. Click Start.
+2. Type `cmd`.
+3. Open Command Prompt.
+4. Type `ipconfig /all` and press Enter.
+5. Find the active adapter. It is usually named Wi-Fi or Ethernet.
+6. Record the IPv4 Address.
+7. Record the Subnet Mask.
+8. Record the Default Gateway.
+9. Record the DNS Servers.
+10. Record the Physical Address. This is the MAC address.
 
-1. Open Command Prompt.
-2. Run `ipconfig /all`.
-3. Identify the IPv4 address, subnet mask, default gateway, DNS server, and MAC address.
-4. Run `ping 127.0.0.1`.
-5. Run `ping <your-default-gateway>`.
-6. Run `ping 8.8.8.8`.
-7. Run `nslookup google.com`.
-8. Run `tracert 8.8.8.8`.
-9. Record each result.
+### Part B: Test the Local TCP/IP Stack
 
-## Step-by-Step Tasks on Linux
+1. In Command Prompt, type `ping 127.0.0.1` and press Enter.
+2. Confirm replies are received.
+3. If this fails, the local TCP/IP stack or firewall/security software may be involved.
 
-1. Open the terminal.
-2. Run `ip addr`.
-3. Run `ip route`.
-4. Run `ping -c 4 127.0.0.1`.
-5. Run `ping -c 4 <your-default-gateway>`.
-6. Run `ping -c 4 8.8.8.8`.
-7. Run `dig google.com`.
-8. Run `traceroute 8.8.8.8` if traceroute is installed.
+### Part C: Test the Local Adapter IP
 
-## Step-by-Step Tasks in Wireshark
+1. Type `ping <your-own-ip-address>` and press Enter.
+2. Replace `<your-own-ip-address>` with the IPv4 address found in `ipconfig /all`.
+3. Confirm replies are received.
+4. If this fails, check the adapter configuration.
+
+### Part D: Test the Default Gateway
+
+1. Type `ping <default-gateway-ip>` and press Enter.
+2. Replace `<default-gateway-ip>` with the gateway shown in `ipconfig /all`.
+3. Confirm replies are received.
+4. If this fails, the issue may be local Wi-Fi, Ethernet cabling, VLAN assignment, or gateway reachability.
+
+### Part E: Test Internet Reachability by IP
+
+1. Type `ping 8.8.8.8` and press Enter.
+2. If replies are received, Layer 3 internet reachability is working.
+3. If the ping fails, do not conclude DNS is broken yet because this test does not use DNS.
+
+### Part F: Test DNS
+
+1. Type `nslookup example.com` and press Enter.
+2. Confirm a DNS server replies.
+3. Confirm at least one IP address is returned.
+4. If `ping 8.8.8.8` works but `nslookup example.com` fails, suspect DNS.
+
+### Part G: Trace the Path
+
+1. Type `tracert 8.8.8.8` and press Enter.
+2. Record the first hop.
+3. The first hop should normally be the default gateway or upstream router.
+4. Some hops may show asterisks because routers may block ICMP time-exceeded responses. That does not always mean the network is down.
+
+## Detailed Step-by-Step Procedure on Linux
+
+1. Open Terminal.
+2. Type `ip addr` and press Enter.
+3. Record the active interface IP address.
+4. Type `ip route` and press Enter.
+5. Record the default route.
+6. Type `ping -c 4 127.0.0.1` and press Enter.
+7. Type `ping -c 4 <default-gateway-ip>` and press Enter.
+8. Type `ping -c 4 8.8.8.8` and press Enter.
+9. Type `dig example.com` and press Enter. If `dig` is not installed, use `nslookup example.com`.
+10. Type `traceroute 8.8.8.8` if traceroute is installed.
+
+## Detailed Step-by-Step Procedure in Wireshark
 
 1. Open Wireshark.
-2. Select the active network adapter.
-3. Start a capture.
-4. In Command Prompt or terminal, ping the default gateway.
-5. Stop the capture after the ping completes.
-6. Use the filter `arp`.
-7. Use the filter `icmp`.
-8. Use the filter `dns`.
-9. Use the filter `tcp.port == 443`.
-10. Visit a secure website in a browser and observe TCP/HTTPS-related packets.
+2. Select the active Ethernet or Wi-Fi adapter.
+3. Click the blue shark-fin icon to start capturing.
+4. Open Command Prompt or Terminal.
+5. Ping the default gateway.
+6. Run `nslookup example.com`.
+7. Open a browser and visit `https://example.com`.
+8. Return to Wireshark.
+9. Click the red square to stop capturing.
+10. In the display filter bar, type `arp` and press Enter.
+11. Identify ARP request and reply packets if present.
+12. Change the filter to `icmp` and press Enter.
+13. Identify echo request and echo reply packets.
+14. Change the filter to `dns` and press Enter.
+15. Identify the DNS query and response.
+16. Change the filter to `tcp.port == 443` and press Enter.
+17. Identify TCP traffic related to HTTPS.
+18. Save the capture if the instructor requires it.
 
-## Verification
+## Verification Table
 
-| Test | Meaning |
+| Test | Correct Meaning |
 |---|---|
-| Loopback ping works | Local TCP/IP stack is working |
-| Gateway ping works | Local LAN path is working |
-| 8.8.8.8 ping works | Internet Layer 3 connectivity is working |
-| DNS lookup works | Name resolution is working |
-| Wireshark shows ARP/ICMP/DNS | Traffic is visible and interpretable |
+| `ping 127.0.0.1` works | Local TCP/IP stack responds |
+| Gateway ping works | Local network path is reachable |
+| `ping 8.8.8.8` works | Remote IP reachability exists |
+| `nslookup example.com` works | DNS resolution works |
+| Wireshark shows traffic | Packet evidence supports the tests |
+
+## Accuracy Note
+
+Some networks block ping or traceroute. A blocked ICMP reply does not always mean the network is fully down. Use multiple tests before reaching a conclusion.
 
 ## Student Deliverable
 
-Submit a short host network report showing IP settings, gateway test, DNS test, and one Wireshark screenshot.
-
----
-
+Submit host IP settings, command results, and screenshots showing at least two Wireshark filters.
