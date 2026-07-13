@@ -174,6 +174,93 @@ ping
 traceroute
 ```
 
+
+## Copy-Friendly Command Blocks
+
+### R-HQ Configuration
+
+```text
+enable
+configure terminal
+hostname R-HQ
+interface gigabitEthernet0/0
+ description HQ_LAN
+ ip address 10.10.10.1 255.255.255.0
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description TO_ISP
+ ip address 198.51.100.2 255.255.255.252
+ no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 198.51.100.1
+end
+show ip interface brief
+show ip route
+```
+
+### R-BRANCH Configuration
+
+```text
+enable
+configure terminal
+hostname R-BRANCH
+interface gigabitEthernet0/0
+ description BRANCH_LAN
+ ip address 10.20.20.1 255.255.255.0
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description TO_ISP
+ ip address 203.0.113.2 255.255.255.252
+ no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+end
+show ip interface brief
+show ip route
+```
+
+### R-ISP Configuration
+
+```text
+enable
+configure terminal
+hostname R-ISP
+interface gigabitEthernet0/0
+ description TO_HQ
+ ip address 198.51.100.1 255.255.255.252
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description TO_BRANCH
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+exit
+ip route 10.10.10.0 255.255.255.0 198.51.100.2
+ip route 10.20.20.0 255.255.255.0 203.0.113.2
+end
+show ip route
+```
+
+### Branch Tests
+
+```text
+ping 10.20.20.1
+```
+
+```text
+ping 203.0.113.1
+```
+
+```text
+ping 10.10.10.100
+```
+
+```text
+tracert 10.10.10.100
+```
+
 ## Student Deliverable
 
 Submit the topology, routing verification, VPN design table, and power-resilience worksheet.
