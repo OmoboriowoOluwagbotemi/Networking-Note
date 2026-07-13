@@ -124,6 +124,43 @@ A small training room has three computers. The computers must communicate with o
 
 If ping fails, check the cable type, switch link lights, PC IP addresses, subnet masks, and whether the PC is connected to the expected switch port. A default gateway is not needed in this lab because all hosts are in the same subnet.
 
+
+## Copy-Friendly Command Blocks
+
+### PC1 Command Prompt
+
+```text
+ipconfig
+```
+
+```text
+ping 192.168.10.12
+```
+
+```text
+ping 192.168.10.13
+```
+
+### PC2 Command Prompt
+
+```text
+ping 192.168.10.13
+```
+
+### SW1 CLI Verification
+
+```text
+enable
+```
+
+```text
+show interfaces status
+```
+
+```text
+show mac address-table
+```
+
 ## Student Deliverable
 
 Submit a screenshot of the completed topology, PC1 ping results, and SW1 MAC address table. Add two sentences explaining why a router is not required for same-subnet communication.
