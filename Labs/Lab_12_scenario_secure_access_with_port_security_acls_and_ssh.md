@@ -195,6 +195,104 @@ show access-lists
 show running-config interface gigabitEthernet0/1
 ```
 
+
+## Copy-Friendly Command Blocks
+
+### R1 Interface Configuration
+
+```text
+enable
+configure terminal
+hostname R1
+interface gigabitEthernet0/0
+ description STAFF_LAN
+ ip address 192.168.80.1 255.255.255.0
+ no shutdown
+exit
+interface gigabitEthernet0/1
+ description GUEST_LAN
+ ip address 192.168.90.1 255.255.255.0
+ no shutdown
+exit
+interface gigabitEthernet0/2
+ description SERVER_LAN
+ ip address 192.168.100.1 255.255.255.0
+ no shutdown
+exit
+end
+show ip interface brief
+```
+
+### SW1 SSH Management Configuration
+
+```text
+enable
+configure terminal
+hostname SW1
+interface vlan 1
+ ip address 192.168.80.2 255.255.255.0
+ no shutdown
+exit
+ip default-gateway 192.168.80.1
+ip domain-name femtect.local
+username admin secret StrongLabPass123
+crypto key generate rsa
+1024
+ip ssh version 2
+line vty 0 15
+ login local
+ transport input ssh
+exit
+end
+show ip ssh
+```
+
+### SW1 Port Security Configuration
+
+```text
+enable
+configure terminal
+interface fa0/1
+ description PC-STAFF1_SECURE_PORT
+ switchport mode access
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security mac-address sticky
+ switchport port-security violation restrict
+end
+show port-security interface fa0/1
+```
+
+### R1 ACL Configuration
+
+```text
+enable
+configure terminal
+ip access-list extended BLOCK_GUEST_TO_SERVER
+ deny ip 192.168.90.0 0.0.0.255 host 192.168.100.10
+ permit ip any any
+exit
+interface gigabitEthernet0/1
+ ip access-group BLOCK_GUEST_TO_SERVER in
+end
+show access-lists
+show running-config interface gigabitEthernet0/1
+```
+
+### Security Tests
+
+```text
+ping 192.168.100.10
+```
+
+```text
+show access-lists
+```
+
+```text
+ssh -l admin 192.168.80.2
+```
+
 ## Student Deliverable
 
 Submit SSH verification, port security output, ACL configuration, and screenshots proving guest-to-server traffic is denied while staff-to-server traffic works.
