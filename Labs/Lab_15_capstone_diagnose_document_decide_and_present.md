@@ -242,6 +242,98 @@ nslookup
 | What fixed it? |  |
 | How can it be prevented? |  |
 
+
+## Copy-Friendly Command Blocks
+
+### Layer 1 Switch Checks
+
+```text
+enable
+show interfaces status
+```
+
+### Layer 2 Switch Checks
+
+```text
+show vlan brief
+```
+
+```text
+show interfaces trunk
+```
+
+```text
+show mac address-table dynamic
+```
+
+### Fix Wrong Access VLAN
+
+```text
+configure terminal
+interface fa0/x
+ switchport mode access
+ switchport access vlan <correct-vlan-id>
+end
+show vlan brief
+```
+
+### Layer 3 Router Checks
+
+```text
+enable
+show ip interface brief
+```
+
+```text
+show running-config
+```
+
+```text
+show ip route
+```
+
+### DHCP and DNS Client Checks
+
+```text
+ipconfig /all
+```
+
+```text
+ping <default-gateway-ip>
+```
+
+```text
+ping <dns-server-ip>
+```
+
+```text
+nslookup intranet.femtect.local
+```
+
+### ACL Checks
+
+```text
+show access-lists
+```
+
+```text
+show running-config | include access-group
+```
+
+```text
+show running-config
+```
+
+### End-to-End Tests
+
+```text
+ping <server-ip-address>
+```
+
+```text
+tracert <server-ip-address>
+```
+
 ## Student Deliverable
 
 Submit the final working Packet Tracer file, logical diagram, IP addressing table, troubleshooting log, change record, root cause analysis, and a one-page portfolio case study explaining the incident.
