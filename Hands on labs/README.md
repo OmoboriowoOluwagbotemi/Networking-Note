@@ -30,11 +30,3 @@ The theory lessons remain in `Network_Engineering_Foundation_20_Lessons/`. These
 | FEMTECT Final Network Operations Case | [FEMTECT_Final_Network_Operations_Case/Topology.md](FEMTECT_Final_Network_Operations_Case/Topology.md) | [FEMTECT_Final_Network_Operations_Case/Problem.md](FEMTECT_Final_Network_Operations_Case/Problem.md) | [FEMTECT_Final_Network_Operations_Case/Solution.md](FEMTECT_Final_Network_Operations_Case/Solution.md) |
 | Nova Network | [Nova_Network/README.md](Nova_Network/README.md) | [Nova_Network_Problem.md](Nova_Network/Nova_Network_Problem.md) | [Nova_Network_Solution.md](Nova_Network/Nova_Network_Solution.md) |
 | Villa University | [Villa_University_Physical_Topology.md](Villa_University/Villa_University_Physical_Topology.md) | [Villa_University_Problem.md](Villa_University/Villa_University_Problem.md) | [Villa_University_Solution.md](Villa_University/Villa_University_Solution.md) |
-
-## Reference Files
-
-- [VLAN screenshot example](Reference_Files/VLANS.png)
-- [Single LAN topology example](Reference_Files/single_lan_topology.png)
-- [Pacesetters VLAN topology example](Reference_Files/pacesetters_vlan_topology.png)
-- [Unilorin VLAN topology example](Reference_Files/unilorin_vlan_topology.png)
-- [Uploaded Packet Tracer starter file](Reference_Files/exam_4_vlan_practice.pkt)
