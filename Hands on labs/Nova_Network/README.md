@@ -1,4 +1,4 @@
-# Nova Care Packet Tracer Assignment
+﻿# Nova Care Packet Tracer Assignment
 
 This folder contains the interpreted problem, the complete step-by-step solution, the original Packet Tracer file, and the physical topology image for the Nova Care network activity.
 
@@ -20,3 +20,5 @@ This folder contains the interpreted problem, the complete step-by-step solution
 Nova Care has an internal LAN in `192.168.1.0/24`, a router-to-router WAN link in `10.0.0.0/30`, and a server-side network in `172.16.1.0/24`. The goal is to configure the routers, workstations, access point, and web server so LAN users can reach the remote web server.
 
 The solution uses static routing and gives copy-friendly Cisco IOS commands. If the router interface names in Packet Tracer are different from the sample commands, run `show ip interface brief` and replace the interface names with the correct ones.
+
+

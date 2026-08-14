@@ -1,4 +1,4 @@
-# Villa University Physical Topology
+﻿# Villa University Physical Topology
 
 ## Physical Design Overview
 
@@ -91,3 +91,5 @@ Place the devices in this order:
 ## What This Topology Proves
 
 This topology proves that Villa University is using a campus design where all buildings connect to a central core switch. The access switches provide local building connectivity, the trunk links carry VLAN traffic across the campus, and the router provides inter-VLAN routing for communication between departments.
+
+

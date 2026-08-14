@@ -1,4 +1,5 @@
 ﻿# Summit Branch Subnetting - Problem
+
 ## Assignment Scenario
 
 A branch received 192.168.120.0/24 and must divide it into Admin, Sales, and Support networks. Students calculate subnets, assign gateways, and verify routing.
@@ -29,7 +30,7 @@ Admin 192.168.120.0/26 gateway .1, Sales 192.168.120.64/26 gateway .65, Support 
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -38,4 +39,6 @@ Admin 192.168.120.0/26 gateway .1, Sales 192.168.120.64/26 gateway .65, Support 
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

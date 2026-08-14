@@ -1,4 +1,5 @@
 ﻿# Silverline School Wireless Security - Problem
+
 ## Assignment Scenario
 
 A school needs two wireless networks: Staff and Guest. Staff should use stronger security and connect to the internal network; Guest should be isolated in its own VLAN.
@@ -30,7 +31,7 @@ Staff VLAN30 192.168.30.0/24, Guest VLAN40 192.168.40.0/24, Server VLAN99 192.16
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -39,4 +40,6 @@ Staff VLAN30 192.168.30.0/24, Guest VLAN40 192.168.40.0/24, Server VLAN99 192.16
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

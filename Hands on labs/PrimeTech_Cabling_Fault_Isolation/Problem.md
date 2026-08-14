@@ -1,4 +1,5 @@
 ﻿# PrimeTech Cabling Fault Isolation - Problem
+
 ## Assignment Scenario
 
 A newly installed training room has intermittent connectivity. Students must choose correct cables, verify link lights, and isolate physical faults before blaming IP addressing.
@@ -31,7 +32,7 @@ All PCs in 192.168.80.0/24: PC1 .10, PC2 .11, PC3 .12, PC4 .13.
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -40,4 +41,6 @@ All PCs in 192.168.80.0/24: PC1 .10, PC2 .11, PC3 .12, PC4 .13.
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

@@ -1,4 +1,5 @@
 ﻿# Oakridge DHCP and DNS Services - Problem
+
 ## Assignment Scenario
 
 A company wants automatic addressing and name resolution for two departments. The DHCP/DNS server is in the server VLAN, so router relay is required.
@@ -30,7 +31,7 @@ VLAN10 192.168.10.0/24 gateway .1, VLAN20 192.168.20.0/24 gateway .1, VLAN99 192
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -39,4 +40,6 @@ VLAN10 192.168.10.0/24 gateway .1, VLAN20 192.168.20.0/24 gateway .1, VLAN99 192
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

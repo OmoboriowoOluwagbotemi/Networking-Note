@@ -1,4 +1,5 @@
 ﻿# FutureNet IPv6 Pilot - Problem
+
 ## Assignment Scenario
 
 A small office wants to test IPv6 before production. Students configure IPv6 addresses, verify link-local addresses, and ping using IPv6.
@@ -29,7 +30,7 @@ IPv6 prefix 2001:db8:12:1::/64. R1 gateway 2001:db8:12:1::1/64. PC1 ::10/64, PC2
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -38,4 +39,6 @@ IPv6 prefix 2001:db8:12:1::/64. R1 gateway 2001:db8:12:1::1/64. PC1 ::10/64, PC2
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

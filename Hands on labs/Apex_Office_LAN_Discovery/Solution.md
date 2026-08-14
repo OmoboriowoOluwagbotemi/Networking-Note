@@ -1,13 +1,14 @@
 ﻿# Apex Office LAN Discovery and Failure Testing - Solution
+
 ## Purpose of This Solution
 
-This solution explains how to complete the lab in Cisco Packet Tracer. It follows the same practical style as the Villa University and Nova Care case studies: build the topology first, configure devices carefully, verify each stage, and document the evidence.
+This solution explains how to complete this case study in Cisco Packet Tracer. It follows the same practical style as the Villa University and Nova Care case studies: build the topology first, configure devices carefully, verify each stage, and document the evidence.
 
 ## Step 1: Build the Topology
 
 1. Open Cisco Packet Tracer.
 2. Create a new blank project.
-3. Save the file using the lab number and title.
+3. Save the file using the case-study name.
 4. Add the required devices: 1 Cisco 2960 switch, 4 PCs.
 5. Build this topology: PC1, PC2, PC3, and PC4 connect to SW1.
 6. Label all devices clearly.
@@ -59,7 +60,7 @@ From PC1 command prompt: ping 192.168.17.11, ping 192.168.17.12, and ping 192.16
 
 ## Step 6: Save and Submit Evidence
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -67,5 +68,7 @@ From PC1 command prompt: ping 192.168.17.11, ping 192.168.17.12, and ping 192.16
 
 ## Expected Final Result
 
-At the end of the lab, the required devices should be connected, correctly addressed, correctly configured, and successfully verified using the commands or tests stated above. If the scenario expects isolation, such as VLAN separation before inter-VLAN routing, the failed ping is also correct evidence when it matches the requirement.
+At the end of the case study, the required devices should be connected, correctly addressed, correctly configured, and successfully verified using the commands or tests stated above. If the scenario expects isolation, such as VLAN separation before inter-VLAN routing, the failed ping is also correct evidence when it matches the requirement.
+
+
 

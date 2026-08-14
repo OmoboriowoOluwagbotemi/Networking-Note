@@ -1,4 +1,4 @@
-# Nova Care Network Step-by-Step Solution
+﻿# Nova Care Network Step-by-Step Solution
 
 ## Purpose
 
@@ -562,3 +562,5 @@ copy running-config startup-config
 ```
 
 When asked for destination filename, press Enter.
+
+

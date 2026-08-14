@@ -1,4 +1,5 @@
 ﻿# Pacesetters Multi-Switch Trunking and STP - Problem
+
 ## Assignment Scenario
 
 The school now has two floors. VLANs must work across two switches, and students must verify trunking and Spanning Tree behavior.
@@ -30,7 +31,7 @@ Use VLANs 10, 20, 30, 40. Same subnets as Lab 13.
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -39,4 +40,6 @@ Use VLANs 10, 20, 30, 40. Same subnets as Lab 13.
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

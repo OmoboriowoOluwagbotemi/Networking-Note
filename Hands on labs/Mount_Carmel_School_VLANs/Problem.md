@@ -1,4 +1,5 @@
 ﻿# Mount Carmel School VLAN Segmentation - Problem
+
 ## Assignment Scenario
 
 A school has one switch but four user groups must be separated: Guests, Parents, Teachers, and Students. Students build the topology shown in the supplied VLAN screenshots and prove that VLANs isolate broadcasts.
@@ -30,7 +31,7 @@ Guests VLAN10 192.168.10.10-11/24, Parents VLAN20 192.168.20.12-13/24, Teachers 
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -39,4 +40,6 @@ Guests VLAN10 192.168.10.10-11/24, Parents VLAN20 192.168.20.12-13/24, Teachers 
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

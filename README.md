@@ -8,6 +8,10 @@ The current publishable edition is organized in the folder:
 
 [Network_Engineering_Foundation_20_Lessons](Network_Engineering_Foundation_20_Lessons/README.md)
 
+The scenario-based Cisco Packet Tracer practical assignments are organized in:
+
+[Hands on Labs](Hands%20on%20labs/README.md)
+
 ## Course Lessons
 
 1. [How Networks Work and Why They Fail](Network_Engineering_Foundation_20_Lessons/Lesson_01_How_Networks_Work_and_Why_They_Fail.md)
@@ -51,6 +55,10 @@ Lessons should be taught in clear explanatory paragraphs, not as rigid What / Wh
 Each lesson assessment should stay focused and consistent: 5 theory questions, 10 multiple-choice questions, and 2 scenario-based questions. This keeps classroom review manageable while still testing understanding, recall, and practical problem-solving.
 
 Cisco Packet Tracer practice should remain in the separate lab materials, not inside each theory lesson.
+
+## Hands-on Practice
+
+The `Hands on labs` folder contains separate case-study assignments such as Villa University, Nova Network, Mount Carmel School VLANs, Unilorin School Inter-VLAN Routing, SwiftMart OSPF and NAT/PAT, and Oakridge DHCP/DNS Services. Each case is organized with topology, problem, and solution files so students can first attempt the task before checking the step-by-step answer.
 
 ## Course Memory
 

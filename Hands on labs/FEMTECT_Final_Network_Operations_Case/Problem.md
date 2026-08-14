@@ -1,4 +1,5 @@
 ﻿# FEMTECT Final Network Operations Case - Problem
+
 ## Assignment Scenario
 
 A small organization reports that users cannot reach a server after a change. Students diagnose Layer 1 to Layer 3, harden management access, document the fix, and prepare a handover report.
@@ -29,7 +30,7 @@ Users VLAN10 192.168.10.0/24, Admin VLAN20 192.168.20.0/24, WAN 10.20.20.0/30, S
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -38,4 +39,6 @@ Users VLAN10 192.168.10.0/24, Admin VLAN20 192.168.20.0/24, WAN 10.20.20.0/30, S
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

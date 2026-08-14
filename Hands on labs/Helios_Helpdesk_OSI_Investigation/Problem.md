@@ -1,4 +1,5 @@
 ﻿# Helios Helpdesk OSI Investigation - Problem
+
 ## Assignment Scenario
 
 A helpdesk trainee must prove which OSI layers are involved when a PC opens a web page from a local server. Students build a small network, generate HTTP traffic, and inspect PDUs in Simulation Mode.
@@ -31,7 +32,7 @@ PC1 192.168.40.10/24, WEB1 192.168.40.20/24. No gateway required.
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -40,4 +41,6 @@ PC1 192.168.40.10/24, WEB1 192.168.40.20/24. No gateway required.
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

@@ -1,4 +1,4 @@
-# Nova Care Network Problem Interpretation
+﻿# Nova Care Network Problem Interpretation
 
 ## Source Files
 
@@ -73,3 +73,5 @@ At the end of the configuration:
 ## Main Skills Practiced
 
 This activity practices IPv4 addressing, default gateways, static routing, router interface configuration, LAN switching, wireless access point setup, server configuration, HTTP service verification, and end-to-end troubleshooting.
+
+

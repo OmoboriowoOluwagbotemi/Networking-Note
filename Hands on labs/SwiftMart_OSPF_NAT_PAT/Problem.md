@@ -1,4 +1,5 @@
 ﻿# SwiftMart OSPF and NAT/PAT - Problem
+
 ## Assignment Scenario
 
 A small office has multiple internal networks and one public internet link. Students configure OSPF internally and PAT so many users can share one public IP address.
@@ -29,7 +30,7 @@ LAN1 192.168.180.0/24, LAN2 192.168.181.0/24, R1-R2 10.0.0.0/30, Internet server
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -38,4 +39,6 @@ LAN1 192.168.180.0/24, LAN2 192.168.181.0/24, R1-R2 10.0.0.0/30, Internet server
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

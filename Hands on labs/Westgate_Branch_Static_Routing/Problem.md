@@ -1,4 +1,5 @@
 ﻿# Westgate Branch Static Routing - Problem
+
 ## Assignment Scenario
 
 A branch office must reach headquarters through a primary link and keep a backup route ready. Students configure static routes, default routes, and a floating static route.
@@ -30,7 +31,7 @@ Branch LAN 192.168.160.0/24, R1-R2 10.0.12.0/30, R1-R3 10.0.13.0/30, R3-R2 10.0.
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -39,4 +40,6 @@ Branch LAN 192.168.160.0/24, R1-R2 10.0.12.0/30, R1-R3 10.0.13.0/30, R3-R2 10.0.
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

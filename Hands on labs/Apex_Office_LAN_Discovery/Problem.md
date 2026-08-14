@@ -1,4 +1,5 @@
 ﻿# Apex Office LAN Discovery and Failure Testing - Problem
+
 ## Assignment Scenario
 
 Femtect Support has been asked to check a small office where four staff computers should communicate through one switch. Students will build the LAN, assign IP addresses, prove that the network works, then intentionally create simple faults and diagnose them.
@@ -30,7 +31,7 @@ PC1 192.168.17.10/24, PC2 192.168.17.11/24, PC3 192.168.17.12/24, PC4 192.168.17
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -39,4 +40,6 @@ PC1 192.168.17.10/24, PC2 192.168.17.11/24, PC3 192.168.17.12/24, PC4 192.168.17
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

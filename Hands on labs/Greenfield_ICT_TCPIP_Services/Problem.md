@@ -1,4 +1,5 @@
 ﻿# Greenfield ICT TCP/IP Services - Problem
+
 ## Assignment Scenario
 
 A school ICT room has a web server and DNS server. Students observe ARP, ICMP, DNS, TCP, and HTTP behavior using Packet Tracer Simulation Mode.
@@ -29,7 +30,7 @@ PC1 192.168.60.10/24 DNS 192.168.60.20. SERVER1 192.168.60.20/24.
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -38,4 +39,6 @@ PC1 192.168.60.10/24 DNS 192.168.60.20. SERVER1 192.168.60.20/24.
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

@@ -1,4 +1,5 @@
 ﻿# Northstar Service Port Testing - Problem
+
 ## Assignment Scenario
 
 A company server hosts web, DNS, and file-transfer services. Students enable services, test ports, and identify which application uses which traffic type.
@@ -30,7 +31,7 @@ PC1 192.168.70.10/24 DNS 192.168.70.20. SRV1 192.168.70.20/24.
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -39,4 +40,6 @@ PC1 192.168.70.10/24 DNS 192.168.70.20. SRV1 192.168.70.20/24.
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 

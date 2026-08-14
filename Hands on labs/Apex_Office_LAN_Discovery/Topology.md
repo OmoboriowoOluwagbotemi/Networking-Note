@@ -1,4 +1,5 @@
 ﻿# Apex Office LAN Discovery and Failure Testing - Topology
+
 ## Aligned Theory Lesson
 
 Lesson 1
@@ -48,6 +49,8 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 
 
 

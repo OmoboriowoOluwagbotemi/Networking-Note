@@ -1,13 +1,14 @@
 ﻿# Mount Carmel School VLAN Segmentation - Solution
+
 ## Purpose of This Solution
 
-This solution explains how to complete the lab in Cisco Packet Tracer. It follows the same practical style as the Villa University and Nova Care case studies: build the topology first, configure devices carefully, verify each stage, and document the evidence.
+This solution explains how to complete this case study in Cisco Packet Tracer. It follows the same practical style as the Villa University and Nova Care case studies: build the topology first, configure devices carefully, verify each stage, and document the evidence.
 
 ## Step 1: Build the Topology
 
 1. Open Cisco Packet Tracer.
 2. Create a new blank project.
-3. Save the file using the lab number and title.
+3. Save the file using the case-study name.
 4. Add the required devices: 1 switch, 8 PCs.
 5. Build this topology: One central switch connects to eight PCs grouped into four colored departments, two PCs per department.
 6. Label all devices clearly.
@@ -82,7 +83,7 @@ Same-VLAN pings should work. Different-VLAN pings should fail until Lesson 15 in
 
 ## Step 6: Save and Submit Evidence
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -90,5 +91,7 @@ Same-VLAN pings should work. Different-VLAN pings should fail until Lesson 15 in
 
 ## Expected Final Result
 
-At the end of the lab, the required devices should be connected, correctly addressed, correctly configured, and successfully verified using the commands or tests stated above. If the scenario expects isolation, such as VLAN separation before inter-VLAN routing, the failed ping is also correct evidence when it matches the requirement.
+At the end of the case study, the required devices should be connected, correctly addressed, correctly configured, and successfully verified using the commands or tests stated above. If the scenario expects isolation, such as VLAN separation before inter-VLAN routing, the failed ping is also correct evidence when it matches the requirement.
+
+
 

@@ -1,4 +1,5 @@
 ﻿# Unilorin School Inter-VLAN Routing - Problem
+
 ## Assignment Scenario
 
 Management now wants controlled communication between Guests, Parents, Teachers, and Students. Students first learn the direct-cable method, then compare it with router-on-a-stick.
@@ -31,7 +32,7 @@ VLAN10 192.168.10.0/24 gateway .1, VLAN20 192.168.20.0/24 gateway .1, VLAN30 192
 
 ## Required Deliverables
 
-1. A saved Packet Tracer file named after the lab number and title.
+1. A saved Packet Tracer file named after the case-study name.
 2. Screenshot of the completed physical topology.
 3. Screenshot of the addressing table or PC IP settings.
 4. Screenshot of successful verification tests.
@@ -40,4 +41,6 @@ VLAN10 192.168.10.0/24 gateway .1, VLAN20 192.168.20.0/24 gateway .1, VLAN30 192
 ## Main Skills Tested
 
 This assignment tests whether the student can read a scenario, build a Packet Tracer topology, apply correct addressing, configure Cisco devices, verify connectivity, troubleshoot common faults, and document the final result clearly.
+
+
 
