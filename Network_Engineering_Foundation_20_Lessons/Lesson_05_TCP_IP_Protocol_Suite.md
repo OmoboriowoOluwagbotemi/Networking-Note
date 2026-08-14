@@ -13,7 +13,7 @@ The TCP/IP protocol suite is the group of communication protocols that make mode
 
 TCP/IP is the foundation of enterprise networks, home networks, cloud networks, service provider networks, and the global Internet. When a computer browses a website, joins a video call, downloads a file, sends email, connects to a server, or pings a router, TCP/IP protocols are involved.
 
-In Lesson 4, the OSI model explained communication as seven layers. TCP/IP is the real-world protocol suite that maps closely to those concepts. IP works at the Network layer by providing logical addressing and routing. TCP and UDP work at the Transport layer by delivering data between applications using port numbers. ICMP supports testing and control messages. ARP helps IPv4 devices find MAC addresses for local delivery.
+In Lesson 3, the OSI model explained communication as seven layers. TCP/IP is the real-world protocol suite that maps closely to those concepts. IP works at the Network layer by providing logical addressing and routing. TCP and UDP work at the Transport layer by delivering data between applications using port numbers. ICMP supports testing and control messages. ARP helps IPv4 devices find MAC addresses for local delivery.
 
 The TCP/IP suite exists because devices need common rules for communication. Without common protocols, a Windows laptop, Linux server, Cisco router, Android phone, cloud firewall, and web server would not understand each other. TCP/IP gives these systems a shared language.
 
@@ -33,7 +33,7 @@ In real enterprise troubleshooting, engineers often ask protocol-specific questi
 
 The TCP/IP model is usually shown with four layers: Application, Transport, Internet, and Network Access. Some sources use a five-layer model by separating Data Link and Physical. The OSI model uses seven layers. Both models describe network communication, but they group functions differently.
 
-The TCP/IP model is more directly tied to real protocols used on modern networks. The OSI model is very useful for teaching and troubleshooting. A professional should understand both. In this lesson, the focus is the TCP/IP protocol suite itself, not the OSI model, because Lesson 4 already covered the OSI layers deeply.
+The TCP/IP model is more directly tied to real protocols used on modern networks. The OSI model is very useful for teaching and troubleshooting. A professional should understand both. In this lesson, the focus is the TCP/IP protocol suite itself, not the OSI model, because Lesson 3 already covered the OSI layers deeply.
 
 TCP/IP to OSI Mapping
 

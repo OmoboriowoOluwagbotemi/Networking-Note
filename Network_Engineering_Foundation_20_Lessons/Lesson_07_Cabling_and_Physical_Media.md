@@ -9,7 +9,7 @@ This lesson is part of the FEMTECT Network Engineering Foundation course. It is 
 
 ### 7.1 Cabling and Physical Media
 
-Cabling and physical media are the physical pathways used to carry network signals between devices. They operate at Layer 1, the Physical layer, which was introduced in Lesson 4. Every network communication eventually becomes a signal, and that signal must travel across some type of medium. The medium may be copper cable, fiber optic cable, wireless radio, or another physical transmission system.
+Cabling and physical media are the physical pathways used to carry network signals between devices. They operate at Layer 1, the Physical layer, which was introduced in Lesson 3. Every network communication eventually becomes a signal, and that signal must travel across some type of medium. The medium may be copper cable, fiber optic cable, wireless radio, or another physical transmission system.
 
 In enterprise networks, cabling is not just an installation detail. It is part of the network design. A good switch, router, firewall, server, or access point cannot perform properly if the physical cabling is poor. Many network faults that appear to be "IP problems" or "application problems" are actually caused by weak physical media, bad terminations, damaged patch cords, poor cable routing, low-quality connectors, electromagnetic interference, or incorrect fiber selection.
 

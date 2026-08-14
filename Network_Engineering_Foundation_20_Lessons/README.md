@@ -8,8 +8,8 @@ The writing style in this edition uses paragraph-led teaching. It avoids rigid W
 
 1. [How Networks Work and Why They Fail](Lesson_01_How_Networks_Work_and_Why_They_Fail.md)
 2. [Network Devices and Appliances](Lesson_02_Network_Devices_and_Appliances.md)
-3. [How Data Travels Through a Network](Lesson_03_How_Data_Travels_Through_a_Network.md)
-4. [OSI Model Deep Dive](Lesson_04_OSI_Model_Deep_Dive.md)
+3. [OSI Model Deep Dive](Lesson_03_OSI_Model_Deep_Dive.md)
+4. [How Data Travels Through a Network](Lesson_04_How_Data_Travels_Through_a_Network.md)
 5. [TCP/IP Protocol Suite](Lesson_05_TCP_IP_Protocol_Suite.md)
 6. [Common Ports, Protocols, and Traffic Types](Lesson_06_Common_Ports_Protocols_and_Traffic_Types.md)
 7. [Cabling and Physical Media](Lesson_07_Cabling_and_Physical_Media.md)

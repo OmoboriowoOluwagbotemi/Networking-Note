@@ -1,4 +1,4 @@
-# Course Memory: Professional Networking Course
+﻿# Course Memory: Professional Networking Course
 
 ## Current Course Direction
 
@@ -20,8 +20,8 @@ Quality review note: the 20-lesson edition should remain beginner friendly while
 |---|---|
 | 1 | How Networks Work and Why They Fail |
 | 2 | Network Devices and Appliances |
-| 3 | How Data Travels Through a Network |
-| 4 | OSI Model Deep Dive |
+| 3 | OSI Model Deep Dive |
+| 4 | How Data Travels Through a Network |
 | 5 | TCP/IP Protocol Suite |
 | 6 | Common Ports, Protocols, and Traffic Types |
 | 7 | Cabling and Physical Media |
@@ -46,14 +46,14 @@ Quality review note: the 20-lesson edition should remain beginner friendly while
 
 ## Remaining Lesson Notes From User Curriculum
 
-### Lesson 3: How Data Travels Through a Network
+### Lesson 3: OSI Model Deep Dive
 
 - Data Communication Process
 - Unicast, Broadcast, Multicast
 - Encapsulation and Decapsulation, including PDU at each layer
 - Packet Journey from Source to Destination
 
-### Lesson 4: OSI Model Deep Dive
+### Lesson 4: How Data Travels Through a Network
 
 - All Seven Layers and Their Functions
 - PDU Names per Layer
@@ -225,8 +225,8 @@ Quality review note: the 20-lesson edition should remain beginner friendly while
 |---|---|---|---|
 | 1 | How Networks Work and Why They Fail | Revised to match technical in-depth style | Foundation lesson introducing network purpose, network types, architecture models, topologies, Windows basic troubleshooting commands, and why networks fail. |
 | 2 | Network Devices and Appliances | Completed | Expanded end devices, servers, switches, routers, APs/WLCs, firewalls, IDS/IPS, load balancers, proxies/content filters, NICs, transceivers, placement, troubleshooting scope, and practical commands. |
-| 3 | How Data Travels Through a Network | Completed | Explained data communication process, source/destination addressing, unicast/broadcast/multicast, encapsulation/decapsulation, PDU names, packet journey, device inspection behavior, and troubleshooting the data path. |
-| 4 | OSI Model Deep Dive | Completed | Explained all seven OSI layers, functions, PDU names, OSI troubleshooting, OSI-to-TCP/IP mapping, real-world layer examples, cybersecurity relevance, cloud relevance, and practical commands. |
+| 3 | OSI Model Deep Dive | Completed | Explained data communication process, source/destination addressing, unicast/broadcast/multicast, encapsulation/decapsulation, PDU names, packet journey, device inspection behavior, and troubleshooting the data path. |
+| 4 | How Data Travels Through a Network | Completed | Explained all seven OSI layers, functions, PDU names, OSI troubleshooting, OSI-to-TCP/IP mapping, real-world layer examples, cybersecurity relevance, cloud relevance, and practical commands. |
 | 5 | TCP/IP Protocol Suite | Completed | Explained TCP/IP suite, IP with IPv4/IPv6 overview, TCP reliability, TCP three-way handshake, UDP reliability tradeoffs and use cases, ICMP diagnostics, ARP process, troubleshooting, security, and cloud relevance. |
 | 6 | Common Ports, Protocols, and Traffic Types | Completed | Explained common service ports and traffic types: FTP, SSH, Telnet, SMTP/SMTPS, DNS, DHCP, TFTP, HTTP/HTTPS, NTP, SNMP, LDAP/LDAPS, SMB, Syslog, SQL Server, RDP, SIP, secure alternatives, troubleshooting, and cloud/security relevance. |
 | 7 | Cabling and Physical Media | Completed | Explained UTP, STP, CAT5e, CAT6, RJ45/T568A/T568B, straight-through and crossover cabling, cable testing tools, single-mode and multi-mode fiber, media selection, physical troubleshooting, and local installation realities. |
