@@ -505,41 +505,6 @@ When the package moves from one city to another, the final building address does
 
 When the package reaches the final building, staff remove the transport labels and deliver the document to the correct department. This is like decapsulation. The network delivery information is removed until the application receives the original data.
 
-## 7. CISCO PACKET TRACER PRACTICE
-
-### Practice Lab: Observe a Packet Journey
-
-Build a simple Packet Tracer topology:
-
-- PC1 in one LAN.
-- One access switch.
-- One router or Layer 3 switch acting as the default gateway.
-- One server in another LAN.
-
-Suggested addressing:
-
-| Device | Interface | IP Address | Purpose |
-|---|---|---|---|
-| PC1 | NIC | 192.168.10.10/24 | Source host |
-| Gateway LAN 1 | G0/0 | 192.168.10.1/24 | Default gateway for PC1 |
-| Gateway LAN 2 | G0/1 | 192.168.20.1/24 | Gateway for server LAN |
-| Server | NIC | 192.168.20.20/24 | Destination host |
-
-Student tasks:
-
-1. Configure the IP addresses and default gateways.
-2. Ping from PC1 to the server.
-3. Use Simulation Mode to observe the packet.
-4. Identify where encapsulation happens.
-5. Identify where the frame is processed by the switch.
-6. Identify where the router removes the old frame and creates a new one.
-7. Identify where decapsulation happens.
-8. Repeat the test after removing PC1's default gateway and observe the failure.
-
-Expected learning outcome:
-
-Students should see that local delivery uses frames and MAC addresses, while remote delivery requires IP addressing and a default gateway. They should also see that routers forward packets but rebuild Layer 2 frames for each link.
-
 ## 8. QUICK-RECAP CHEAT SHEET
 
 - Data communication is the process of moving information from a source to a destination.
@@ -583,7 +548,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -646,11 +611,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

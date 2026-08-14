@@ -595,65 +595,6 @@ In networking, the physical switch infrastructure is the building. VLANs are the
 
 The analogy is useful, but the technical rule is simple: VLANs create separate Layer 2 broadcast domains.
 
-## 17. CISCO PACKET TRACER PRACTICE
-
-### Practice Lab: Observe VLAN Broadcast Separation
-
-Build a topology:
-
-- One switch.
-- Four PCs.
-- PC1 and PC2 in VLAN 10.
-- PC3 and PC4 in VLAN 20.
-
-Suggested addressing:
-
-| Device | VLAN | IPv4 Address | Mask |
-|---|---:|---|---|
-| PC1 | 10 | 192.168.10.11 | 255.255.255.0 |
-| PC2 | 10 | 192.168.10.12 | 255.255.255.0 |
-| PC3 | 20 | 192.168.20.11 | 255.255.255.0 |
-| PC4 | 20 | 192.168.20.12 | 255.255.255.0 |
-
-Tasks:
-
-1. Create VLAN 10 and VLAN 20.
-2. Assign PC1 and PC2 switch ports to VLAN 10.
-3. Assign PC3 and PC4 switch ports to VLAN 20.
-4. Ping PC2 from PC1.
-5. Ping PC4 from PC3.
-6. Try to ping PC3 from PC1.
-7. Explain why devices in different VLANs cannot communicate without routing.
-
-Expected learning outcome:
-
-Students should understand that devices in the same VLAN and subnet can communicate locally, while devices in different VLANs require inter-VLAN routing.
-
-### Practice Lab: Design VLANs for a Small Business
-
-Use this business requirement:
-
-| Group | Devices | Security Need |
-|---|---:|---|
-| Back Office | 35 | Internal access |
-| Voice | 25 | Call services |
-| Shop Floor | 40 | Restricted access |
-| Guest Wi-Fi | 60 | Internet only |
-| Management | 10 | Admin only |
-
-Tasks:
-
-1. Choose VLAN IDs and names.
-2. Assign IPv4 subnets.
-3. Identify the default gateway for each VLAN.
-4. Decide which VLANs should be allowed to communicate.
-5. Decide which VLANs should be blocked from each other.
-6. Document the plan in a table.
-
-Expected learning outcome:
-
-Students should learn that VLAN design is not only technical. It reflects business function, security policy, and operational needs.
-
 ## 18. WINDOWS, LINUX, AND CISCO IOS PRACTICAL COMMANDS
 
 ### Windows Commands
@@ -727,7 +668,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -790,11 +731,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

@@ -495,39 +495,6 @@ The IP address is like the full company address used to reach a building or bran
 
 Collision domains are like shared walkways where people can bump into each other if everyone moves at once. Modern switches create separate paths, reducing collisions. Broadcast domains are like announcement zones. If an announcement is made in one department, everyone in that department hears it. VLANs create separate announcement zones so every message does not disturb the whole building.
 
-## 12. CISCO PACKET TRACER PRACTICE
-
-### Practice Lab: Observe Ethernet Behavior
-
-Build a topology:
-
-- PC1.
-- PC2.
-- One switch.
-- One router or Layer 3 gateway.
-
-Suggested addressing:
-
-| Device | IP Address | Gateway |
-|---|---|---|
-| PC1 | 192.168.10.10/24 | 192.168.10.1 |
-| PC2 | 192.168.10.20/24 | 192.168.10.1 |
-| Gateway | 192.168.10.1/24 | Not applicable |
-
-Student tasks:
-
-1. Ping PC2 from PC1.
-2. Use Simulation Mode to observe ARP and Ethernet frames.
-3. Identify source and destination MAC addresses.
-4. Ping the gateway and observe the destination MAC.
-5. Add a second VLAN if available and observe broadcast separation.
-6. Check the switch MAC address table.
-7. Disconnect a cable and observe link behavior.
-
-Expected learning outcome:
-
-Students should understand that Ethernet uses frames and MAC addresses for local delivery, while broadcast domains define where local broadcasts are heard.
-
 ## 13. WINDOWS, LINUX, AND CISCO IOS PRACTICAL COMMANDS
 
 ### Windows Commands
@@ -595,7 +562,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -658,11 +625,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

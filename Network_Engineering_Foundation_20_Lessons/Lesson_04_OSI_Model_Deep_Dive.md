@@ -690,38 +690,6 @@ At Layer 7, the business decides what service is needed: send a document, reques
 
 If the road is blocked, that is like a Physical layer problem. If the local delivery label is wrong, that is like a Data Link layer problem. If the building address is wrong, that is like a Network layer problem. If the wrong department code is used, that is like a Transport layer problem. If the receiver's account session has expired, that is like a Session layer problem. If the document is encrypted with the wrong key, that is like a Presentation layer problem. If the business application rejects the request, that is like an Application layer problem.
 
-## 8. CISCO PACKET TRACER PRACTICE
-
-### Practice Lab: Troubleshoot by OSI Layer
-
-Build a small topology:
-
-- PC1.
-- One access switch.
-- One router.
-- One server.
-
-Suggested addressing:
-
-| Device | IP Address | Gateway |
-|---|---|---|
-| PC1 | 192.168.10.10/24 | 192.168.10.1 |
-| Router G0/0 | 192.168.10.1/24 | Not applicable |
-| Router G0/1 | 192.168.20.1/24 | Not applicable |
-| Server | 192.168.20.20/24 | 192.168.20.1 |
-
-Student tasks:
-
-1. Verify normal connectivity from PC1 to the server.
-2. Create a Layer 1 issue by disconnecting a cable.
-3. Restore the cable and create a Layer 3 issue by removing the default gateway from PC1.
-4. Restore the gateway and create a Layer 7 issue by disabling the server HTTP service if available.
-5. For each issue, identify the OSI layer, symptom, test command, and fix.
-
-Expected learning outcome:
-
-Students should understand that different failures create different symptoms. The OSI model helps identify whether the problem is physical connectivity, local switching, routing, transport, session, presentation, or application service.
-
 ## 9. WINDOWS, LINUX, AND CISCO IOS PRACTICAL COMMANDS
 
 ### Windows Commands
@@ -798,7 +766,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -861,11 +829,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

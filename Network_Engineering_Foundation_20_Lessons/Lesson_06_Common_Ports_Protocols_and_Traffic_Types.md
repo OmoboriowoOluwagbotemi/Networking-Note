@@ -720,37 +720,6 @@ Different departments also have different security rules. The public reception a
 
 ## 11. CISCO PACKET TRACER / PRACTICAL LAB
 
-### Practice Lab: Match Services to Ports
-
-Build or use a simple topology with:
-
-- One PC.
-- One switch.
-- One router.
-- One server.
-
-Enable services on the server if available:
-
-- HTTP.
-- HTTPS if supported.
-- DNS.
-- DHCP.
-- FTP.
-
-Student tasks:
-
-1. Configure the PC to receive an IP address using DHCP.
-2. Use DNS to resolve a server name.
-3. Access the server web page using HTTP.
-4. Test FTP access if enabled.
-5. Disable one service at a time and observe the failure.
-6. Use simulation mode to identify the protocol and port involved.
-7. Explain why ping may still work when the service is disabled.
-
-Expected learning outcome:
-
-Students should understand that network reachability and application service availability are not the same thing. A device can be reachable by IP while a specific service port is closed, blocked, or stopped.
-
 ## 12. QUICK-RECAP CHEAT SHEET
 
 - Ports identify services on a host.
@@ -792,7 +761,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -855,11 +824,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

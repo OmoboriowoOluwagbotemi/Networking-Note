@@ -464,59 +464,6 @@ traceroute <destination>
 
 For dynamic routing, `show ip protocols` shows routing protocol information. For NAT, `show ip nat translations` and `show ip nat statistics` are key commands.
 
-## 18.19 Cisco Packet Tracer Practice
-
-### Practice Lab: PAT for Office Internet Access
-
-Build a topology:
-
-- One LAN switch.
-- Two PCs in `192.168.10.0/24`.
-- One edge router.
-- One ISP router.
-- One external server.
-
-Tasks:
-
-1. Configure LAN addressing.
-2. Configure edge router inside and outside interfaces.
-3. Configure a default route toward the ISP.
-4. Configure ACL matching the inside LAN.
-5. Configure PAT using `overload`.
-6. Ping the external server from inside PCs.
-7. Check `show ip nat translations`.
-8. Remove `ip nat inside` from the LAN interface.
-9. Test again and observe failure.
-10. Restore the configuration.
-
-Expected learning outcome:
-
-Students should understand that PAT requires inside/outside interface marking, a matching ACL, overload, and working routing.
-
-### Practice Lab: Static NAT for an Internal Server
-
-Build a topology with one internal server and one outside test host.
-
-Addressing:
-
-| Device | Address |
-|---|---|
-| Internal Server | 192.168.10.10 |
-| Public Static NAT | 203.0.113.10 |
-| Outside Host | 198.51.100.50 |
-
-Tasks:
-
-1. Configure static NAT for the internal server.
-2. Mark inside and outside interfaces.
-3. Test reachability from outside host to public NAT address.
-4. Verify translations.
-5. Discuss why firewall policy would also be required in production.
-
-Expected learning outcome:
-
-Students should understand that static NAT provides a consistent public mapping for an internal host.
-
 ## 18.20 Cybersecurity Relevance
 
 Dynamic routing and NAT both affect security.
@@ -669,7 +616,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -732,11 +679,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

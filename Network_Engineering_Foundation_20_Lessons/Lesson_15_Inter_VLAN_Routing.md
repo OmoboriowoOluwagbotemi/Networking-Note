@@ -443,86 +443,6 @@ show running-config interface <interface-id>
 
 Cisco IOS verifies the switch and routing side of the path. Use these commands to prove whether the issue is VLAN membership, trunking, gateway configuration, routing, or policy.
 
-## 16.15 Cisco Packet Tracer Practice
-
-### Practice Lab: Router-on-a-Stick
-
-Build a topology:
-
-- One router.
-- One switch.
-- Two PCs in VLAN 10.
-- Two PCs in VLAN 20.
-- Router connected to switch using one trunk.
-
-Addressing:
-
-| VLAN | Subnet | Gateway |
-|---:|---|---|
-| 10 | 192.168.10.0/24 | 192.168.10.1 |
-| 20 | 192.168.20.0/24 | 192.168.20.1 |
-
-Tasks:
-
-1. Create VLAN 10 and VLAN 20 on the switch.
-2. Assign PC ports to the correct VLANs.
-3. Configure the switch port to the router as a trunk.
-4. Configure router subinterfaces with `encapsulation dot1Q`.
-5. Configure PC IP addresses and default gateways.
-6. Ping within the same VLAN.
-7. Ping between VLANs.
-8. Remove one `encapsulation dot1Q` command or block one VLAN on the trunk.
-9. Observe the failure.
-10. Restore the configuration and verify connectivity.
-
-Expected learning outcome:
-
-Students should understand how router subinterfaces act as VLAN gateways and why trunks must carry the required VLANs.
-
-### Practice Lab: Layer 3 Switch SVIs
-
-Build a topology:
-
-- One Layer 3 switch.
-- Two VLANs.
-- Two PCs in each VLAN.
-
-Addressing:
-
-| VLAN | Subnet | SVI Gateway |
-|---:|---|---|
-| 10 | 10.10.10.0/24 | 10.10.10.1 |
-| 20 | 10.10.20.0/24 | 10.10.20.1 |
-
-Configuration concept:
-
-```text
-ip routing
-vlan 10
-vlan 20
-interface vlan 10
- ip address 10.10.10.1 255.255.255.0
- no shutdown
-interface vlan 20
- ip address 10.10.20.1 255.255.255.0
- no shutdown
-```
-
-Tasks:
-
-1. Create VLANs.
-2. Assign access ports.
-3. Configure SVIs.
-4. Enable `ip routing`.
-5. Configure PCs with correct gateways.
-6. Test inter-VLAN connectivity.
-7. Disable `ip routing`.
-8. Observe what breaks.
-
-Expected learning outcome:
-
-Students should understand that SVIs provide gateways on a Layer 3 switch and that `ip routing` is required for routing between VLANs.
-
 ## 16.16 Cybersecurity Relevance
 
 Inter-VLAN routing is a security control point. Once routing exists, VLAN boundaries can be crossed. This is useful for business communication, but dangerous if unrestricted.
@@ -644,7 +564,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -707,11 +627,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

@@ -560,56 +560,6 @@ Wireless Troubleshooting Table
 
 Do not troubleshoot wireless only from the AP. Always test from the client perspective too.
 
-## 20.26 Packet Tracer Practice
-
-### Practice Lab 1: Basic Wireless LAN
-
-Build a simple wireless network with:
-
-| Device | Role |
-|---|---|
-| Wireless router or AP | Provides WLAN |
-| Laptop | Wireless client |
-| Switch | Wired LAN connection |
-| Server | DHCP and DNS |
-| Router/firewall | Default gateway/internet path |
-
-Configure one SSID named `FEMTECT-STAFF`. Configure WPA2-Personal for the lab. Configure DHCP so the wireless laptop receives an IP address, default gateway, and DNS server. Verify that the laptop can ping the gateway and resolve a DNS name.
-
-### Practice Lab 2: SSID-to-VLAN Design
-
-Build a design with two SSIDs:
-
-| SSID | VLAN | Subnet | Purpose |
-|---|---|---|---|
-| FEMTECT-STAFF | 10 | 192.168.10.0/24 | Staff users |
-| FEMTECT-GUEST | 30 | 192.168.30.0/24 | Guest users |
-
-Configure the AP uplink as a trunk if the Packet Tracer device supports it. Configure DHCP scopes for both VLANs. Verify that staff and guest clients receive addresses from the correct subnet.
-
-Expected result:
-
-```text
-Staff wireless client receives 192.168.10.x
-Guest wireless client receives 192.168.30.x
-Guest client cannot access internal server if firewall/ACL policy is configured
-Both clients can reach the internet path if NAT/routing is configured
-```
-
-### Practice Lab 3: Wireless Troubleshooting
-
-Intentionally create faults:
-
-| Fault | Expected Symptom |
-|---|---|
-| Wrong Wi-Fi password | Client cannot authenticate |
-| Wrong VLAN mapping | Client receives wrong subnet |
-| Missing DHCP scope | Client fails to obtain IP |
-| Missing DNS option | Client has IP but name resolution fails |
-| Blocked VLAN on trunk | Clients on one SSID fail |
-
-Students should document symptoms, test results, root cause, and fix.
-
 ## 20.27 Cybersecurity Relevance
 
 Wireless extends the network beyond physical walls. An attacker does not need to plug into a switchport if wireless security is weak. A person near the building may see SSIDs and attempt attacks.
@@ -786,7 +736,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -849,11 +799,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

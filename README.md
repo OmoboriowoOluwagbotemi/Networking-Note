@@ -36,7 +36,7 @@ The current publishable edition is organized in the folder:
 - Technical explanations from first principles
 - Enterprise examples and practical scenarios
 - Cisco IOS, Windows, and Linux commands where relevant
-- Cisco Packet Tracer activities
+- Practical references to commands and troubleshooting where relevant
 - Troubleshooting and cybersecurity relevance
 - Cloud and career context
 - CCNA and Network+ exam reminders
@@ -49,6 +49,8 @@ The current publishable edition is organized in the folder:
 Lessons should be taught in clear explanatory paragraphs, not as rigid What / Why / How / Where sections. Each topic should still explain purpose, operation, deployment context, and troubleshooting relevance, but the writing should feel natural, technically accurate, and easy for students to follow.
 
 Each lesson assessment should stay focused and consistent: 5 theory questions, 10 multiple-choice questions, and 2 scenario-based questions. This keeps classroom review manageable while still testing understanding, recall, and practical problem-solving.
+
+Cisco Packet Tracer practice should remain in the separate lab materials, not inside each theory lesson.
 
 ## Course Memory
 

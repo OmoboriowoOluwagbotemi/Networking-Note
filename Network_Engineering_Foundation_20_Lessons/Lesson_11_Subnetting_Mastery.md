@@ -611,70 +611,6 @@ traceroute <destination>
 
 On Cisco routers and Layer 3 switches, `show ip interface brief` quickly confirms interface addressing and status. `show ip route connected` shows networks that are directly connected based on interface IP addresses and masks.
 
-## 11.18 CISCO PACKET TRACER PRACTICE
-
-### Practice Lab: Identify Network, Broadcast, and Host Range
-
-Build a topology with one router, one switch, and two PCs.
-
-Use this subnet:
-
-```text
-192.168.40.64/26
-```
-
-Configure:
-
-| Device | IP Address | Mask | Gateway |
-|---|---|---|---|
-| Router G0/0 | 192.168.40.65 | 255.255.255.192 | N/A |
-| PC1 | 192.168.40.66 | 255.255.255.192 | 192.168.40.65 |
-| PC2 | 192.168.40.67 | 255.255.255.192 | 192.168.40.65 |
-
-Tasks:
-
-1. Identify the network address.
-2. Identify the broadcast address.
-3. Identify the valid host range.
-4. Configure the router and PCs.
-5. Ping the gateway from each PC.
-6. Change PC2 to `192.168.40.127`.
-7. Explain why PC2 should not use that address.
-
-Expected learning outcome:
-
-Students should understand that `192.168.40.64` is the network address, `192.168.40.127` is the broadcast address, and valid hosts are `192.168.40.65` through `192.168.40.126`.
-
-### Practice Lab: VLSM Address Plan
-
-Use this address block:
-
-```text
-192.168.60.0/24
-```
-
-Requirements:
-
-| Network | Needed Hosts |
-|---|---:|
-| Staff | 60 |
-| Voice | 30 |
-| Servers | 14 |
-| Management | 6 |
-| WAN Link | 2 |
-
-Tasks:
-
-1. Sort the requirements from largest to smallest.
-2. Choose the smallest prefix that supports each requirement.
-3. Allocate subnets without overlap.
-4. Document network address, first host, last host, and broadcast address.
-5. Configure at least two of the subnets in Packet Tracer and test connectivity through a router.
-
-Expected learning outcome:
-
-Students should understand that VLSM assigns different mask lengths based on actual host requirements.
-
 ## 11.19 CYBERSECURITY RELEVANCE
 
 Subnetting is a security skill because security policy is often written around IP networks. Firewalls, ACLs, VPNs, monitoring tools, SIEM platforms, and endpoint management systems all depend on accurate network ranges.
@@ -818,7 +754,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -881,11 +817,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

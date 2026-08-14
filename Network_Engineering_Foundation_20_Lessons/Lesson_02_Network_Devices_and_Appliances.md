@@ -591,44 +591,6 @@ Wireless access points provide Wi-Fi coverage for mobile clinical devices. A WLA
 
 If the patient portal is slow, the issue may be the server, load balancer, firewall, DNS, database, or network path. If one ward has no network, the issue may be an access switch, uplink, power, VLAN, or fiber transceiver. If only one doctor's laptop has a problem, the issue may be the laptop NIC, Wi-Fi adapter, IP settings, or security software. Understanding devices helps engineers narrow the problem quickly.
 
-## 6. CISCO PACKET TRACER PRACTICE
-
-### Practice Lab: Identify Device Roles
-
-Build a small network with:
-
-- Two PCs.
-- One server.
-- One switch.
-- One router.
-- One wireless access point.
-- One laptop connected wirelessly.
-
-Suggested addressing:
-
-| Device | IP Address | Purpose |
-|---|---|---|
-| PC1 | 192.168.10.10 | Wired end device |
-| PC2 | 192.168.10.11 | Wired end device |
-| Server | 192.168.10.20 | Service provider |
-| Router LAN Interface | 192.168.10.1 | Default gateway |
-| Laptop | DHCP or static in same network | Wireless end device |
-
-Student tasks:
-
-1. Connect PC1, PC2, the server, and AP to the switch.
-2. Connect the switch to the router.
-3. Configure IP addresses.
-4. Ping from PC1 to PC2.
-5. Ping from PC1 to the server.
-6. Ping from PC1 to the router interface.
-7. Disconnect PC1's cable and observe the failure.
-8. Disconnect the switch-to-router link and observe that local switching may still work while remote access fails.
-
-Expected learning outcome:
-
-Students should understand that different devices create different failure patterns. A PC cable failure affects one device. A switch failure affects many local devices. A router or gateway failure affects communication outside the local network.
-
 ## 7. WINDOWS, LINUX, AND CISCO IOS PRACTICAL COMMANDS
 
 ### Windows Commands
@@ -708,7 +670,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -771,11 +733,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

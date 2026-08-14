@@ -534,97 +534,6 @@ show mac address-table vlan 10
 
 Cisco IOS is the primary verification point for VLAN configuration. The switch tells the technician what VLAN the port belongs to, whether the trunk is active, which VLANs are allowed, and whether MAC addresses are being learned.
 
-## 14.16 Cisco Packet Tracer Practice
-
-### Practice Lab: Create VLANs and Access Ports
-
-Build a topology:
-
-- One Cisco switch.
-- Four PCs.
-- PC1 and PC2 in VLAN 10.
-- PC3 and PC4 in VLAN 20.
-
-Addressing:
-
-| Device | VLAN | IPv4 Address | Mask |
-|---|---:|---|---|
-| PC1 | 10 | 192.168.10.11 | 255.255.255.0 |
-| PC2 | 10 | 192.168.10.12 | 255.255.255.0 |
-| PC3 | 20 | 192.168.20.11 | 255.255.255.0 |
-| PC4 | 20 | 192.168.20.12 | 255.255.255.0 |
-
-Switch configuration:
-
-```text
-enable
-configure terminal
-vlan 10
- name STAFF
-vlan 20
- name STUDENTS
-
-interface range fastEthernet 0/1 - 2
- switchport mode access
- switchport access vlan 10
-
-interface range fastEthernet 0/3 - 4
- switchport mode access
- switchport access vlan 20
-end
-```
-
-Tasks:
-
-1. Verify VLANs with `show vlan brief`.
-2. Ping PC2 from PC1.
-3. Ping PC4 from PC3.
-4. Try to ping PC3 from PC1.
-5. Explain why same-VLAN pings work but different-VLAN pings fail without routing.
-
-### Practice Lab: Configure a Trunk Between Two Switches
-
-Build a topology:
-
-- SW1 connected to SW2 using `Gi0/1`.
-- PC1 on SW1 in VLAN 10.
-- PC2 on SW2 in VLAN 10.
-- PC3 on SW1 in VLAN 20.
-- PC4 on SW2 in VLAN 20.
-
-Configure VLANs on both switches:
-
-```text
-vlan 10
- name STAFF
-vlan 20
- name VOICE
-vlan 999
- name NATIVE_UNUSED
-```
-
-Configure trunk on both switches:
-
-```text
-interface gigabitEthernet 0/1
- switchport mode trunk
- switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,999
-```
-
-Tasks:
-
-1. Verify trunk status with `show interfaces trunk`.
-2. Ping between PCs in VLAN 10 across switches.
-3. Ping between PCs in VLAN 20 across switches.
-4. Remove VLAN 10 from the allowed list on one trunk.
-5. Test VLAN 10 again.
-6. Add VLAN 10 back and verify recovery.
-
-Expected learning outcome:
-
-Students should understand that VLANs must exist and be allowed across the trunk for same-VLAN communication across switches.
-
 ## 14.17 Cybersecurity Relevance
 
 VLAN configuration affects security directly. A secure design can be weakened by a careless switch configuration. If guest VLAN traffic is allowed across trunks where it is not needed, exposure increases. If a user-facing port negotiates a trunk, an attacker may attempt unauthorized VLAN access. If the native VLAN carries real user traffic, native VLAN misuse becomes more dangerous.
@@ -761,7 +670,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -824,11 +733,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

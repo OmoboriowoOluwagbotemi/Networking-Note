@@ -509,69 +509,6 @@ show running-config interface gigabitEthernet 0/0
 
 `show ipv6 interface brief` is the fastest Cisco IOS command for checking IPv6 interface addresses and status. `show ipv6 neighbors` is similar in troubleshooting value to checking ARP in IPv4, but it uses IPv6 Neighbor Discovery.
 
-## 12.19 CISCO PACKET TRACER PRACTICE
-
-### Practice Lab: Basic IPv6 Addressing
-
-Build a topology:
-
-- One router.
-- One switch.
-- Two PCs.
-
-Configure:
-
-| Device | Interface | IPv6 Address |
-|---|---|---|
-| Router G0/0 | LAN | `2001:db8:100:10::1/64` |
-| PC1 | NIC | `2001:db8:100:10::11/64` |
-| PC2 | NIC | `2001:db8:100:10::12/64` |
-
-Tasks:
-
-1. Enable IPv6 routing on the router.
-2. Configure the router interface.
-3. Configure the PCs with IPv6 addresses.
-4. Ping the router from PC1.
-5. Ping PC2 from PC1.
-6. Check IPv6 neighbor information.
-7. Identify the link-local address on each device.
-
-Expected learning outcome:
-
-Students should understand that IPv6 hosts can communicate in the same `/64` subnet and that devices also have link-local addresses.
-
-### Practice Lab: SLAAC Observation
-
-Use a router and one PC.
-
-On the router:
-
-```text
-enable
-configure terminal
-ipv6 unicast-routing
-interface gigabitEthernet 0/0
-ipv6 address 2001:db8:200:10::1/64
-no shutdown
-end
-```
-
-On the PC, set IPv6 configuration to automatic if Packet Tracer supports it.
-
-Tasks:
-
-1. Observe the IPv6 address assigned to the PC.
-2. Identify the prefix.
-3. Identify the PC link-local address.
-4. Ping the router global unicast address.
-5. Ping the router link-local address if supported.
-6. Explain how Router Advertisements help the PC configure itself.
-
-Expected learning outcome:
-
-Students should understand that SLAAC uses router-advertised prefix information and that the host forms its own IPv6 address.
-
 ## 12.20 CYBERSECURITY RELEVANCE
 
 IPv6 security matters because unmanaged IPv6 can create blind spots. A company may believe it only uses IPv4, while endpoints still generate IPv6 link-local traffic. Attackers may exploit weak monitoring, rogue router advertisements, or firewall rules that ignore IPv6.
@@ -723,7 +660,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -786,11 +723,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

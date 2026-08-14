@@ -530,62 +530,6 @@ show ip route
 
 `show ip interface brief` is one of the fastest commands for checking interface IP addresses and status on Cisco routers and Layer 3 switches. `show arp` helps connect IPv4 addresses to MAC addresses on local segments. `show ip route` will be covered in more depth later, but students should recognize that routers forward packets using routing tables.
 
-## 10.18 CISCO PACKET TRACER PRACTICE
-
-### Practice Lab: IPv4 Addressing and Local Connectivity
-
-Build a simple topology:
-
-- One switch.
-- Two PCs connected to the switch.
-- No router for the first part.
-
-Configure:
-
-| Device | IPv4 Address | Subnet Mask |
-|---|---|---|
-| PC1 | 192.168.10.11 | 255.255.255.0 |
-| PC2 | 192.168.10.12 | 255.255.255.0 |
-
-Tasks:
-
-1. Configure both PCs with the addresses above.
-2. Ping PC2 from PC1.
-3. View the ARP table on PC1.
-4. Change PC2's address to `192.168.20.12` while keeping the same mask.
-5. Try to ping again.
-6. Explain why the ping fails without a router.
-
-Expected learning outcome:
-
-Students should understand that devices in the same IP network can communicate locally through the switch, while devices in different IP networks require routing.
-
-### Practice Lab: Default Gateway Requirement
-
-Add one router to the topology.
-
-Configure:
-
-| Device | IPv4 Address | Subnet Mask | Gateway |
-|---|---|---|---|
-| PC1 | 192.168.10.11 | 255.255.255.0 | 192.168.10.1 |
-| PC2 | 192.168.20.12 | 255.255.255.0 | 192.168.20.1 |
-| Router G0/0 | 192.168.10.1 | 255.255.255.0 | N/A |
-| Router G0/1 | 192.168.20.1 | 255.255.255.0 | N/A |
-
-Tasks:
-
-1. Configure the router interfaces.
-2. Configure both PCs with IP address, mask, and gateway.
-3. Ping from PC1 to PC2.
-4. Remove PC1's default gateway.
-5. Try the ping again.
-6. Explain the result.
-
-Expected learning outcome:
-
-Students should understand that the default gateway is required for communication outside the local IP network.
-
 ## 10.19 TROUBLESHOOTING IPv4 ADDRESSING
 
 IPv4 troubleshooting should be structured. A technician should not immediately blame the internet or the router. Start from the local host and move outward.
@@ -753,7 +697,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -816,11 +760,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

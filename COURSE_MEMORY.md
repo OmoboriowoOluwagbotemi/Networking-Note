@@ -8,6 +8,8 @@ The current writing standard no longer uses rigid separate What / Why / How / Wh
 
 Each lesson assessment must contain only 5 theory questions, 10 multiple-choice questions, and 2 scenario-based questions. Avoid very long review-question sections because the course should remain classroom friendly and easy to assess.
 
+Cisco Packet Tracer practice sections should not be included inside the 20 theory lessons. Packet Tracer work should remain in the separate hands-on lab materials and assignment folders.
+
 The publishable 20-lesson edition is located in `Network_Engineering_Foundation_20_Lessons/`.
 
 ## Source Curriculum Map

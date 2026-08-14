@@ -474,70 +474,6 @@ The MAC address table is the receptionist's desk directory. Forwarding is direct
 
 This analogy is useful, but the real technical point is that switches learn from source MAC addresses and make forwarding decisions using destination MAC addresses.
 
-## 13. CISCO PACKET TRACER PRACTICE
-
-### Practice Lab: Observe MAC Learning and Frame Forwarding
-
-Build a simple topology:
-
-- One Cisco switch.
-- Three PCs connected to access ports.
-- All PCs in the same VLAN.
-- Assign IP addresses in the same subnet.
-
-Suggested addressing:
-
-| Device | IP Address | Switch Port |
-|---|---|---|
-| PC1 | 192.168.10.11/24 | Fa0/1 |
-| PC2 | 192.168.10.12/24 | Fa0/2 |
-| PC3 | 192.168.10.13/24 | Fa0/3 |
-
-Tasks:
-
-1. Open the switch CLI.
-2. Run `show mac address-table`.
-3. From PC1, ping PC2.
-4. Run `show mac address-table` again.
-5. Identify which MAC addresses were learned on which ports.
-6. Clear the MAC address table if supported in the lab environment.
-7. Ping again and observe how the switch relearns addresses.
-8. Change one PC to another switch port and observe how the MAC table updates after traffic is generated.
-
-Expected learning outcome:
-
-Students should see that the switch does not need manual MAC entries for normal operation. It learns source MAC addresses dynamically and uses the table to forward known unicast frames.
-
-### Practice Lab: Basic Port Security
-
-Build a simple topology with one switch and one PC on `Fa0/10`.
-
-Configure:
-
-```text
-enable
-configure terminal
-interface fastEthernet 0/10
-switchport mode access
-switchport port-security
-switchport port-security maximum 1
-switchport port-security mac-address sticky
-switchport port-security violation shutdown
-end
-```
-
-Tasks:
-
-1. Connect one PC and generate traffic.
-2. Check `show port-security interface fastEthernet 0/10`.
-3. Replace the PC with another device if the Packet Tracer scenario allows.
-4. Observe whether a violation occurs.
-5. Use `show interfaces status` to check the port state.
-
-Instructor note:
-
-Explain that port security is useful for learning access-layer protection, but real enterprises may use stronger authentication such as 802.1X.
-
 ## 14. WINDOWS, LINUX, AND CISCO IOS PRACTICAL COMMANDS
 
 ### Windows Commands
@@ -615,7 +551,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -678,11 +614,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

@@ -522,72 +522,6 @@ show arp
 
 These commands verify interface status, route sources, static route configuration, next-hop reachability, and forwarding path.
 
-## 17.17 Cisco Packet Tracer Practice
-
-### Practice Lab: Static Routes Between Two Routers
-
-Build a topology:
-
-```text
-PC1 --- R1 --- R2 --- PC2
-```
-
-Addressing:
-
-| Device/Link | Addressing |
-|---|---|
-| PC1 | 192.168.10.10/24, gateway 192.168.10.1 |
-| R1 LAN | 192.168.10.1/24 |
-| R1-R2 link | R1 10.0.0.1/30, R2 10.0.0.2/30 |
-| R2 LAN | 192.168.20.1/24 |
-| PC2 | 192.168.20.10/24, gateway 192.168.20.1 |
-
-Tasks:
-
-1. Configure router interfaces.
-2. Configure PC IP addresses and gateways.
-3. Verify connected routes with `show ip route connected`.
-4. Configure R1 static route to `192.168.20.0/24`.
-5. Configure R2 static route to `192.168.10.0/24`.
-6. Ping PC2 from PC1.
-7. Remove the return route on R2.
-8. Observe the failure.
-9. Restore the route and verify connectivity.
-
-Expected learning outcome:
-
-Students should understand that static routing requires routes in both directions.
-
-### Practice Lab: Default Route and Floating Static Route
-
-Build a topology:
-
-```text
-LAN --- Branch Router --- ISP1
-                    \---- ISP2
-```
-
-Tasks:
-
-1. Configure a primary default route to ISP1.
-2. Configure a floating default route to ISP2 with higher AD.
-3. Verify the routing table.
-4. Shut down the primary ISP-facing interface.
-5. Observe whether the backup route appears.
-6. Bring the primary link back up.
-7. Verify route preference returns to the primary path.
-
-Example commands:
-
-```text
-ip route 0.0.0.0 0.0.0.0 203.0.113.1
-ip route 0.0.0.0 0.0.0.0 198.51.100.1 200
-```
-
-Expected learning outcome:
-
-Students should understand how administrative distance makes a static route act as a backup.
-
 ## 17.18 Cybersecurity Relevance
 
 Routing affects security because it determines reachability. If a route exists, traffic may be able to reach a network unless policy blocks it. If a sensitive network is accidentally advertised or statically routed where it should not be, exposure increases.
@@ -728,7 +662,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -791,11 +725,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

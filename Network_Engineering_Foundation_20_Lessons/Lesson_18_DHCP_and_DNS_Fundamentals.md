@@ -638,44 +638,6 @@ Common DNS Problems
 | Email delivery issues | Wrong MX, SPF, DKIM, DMARC, or PTR |
 | Random DNS failures | Resolver outage, packet loss, filtering, or overloaded DNS |
 
-## 19.24 Packet Tracer Practice
-
-### Practice Lab 1: DHCP for Multiple VLANs
-
-Build a topology with one Layer 3 switch or router, two access switches, one DHCP server, and client PCs in VLAN 10 and VLAN 20.
-
-Use this addressing plan:
-
-| VLAN | Subnet | Gateway | DHCP Server |
-|---|---|---|---|
-| 10 | 192.168.10.0/24 | 192.168.10.1 | 192.168.100.10 |
-| 20 | 192.168.20.0/24 | 192.168.20.1 | 192.168.100.10 |
-| 100 | 192.168.100.0/24 | 192.168.100.1 | 192.168.100.10 |
-
-Configure VLANs, access ports, trunk ports, SVIs or router subinterfaces, and DHCP relay. Configure DHCP scopes on the server. Verify that clients in both VLANs receive correct IP addresses, masks, gateways, and DNS servers.
-
-Expected verification:
-
-```text
-Client in VLAN 10 receives 192.168.10.x
-Client in VLAN 20 receives 192.168.20.x
-Both clients can ping their gateways
-Both clients can ping the DHCP/DNS server
-Both clients use the correct DNS server
-```
-
-### Practice Lab 2: DNS Name Resolution
-
-Add a DNS server with records:
-
-| Name | Record Type | Value |
-|---|---|---|
-| `web.femtect.local` | A | 192.168.100.20 |
-| `files.femtect.local` | A | 192.168.100.30 |
-| `intranet.femtect.local` | CNAME | `web.femtect.local` |
-
-Configure clients to use the DNS server through DHCP. Test name resolution from client PCs. Then intentionally misconfigure the DNS server option in one DHCP scope and observe how clients receive IP addresses but fail name resolution.
-
 ## 19.25 Cybersecurity Relevance
 
 DHCP and DNS are important security targets. If an attacker can control DHCP, the attacker can give victims a wrong gateway or DNS server. If an attacker can control DNS, the attacker can redirect users to malicious services.
@@ -855,7 +817,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -918,11 +880,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-

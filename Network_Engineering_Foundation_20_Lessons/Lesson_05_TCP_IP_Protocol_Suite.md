@@ -568,37 +568,6 @@ This analogy shows that TCP/IP protocols have different jobs. They work together
 
 ## 9. CISCO PACKET TRACER / WIRESHARK PRACTICE
 
-### Practice Lab: Observe ARP, ICMP, and TCP Behavior
-
-Build a topology:
-
-- PC1.
-- One switch.
-- One router/default gateway.
-- One server.
-
-Suggested addressing:
-
-| Device | IP Address | Gateway |
-|---|---|---|
-| PC1 | 192.168.10.10/24 | 192.168.10.1 |
-| Router G0/0 | 192.168.10.1/24 | Not applicable |
-| Server | 192.168.10.20/24 or remote subnet | Depends on topology |
-
-Student tasks:
-
-1. Clear or inspect the ARP table on PC1.
-2. Ping the server or default gateway.
-3. Observe ARP Request and ARP Reply in Simulation Mode.
-4. Observe ICMP Echo Request and Echo Reply during ping.
-5. Open a web service on the server if available.
-6. Observe TCP SYN, SYN-ACK, and ACK before application data.
-7. Block or stop the web service and observe how TCP behavior changes.
-
-Expected learning outcome:
-
-Students should see that ARP supports local delivery, ICMP supports reachability testing, and TCP uses a handshake before application data is exchanged.
-
 ## 10. QUICK-RECAP CHEAT SHEET
 
 - TCP/IP is the main protocol suite used in modern networks and the Internet.
@@ -637,7 +606,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.2 Multiple-Choice Questions
 
-1. What is the best reason for studying 
+1. What is the best reason for studying this lesson's topic?
    A. It helps students understand and support real network operation.
    B. It replaces the need for troubleshooting.
    C. It removes the need for IP addressing.
@@ -700,11 +669,10 @@ This assessment is intentionally focused. Students should answer clearly, use co
 ### 7.3 Scenario-Based Questions
 
 1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
-2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
 
 Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
 
 Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
-
