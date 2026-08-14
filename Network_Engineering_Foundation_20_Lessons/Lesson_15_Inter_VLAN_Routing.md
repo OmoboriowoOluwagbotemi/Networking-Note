@@ -630,49 +630,88 @@ Without the hallway, departments are isolated. With an uncontrolled hallway, eve
 - Wrong default gateway breaks remote network access.
 - Firewalls and ACLs should control inter-VLAN traffic where security matters.
 
-## 21. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What is inter-VLAN routing?
-2. Why do devices in different VLANs need routing?
-3. What is the default gateway used for?
-4. Why must a host's gateway be in the same subnet as the host?
-5. What is router-on-a-stick?
-6. What is a router subinterface?
-7. What does `encapsulation dot1Q` do?
-8. What switch port type is needed between a switch and router in router-on-a-stick?
-9. What is an SVI?
-10. What command enables IPv4 routing on a Cisco Layer 3 switch?
-11. What is a Layer 3 switch?
-12. Name two requirements for an SVI to route successfully.
-13. Why is router-on-a-stick less scalable than Layer 3 switching?
-14. What should you check if same-VLAN traffic works but different-VLAN traffic fails?
-15. What command shows router or Layer 3 switch interface IP status?
-16. What command shows connected routes?
-17. Why might a firewall be used for inter-VLAN routing?
-18. What can happen if guest VLAN traffic is routed freely to internal VLANs?
-19. Does IPv6 also require routing between VLAN prefixes?
-20. What command enables IPv6 routing on Cisco devices?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 22. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. Inter-VLAN routing is routing traffic between different VLANs and subnets.
-2. VLANs are separate Layer 2 broadcast domains and usually separate IP subnets.
-3. The default gateway sends traffic from a host to remote networks.
-4. The host must reach the gateway locally before the gateway can route traffic.
-5. Router-on-a-stick uses one router physical interface with subinterfaces over a trunk.
-6. A subinterface is a logical interface under a physical router interface.
-7. It maps a router subinterface to an 802.1Q VLAN tag.
-8. A trunk port.
-9. An SVI is a Switch Virtual Interface, a Layer 3 interface for a VLAN.
-10. `ip routing`.
-11. A Layer 3 switch can switch frames and route IP packets.
-12. The VLAN must exist, the SVI must have the right IP, it must be up/up, active ports/trunks must exist, and `ip routing` must be enabled.
-13. All inter-VLAN traffic must cross one router link, which can become a bottleneck.
-14. Check gateway, SVI/router subinterface, trunk allowed VLANs, VLAN assignment, routing, and policy.
-15. `show ip interface brief`.
-16. `show ip route connected`.
-17. To enforce security policy between VLANs.
-18. Guests may access internal business systems, creating a major security risk.
-19. Yes.
-20. `ipv6 unicast-routing`.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 

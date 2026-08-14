@@ -694,45 +694,88 @@ Cisco IOS commands help engineers verify interface status, switching behavior, V
 - One failed router or firewall can affect access to remote networks or the Internet.
 - Device role knowledge makes troubleshooting faster and more accurate.
 
-## 9. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What is a network device?
-2. What is the difference between an end device and an infrastructure device?
-3. Why are servers important in client-server networks?
-4. What does a Layer 2 switch use to forward frames?
-5. What is the difference between a Layer 2 switch and a Layer 3 switch?
-6. What does a router use to forward packets?
-7. What is a default gateway?
-8. What is the role of a wireless access point?
-9. Why do enterprises use WLAN controllers?
-10. What is the main purpose of a firewall?
-11. What is the difference between IDS and IPS?
-12. Why are load balancers used?
-13. What does a proxy server do?
-14. What is the purpose of a content filter?
-15. What is a NIC?
-16. What is a transceiver?
-17. Why can a wrong firewall rule make an application fail?
-18. Why does understanding device placement help troubleshooting?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 10. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. A network device is any physical, virtual, or cloud-based system that participates in network communication.
-2. An end device sends or receives user/application traffic, while an infrastructure device moves, controls, secures, or manages traffic.
-3. Servers provide centralized services such as files, DNS, DHCP, authentication, databases, and applications.
-4. A Layer 2 switch forwards frames using MAC addresses.
-5. A Layer 2 switch switches within a LAN or VLAN, while a Layer 3 switch can also route between IP networks or VLANs.
-6. A router forwards packets using destination IP addresses and a routing table.
-7. A default gateway is the router or Layer 3 device used to reach other networks.
-8. An access point allows wireless clients to connect to the wired network using Wi-Fi.
-9. WLAN controllers centrally manage APs, SSIDs, security, roaming, radio settings, and monitoring.
-10. A firewall permits, denies, logs, and inspects traffic based on security rules.
-11. IDS detects and alerts; IPS detects and can block or prevent traffic.
-12. Load balancers distribute client requests across multiple servers to improve availability, performance, and scalability.
-13. A proxy server acts as an intermediary between clients and destinations.
-14. A content filter permits or blocks websites and content based on policy.
-15. A NIC is the interface that connects a device to a network.
-16. A transceiver is a module that transmits and receives network signals, commonly for fiber or copper uplinks.
-17. A wrong firewall rule can block required ports, protocols, IP addresses, applications, or security zones.
-18. Device placement helps identify likely failure points based on who is affected and what type of traffic is failing.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 

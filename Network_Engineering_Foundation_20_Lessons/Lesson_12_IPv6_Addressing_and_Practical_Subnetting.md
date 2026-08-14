@@ -709,49 +709,88 @@ The important lesson is not that IPv6 addresses are long. The important lesson i
 - `::1` is the IPv6 loopback address.
 - `::` is the unspecified address.
 
-## 17. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What does IPv6 mean?
-2. How many bits are in an IPv6 address?
-3. What is a hextet?
-4. How many hextets are in an IPv6 address?
-5. What number system does IPv6 use?
-6. What are the two main IPv6 abbreviation rules?
-7. Why can `::` be used only once in an IPv6 address?
-8. Shorten `2001:0db8:0000:0000:0000:0000:0000:0001`.
-9. Expand `2001:db8::1`.
-10. What is the standard IPv6 LAN prefix length?
-11. What is a global unicast address?
-12. What is the documentation prefix used in examples?
-13. What is a link-local address?
-14. What prefix do link-local addresses commonly begin with?
-15. Does IPv6 use broadcast?
-16. What prefix identifies IPv6 multicast?
-17. What is anycast?
-18. What does SLAAC mean?
-19. What is the difference between stateless and stateful DHCPv6?
-20. What protocol replaces ARP behavior in IPv6?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 18. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. IPv6 means Internet Protocol version 6.
-2. 128 bits.
-3. A hextet is a 16-bit section of an IPv6 address written with four hexadecimal characters.
-4. Eight hextets.
-5. Hexadecimal.
-6. Remove leading zeros and replace one continuous run of zero hextets with `::`.
-7. Because using it more than once would make the address ambiguous.
-8. `2001:db8::1`.
-9. `2001:0db8:0000:0000:0000:0000:0000:0001`.
-10. `/64`.
-11. A globally routable IPv6 address.
-12. `2001:db8::/32`.
-13. An IPv6 address used only on the local link.
-14. `fe80::/10`.
-15. No.
-16. `ff00::/8`.
-17. Anycast is an address assigned to multiple devices where routing sends traffic to the nearest or best destination.
-18. Stateless Address Autoconfiguration.
-19. Stateless DHCPv6 provides options while SLAAC creates the address; stateful DHCPv6 assigns the address from a server.
-20. Neighbor Discovery Protocol using ICMPv6.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 

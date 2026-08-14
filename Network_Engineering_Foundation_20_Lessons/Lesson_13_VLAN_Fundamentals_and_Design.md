@@ -713,49 +713,88 @@ These commands help verify whether the port is up, which VLAN it belongs to, whe
 - VLANs separate; routers, firewalls, and ACLs control inter-VLAN access.
 - Lesson 14 will configure VLANs and trunks in detail.
 
-## 20. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What does VLAN mean?
-2. What OSI layer is a VLAN primarily associated with?
-3. What is the relationship between a VLAN and a broadcast domain?
-4. Why are VLANs used in enterprise networks?
-5. What is a flat network?
-6. Why is a flat network risky in an enterprise?
-7. How does a VLAN usually relate to an IP subnet?
-8. What is an access VLAN?
-9. What is an access port?
-10. What is a trunk port?
-11. Why are trunks needed in VLAN designs?
-12. What is a VLAN ID?
-13. Why should VLANs have clear names?
-14. What is VLAN 1 commonly used as on Cisco switches?
-15. Why should production networks avoid relying on VLAN 1 for normal user traffic?
-16. What is a voice VLAN?
-17. Why is voice traffic often separated from data traffic?
-18. What is a native VLAN?
-19. Why should guest Wi-Fi be placed in a separate VLAN?
-20. What must be used for devices in different VLANs to communicate?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 21. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. VLAN means Virtual Local Area Network.
-2. Layer 2, the Data Link layer.
-3. Each VLAN is a separate broadcast domain.
-4. VLANs are used for segmentation, broadcast control, security support, troubleshooting, and manageability.
-5. A flat network is a network where many devices share one large broadcast domain.
-6. It allows too much broadcast traffic, weakens security boundaries, and makes troubleshooting harder.
-7. One VLAN usually maps to one IP subnet.
-8. An access VLAN is the VLAN assigned to an access port.
-9. An access port is a switch port that normally carries one VLAN for an endpoint.
-10. A trunk port carries traffic for multiple VLANs.
-11. Trunks allow multiple VLANs to cross one link between switches or network devices.
-12. A VLAN ID is the numeric identifier of a VLAN.
-13. Clear names improve troubleshooting, documentation, and handover.
-14. VLAN 1 is commonly the default VLAN.
-15. Because default VLAN use can create security, management, and troubleshooting risks.
-16. A voice VLAN is a VLAN used for IP phone traffic.
-17. Voice traffic is delay-sensitive and may need separation, QoS, security policy, and voice-specific DHCP options.
-18. The native VLAN carries untagged traffic on an 802.1Q trunk.
-19. Guest Wi-Fi should be isolated so visitors do not access internal business systems.
-20. A router, Layer 3 switch, or firewall must route traffic between VLANs.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 

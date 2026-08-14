@@ -655,49 +655,88 @@ PAT is like an office building with many employees using one public reception ph
 - NAT requires working routing.
 - NAT is not a replacement for firewall policy.
 
-## 23. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What is dynamic routing?
-2. Why does dynamic routing scale better than static routing?
-3. What is convergence?
-4. What metric does RIP use?
-5. What is the maximum usable hop count in RIP?
-6. What does OSPF stand for?
-7. Is OSPF an IGP or EGP?
-8. What does BGP stand for?
-9. What is BGP commonly used for?
-10. What is an IXP?
-11. Why does local peering reduce latency?
-12. What is NAT?
-13. What is PAT?
-14. What is NAT overload?
-15. What is static NAT commonly used for?
-16. What is dynamic NAT?
-17. What is the difference between inside local and inside global?
-18. Which Cisco keyword enables PAT?
-19. Which command shows active NAT translations?
-20. Why is NAT not a complete security solution?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 24. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. Dynamic routing is automatic route learning through routing protocols.
-2. Routers exchange and update routes automatically instead of requiring manual routes everywhere.
-3. Convergence is the process where routers update routing information after a topology change.
-4. Hop count.
-5. 15.
-6. Open Shortest Path First.
-7. IGP.
-8. Border Gateway Protocol.
-9. Exchanging routes between autonomous systems, ISPs, cloud providers, and large networks.
-10. An Internet Exchange Point where networks interconnect and peer.
-11. Traffic can stay local instead of traveling through longer international paths.
-12. Network Address Translation changes IP address information as traffic crosses a router/firewall.
-13. Port Address Translation lets many internal hosts share one public IP using ports.
-14. Cisco's term for PAT.
-15. Publishing an internal server with a consistent public mapping.
-16. Dynamic NAT maps private addresses to a pool of public addresses as needed.
-17. Inside local is the private internal address; inside global is the public translated address.
-18. `overload`.
-19. `show ip nat translations`.
-20. NAT changes addresses, but firewall/security policy is still needed to control access.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 

@@ -753,45 +753,88 @@ Test connectivity using ping from PC1 to PC2. Then disconnect one cable and test
 - Fault tolerance means the network can survive failures.
 - Troubleshooting should move from simple evidence to deeper investigation.
 
-## 7. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What is a computer network?
-2. Why do organizations need networks?
-3. What is the difference between LAN, CAN, MAN, and WAN?
-4. What is the difference between WLAN and LAN?
-5. What is the difference between the Internet, an intranet, and an extranet?
-6. Why is client-server architecture preferred in enterprise networks?
-7. Why does peer-to-peer networking become weak as a business grows?
-8. Why is star topology common in modern Ethernet LANs?
-9. Why is bus topology mostly obsolete?
-10. What is the difference between full mesh and partial mesh?
-11. What are the access, distribution, and core layers?
-12. What is a collapsed core?
-13. What does `ipconfig /all` show?
-14. What does `ping` test?
-15. What does `tracert` show?
-16. If a computer has a `169.254.x.x` address, what is likely wrong?
-17. If a user can ping `8.8.8.8` but cannot open websites by name, what is likely wrong?
-18. Why should a technician identify whether a problem affects one user, one department, or the whole company?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 8. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. A computer network is a group of connected devices that communicate and share resources using protocols.
-2. Organizations need networks for communication, shared resources, centralized administration, security, scalability, cloud access, and business continuity.
-3. LAN covers a local area, CAN connects LANs across a campus, MAN covers a city or metro area, and WAN connects networks across long distances.
-4. WLAN is a wireless LAN that uses Wi-Fi, while LAN commonly refers to local wired and switched network infrastructure.
-5. The Internet is public and global, an intranet is private and internal, and an extranet gives controlled access to selected external users.
-6. Client-server architecture supports centralized management, authentication, backup, monitoring, security, and scalability.
-7. Peer-to-peer becomes weak because permissions, backups, security, and availability are not centrally controlled.
-8. Star topology is common because each device has a dedicated connection to a switch, making installation and troubleshooting easier.
-9. Bus topology is mostly obsolete because it has poor scalability, shared media collisions, and a backbone single point of failure.
-10. Full mesh connects every node to every other node, while partial mesh connects only some nodes with redundant paths.
-11. The access layer connects end devices, the distribution layer aggregates access switches and applies policy, and the core layer provides high-speed backbone connectivity.
-12. A collapsed core combines the distribution and core layers into one layer.
-13. `ipconfig /all` shows detailed adapter information, including IP address, subnet mask, gateway, DNS, DHCP, MAC address, and lease details.
-14. `ping` tests basic reachability using ICMP.
-15. `tracert` shows the path traffic takes through router hops toward a destination.
-16. A `169.254.x.x` address usually means the device failed to receive an address from DHCP.
-17. DNS is likely the problem.
-18. Scope helps identify where to troubleshoot first: endpoint, access switch, VLAN, distribution path, firewall, ISP, DNS, or wider infrastructure.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 

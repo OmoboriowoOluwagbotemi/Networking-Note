@@ -601,49 +601,88 @@ Cisco IOS commands allow the technician to verify the switch side of the connect
 - `show interfaces status` quickly checks port state.
 - `show port-security interface` helps investigate port security issues.
 
-## 16. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What does a Layer 2 switch use to forward frames?
-2. What is a MAC address table?
-3. What does CAM mean in switching?
-4. How does a switch learn a MAC address?
-5. Which MAC address does the switch learn from: source or destination?
-6. Which MAC address does the switch use when deciding where to forward a frame?
-7. What is a dynamic MAC address entry?
-8. What is MAC aging?
-9. What happens when a switch receives a frame with a known destination MAC address?
-10. What happens when a switch receives a broadcast frame?
-11. What is unknown unicast flooding?
-12. What does filtering mean in basic switching?
-13. What is an access port?
-14. What is a trunk port?
-15. Why can a wrong VLAN assignment break user connectivity?
-16. What is port security?
-17. What is sticky MAC learning?
-18. Name the three common Cisco port security violation modes.
-19. What does error-disabled mean?
-20. Which Cisco IOS command shows learned MAC addresses?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 17. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. A Layer 2 switch uses MAC addresses to forward Ethernet frames.
-2. A MAC address table maps MAC addresses to switch ports and VLANs.
-3. CAM means Content Addressable Memory, used for fast MAC address lookup.
-4. A switch learns a MAC address by reading the source MAC address of an incoming frame.
-5. The switch learns from the source MAC address.
-6. The switch uses the destination MAC address to decide where to send the frame.
-7. A dynamic MAC entry is learned automatically from network traffic.
-8. MAC aging removes inactive dynamic MAC entries after a period of time.
-9. The switch forwards the frame only out the correct port in the same VLAN.
-10. The switch floods the broadcast frame out all ports in the same VLAN except the incoming port.
-11. Unknown unicast flooding occurs when the switch floods a unicast frame because the destination MAC is not in the MAC table.
-12. Filtering means the switch does not forward a frame out a port because forwarding is unnecessary or blocked.
-13. An access port carries traffic for one VLAN and usually connects an end device.
-14. A trunk port carries traffic for multiple VLANs.
-15. The device may receive the wrong subnet, wrong gateway, wrong DHCP scope, or wrong security policy.
-16. Port security limits which MAC addresses are allowed on a switch port.
-17. Sticky MAC learning dynamically learns a MAC address and treats it as secure.
-18. Protect, restrict, and shutdown.
-19. Error-disabled means the switch has disabled the port because of a detected problem such as a port security violation.
-20. `show mac address-table`.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 

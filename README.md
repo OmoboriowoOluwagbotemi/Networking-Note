@@ -42,11 +42,13 @@ The current publishable edition is organized in the folder:
 - CCNA and Network+ exam reminders
 - Glossary and comparison tables
 - Quick-reference cheat sheet
-- Review questions and suggested answers
+- Lesson assessment with 5 theory questions, 10 multiple-choice questions, and 2 scenario-based questions
 
 ## Writing Direction
 
 Lessons should be taught in clear explanatory paragraphs, not as rigid What / Why / How / Where sections. Each topic should still explain purpose, operation, deployment context, and troubleshooting relevance, but the writing should feel natural, technically accurate, and easy for students to follow.
+
+Each lesson assessment should stay focused and consistent: 5 theory questions, 10 multiple-choice questions, and 2 scenario-based questions. This keeps classroom review manageable while still testing understanding, recall, and practical problem-solving.
 
 ## Course Memory
 

@@ -569,49 +569,88 @@ Students should see that local delivery uses frames and MAC addresses, while rem
 - IP addresses usually stay the same end-to-end unless NAT is used.
 - Troubleshooting should follow the data path from source to destination.
 
-## 9. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What does it mean for data to travel through a network?
-2. What is the difference between a source and a destination?
-3. Why are protocols necessary for network communication?
-4. What is unicast traffic?
-5. What is broadcast traffic?
-6. What is multicast traffic?
-7. What is encapsulation?
-8. What is decapsulation?
-9. What is a PDU?
-10. What is the PDU name at the Transport layer?
-11. What is the PDU name at the Network layer?
-12. What is the PDU name at the Data Link layer?
-13. What is the PDU name at the Physical layer?
-14. Why does a device need a default gateway to reach remote networks?
-15. What address does a switch mainly use to forward frames?
-16. What address does a router mainly use to forward packets?
-17. Why does the Layer 2 frame change at each routed hop?
-18. Why can DNS failure make an application appear unreachable?
-19. Why can a firewall block traffic even when routing is correct?
-20. What should a technician check first when troubleshooting data movement from a PC?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 10. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. It means data is created, addressed, encapsulated, transmitted, forwarded, received, decapsulated, and delivered to the correct application.
-2. The source sends data, while the destination receives data.
-3. Protocols provide rules so devices can format, address, transmit, receive, and interpret data correctly.
-4. Unicast is one-to-one communication from one source to one destination.
-5. Broadcast is one-to-all communication inside a local broadcast domain.
-6. Multicast is one-to-selected-group communication.
-7. Encapsulation is the process of adding protocol headers or trailers as data moves down the layers.
-8. Decapsulation is the process of removing protocol headers or trailers as data moves up the layers.
-9. A PDU is the name for data at a specific network layer.
-10. The Transport layer PDU is a TCP segment or UDP datagram.
-11. The Network layer PDU is a packet.
-12. The Data Link layer PDU is a frame.
-13. The Physical layer PDU is bits.
-14. A default gateway forwards traffic from the local network to remote networks.
-15. A switch mainly uses destination MAC addresses.
-16. A router mainly uses destination IP addresses and a routing table.
-17. The Layer 2 frame changes because each link needs local source and destination MAC addresses for that segment.
-18. DNS failure prevents the device from translating a name into the IP address needed for communication.
-19. A firewall can deny traffic based on security policy, ports, protocols, applications, zones, or users even when a route exists.
-20. Start by checking the PC's IP address, subnet mask, default gateway, DNS settings, adapter status, and local reachability.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 

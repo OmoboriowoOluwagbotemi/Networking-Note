@@ -6,6 +6,8 @@ The course is now being revised into a 20-lesson Network Engineering Foundation 
 
 The current writing standard no longer uses rigid separate What / Why / How / Where headings. Lessons should use paragraph-led explanations that are detailed, technically correct, beginner friendly, and easy to teach in class. Each topic should still explain the concept, its purpose, its operation, its enterprise use, and its troubleshooting relevance, but those ideas should be woven naturally into instructor-style prose.
 
+Each lesson assessment must contain only 5 theory questions, 10 multiple-choice questions, and 2 scenario-based questions. Avoid very long review-question sections because the course should remain classroom friendly and easy to assess.
+
 The publishable 20-lesson edition is located in `Network_Engineering_Foundation_20_Lessons/`.
 
 ## Source Curriculum Map

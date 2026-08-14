@@ -841,49 +841,88 @@ If reception fails, the visitor may never enter the building properly. If the di
 - Recursive DNS performs lookups for clients.
 - Always separate IP connectivity troubleshooting from DNS troubleshooting.
 
-## 24. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What does DHCP stand for?
-2. What does DNS stand for?
-3. What are the four DHCP DORA steps?
-4. Which UDP ports are used by DHCP?
-5. Which port is commonly used by DNS?
-6. What is a DHCP scope?
-7. What is a DHCP reservation?
-8. What is a DHCP exclusion?
-9. What is a DHCP lease?
-10. Why is DHCP relay needed in routed VLAN environments?
-11. Which Cisco command is commonly used for DHCP relay?
-12. What does APIPA usually indicate?
-13. What does an A record do?
-14. What does an AAAA record do?
-15. What does a CNAME record do?
-16. What does an MX record do?
-17. What does a PTR record do?
-18. What is the difference between a forward lookup zone and a reverse lookup zone?
-19. What is the difference between authoritative DNS and recursive DNS?
-20. Why can a device have internet connectivity by IP address but fail to browse websites by name?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 25. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. Dynamic Host Configuration Protocol.
-2. Domain Name System.
-3. Discover, Offer, Request, Acknowledge.
-4. UDP 67 and UDP 68.
-5. Port 53, usually UDP for normal queries and TCP for some larger responses or zone transfers.
-6. A DHCP range and option set used to assign addresses for a subnet.
-7. A DHCP setting that gives the same device the same IP address, usually based on MAC address or client identifier.
-8. An address or range that DHCP must not dynamically assign.
-9. Temporary permission to use an assigned IP address.
-10. Because DHCP client broadcasts do not cross routers by default.
-11. `ip helper-address`.
-12. The client failed to receive a valid DHCP lease.
-13. Maps a name to an IPv4 address.
-14. Maps a name to an IPv6 address.
-15. Creates an alias to another DNS name.
-16. Identifies mail servers for a domain.
-17. Maps an IP address back to a name.
-18. Forward lookup resolves name to IP; reverse lookup resolves IP to name.
-19. Authoritative DNS holds official zone records; recursive DNS performs lookups for clients.
-20. IP connectivity may work while DNS resolution is failing or the device is using the wrong DNS server.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 

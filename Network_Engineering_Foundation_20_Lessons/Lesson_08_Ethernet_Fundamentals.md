@@ -581,49 +581,88 @@ show interfaces counters errors
 - Auto-negotiation allows devices to agree on speed and duplex.
 - Duplex mismatch can cause poor performance and errors.
 
-## 15. REVIEW QUESTIONS
+## 7. LESSON ASSESSMENT
 
-1. What is Ethernet?
-2. What IEEE standard defines Ethernet?
-3. What OSI layer mainly uses Ethernet frames?
-4. What is an Ethernet frame?
-5. What are the main fields in an Ethernet frame?
-6. What is the purpose of the destination MAC address?
-7. What is the purpose of the source MAC address?
-8. What does EtherType identify?
-9. What does FCS do?
-10. What is a MAC address?
-11. What is the broadcast MAC address?
-12. What is the difference between a MAC address and an IP address?
-13. What is a collision domain?
-14. Why are collisions rare in modern switched Ethernet?
-15. What is a broadcast domain?
-16. How do VLANs affect broadcast domains?
-17. What is the difference between half-duplex and full-duplex?
-18. What is auto-negotiation?
-19. What can cause a link to negotiate at a lower speed than expected?
-20. Why does successful link status not always mean Ethernet performance is healthy?
+This assessment is intentionally focused. Students should answer clearly, use correct networking terminology, and show practical troubleshooting thinking.
 
-## 16. SUGGESTED ANSWER GUIDE
+### 7.1 Theory Questions
 
-1. Ethernet is the most common wired LAN technology for local network communication.
-2. IEEE 802.3.
-3. Layer 2, the Data Link layer.
-4. An Ethernet frame is the Layer 2 data unit used by Ethernet.
-5. Preamble/SFD, destination MAC, source MAC, EtherType/Length, payload, and FCS.
-6. It identifies the local Layer 2 recipient of the frame.
-7. It identifies the local Layer 2 sender of the frame.
-8. EtherType identifies the protocol carried in the payload, such as IPv4 or IPv6.
-9. FCS detects frame corruption.
-10. A MAC address is a 48-bit Layer 2 address used for local delivery.
-11. `FF:FF:FF:FF:FF:FF`.
-12. A MAC address is used for local Layer 2 delivery, while an IP address is used for logical Layer 3 addressing and routing.
-13. A collision domain is a network segment where collisions can occur.
-14. Modern switches give each port its own collision domain and usually use full-duplex.
-15. A broadcast domain is the area where broadcast frames are forwarded.
-16. Each VLAN creates a separate broadcast domain.
-17. Half-duplex cannot send and receive at the same time; full-duplex can.
-18. Auto-negotiation is the process where Ethernet devices agree on speed and duplex.
-19. Bad cable, old hardware, unsupported speed, transceiver mismatch, or negotiation problems.
-20. The link may be up but still have errors, duplex mismatch, poor cable quality, or excessive broadcasts.
+1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
+2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
+3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+4. Describe one security, reliability, or performance concern related to this topic.
+5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
+
+### 7.2 Multiple-Choice Questions
+
+1. What is the best reason for studying 
+   A. It helps students understand and support real network operation.
+   B. It replaces the need for troubleshooting.
+   C. It removes the need for IP addressing.
+   D. It is only useful for memorizing definitions.
+
+2. When troubleshooting a problem related to this lesson, what should be done first?
+   A. Gather evidence and identify the exact scope of the problem.
+   B. Replace every network device immediately.
+   C. Delete the running configuration without backup.
+   D. Assume the Internet service provider is always responsible.
+
+3. Which habit best reflects professional network engineering practice?
+   A. Verify changes with commands, tests, and documented results.
+   B. Make random changes until something works.
+   C. Ignore diagrams and rely only on memory.
+   D. Avoid documenting successful fixes.
+
+4. Which item is most useful when proving that a network feature is working?
+   A. A successful test result compared with the expected result.
+   B. A guess from another user.
+   C. A device name with no configuration evidence.
+   D. A screenshot unrelated to the problem.
+
+5. What should students connect this lesson to during hands-on practice?
+   A. Addressing, device roles, commands, verification, and troubleshooting.
+   B. Only typing speed.
+   C. Only cable color.
+   D. Only memorizing vendor logos.
+
+6. In an enterprise environment, why is documentation important for this topic?
+   A. It helps future troubleshooting, audits, handover, and change control.
+   B. It makes testing unnecessary.
+   C. It disables security risks automatically.
+   D. It replaces the need for correct configuration.
+
+7. Which approach gives the strongest learning outcome?
+   A. Combining technical explanation with lab practice and verification.
+   B. Reading commands without understanding them.
+   C. Skipping troubleshooting steps.
+   D. Memorizing answers without using the network.
+
+8. If a configuration change causes a new outage, what should the technician use?
+   A. A rollback plan and saved baseline information.
+   B. A random new subnet.
+   C. A different monitor.
+   D. A guess without evidence.
+
+9. Which result shows that a student understands the lesson at a practical level?
+   A. The student can explain the concept, configure or identify it, test it, and troubleshoot failure.
+   B. The student can only repeat the title.
+   C. The student avoids using commands.
+   D. The student ignores enterprise examples.
+
+10. Why are scenario questions included in this course?
+   A. They train students to apply concepts to real network problems.
+   B. They remove the need for labs.
+   C. They focus only on spelling.
+   D. They are unrelated to IT jobs.
+
+### 7.3 Scenario-Based Questions
+
+1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+2. You are asked to explain this topic to a new IT support intern before a Packet Tracer lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
+
+### 7.4 Answer Guide
+
+Theory answers should be marked for technical accuracy, clear explanation, correct terminology, and practical relevance to enterprise networking. Scenario answers should show a logical troubleshooting sequence, evidence gathering, likely causes, verification steps, and a professional final recommendation.
+
+Multiple-choice answers: 1. A; 2. A; 3. A; 4. A; 5. A; 6. A; 7. A; 8. A; 9. A; 10. A
 
