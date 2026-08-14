@@ -369,7 +369,7 @@ show arp
 
 ### ARP Cybersecurity Note
 
-ARP has no strong built-in authentication. Attackers can abuse ARP with ARP spoofing or ARP poisoning, where a malicious device claims to own another device's IP address, such as the default gateway. This can enable man-in-the-middle attacks. Enterprise switches can use features such as DHCP Snooping and Dynamic ARP Inspection to reduce this risk. These protections will be covered later in Lesson 22.
+ARP has no strong built-in authentication. Attackers can abuse ARP with ARP spoofing or ARP poisoning, where a malicious device claims to own another device's IP address, such as the default gateway. This can enable man-in-the-middle attacks. Enterprise switches can use features such as DHCP Snooping and Dynamic ARP Inspection to reduce this risk. These protections will be covered later in Lesson 20.
 
 Important IPv6 Note
 
@@ -566,7 +566,6 @@ If the building address is wrong, IP delivery fails. If the registered courier h
 
 This analogy shows that TCP/IP protocols have different jobs. They work together, but they do not all solve the same problem.
 
-## 9. CISCO PACKET TRACER / WIRESHARK PRACTICE
 
 ## 10. QUICK-RECAP CHEAT SHEET
 

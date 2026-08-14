@@ -30,7 +30,7 @@ Inter-VLAN routing also matters for security. The goal is not to allow every VLA
 
 In troubleshooting, inter-VLAN routing is a common failure point. A user may have the correct IP address and VLAN assignment but still fail to reach another subnet because the default gateway is wrong, the SVI is down, a router subinterface is missing, a trunk is not carrying the VLAN, routing is disabled, or an access control rule blocks the traffic.
 
-## 16.3 Why Devices in Different VLANs Need Routing
+## 16.3 Routing Requirement Between VLANs
 
 A VLAN is a Layer 2 broadcast domain. An IP subnet is a Layer 3 network. In good design, each VLAN usually maps to one IP subnet.
 

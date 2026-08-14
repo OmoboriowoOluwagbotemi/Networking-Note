@@ -58,7 +58,7 @@ Static vs Dynamic Routing
 
 Dynamic routing does not mean "no planning." Routing protocols must still be designed, secured, summarized, filtered, monitored, and documented.
 
-## 18.4 What Is a Routing Protocol?
+## 18.4 Routing Protocol Fundamentals
 
 A routing protocol is a set of rules routers use to share network reachability information. Routing protocols allow routers to advertise networks, learn routes, calculate best paths, and react to topology changes.
 
@@ -161,7 +161,7 @@ OSPF is commonly used inside networks. BGP is used between networks.
 
 This is a simplification, but it is a useful beginner mental model.
 
-## 18.9 How Nigerian ISPs Peer via IXPN
+## 18.9 Nigerian ISP Peering Through IXPN
 
 IXPN, the Internet Exchange Point of Nigeria, is a real-world example of how networks exchange traffic locally. An Internet Exchange Point is a shared interconnection platform where ISPs, mobile operators, content providers, cloud providers, educational networks, and other networks can peer.
 
@@ -192,7 +192,7 @@ IXPN Context Table
 
 Source note: the IXPN details above were verified from the official IXPN website at `https://ixpn.ng/` during lesson preparation.
 
-## 18.10 What Is NAT?
+## 18.10 NAT Fundamentals
 
 NAT means Network Address Translation. NAT changes IP address information as traffic passes through a router, firewall, or NAT device.
 

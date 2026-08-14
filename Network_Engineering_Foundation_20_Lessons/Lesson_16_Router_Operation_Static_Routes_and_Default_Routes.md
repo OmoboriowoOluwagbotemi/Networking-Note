@@ -27,7 +27,7 @@ Routing also matters for troubleshooting. When a host can reach its gateway but 
 
 Routing is also a security and design topic. A route can make a network reachable. A missing route can isolate a network. A wrong default route can send traffic to the wrong place. A broad route can expose more networks than intended. Firewalls and ACLs control traffic, but routing determines whether a path exists.
 
-## 17.3 How Routers Forward Packets
+## 17.3 Router Packet Forwarding Process
 
 A router forwards packets by following a structured process.
 

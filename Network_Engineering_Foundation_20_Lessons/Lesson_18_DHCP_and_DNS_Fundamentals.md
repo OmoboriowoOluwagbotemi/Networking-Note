@@ -271,7 +271,7 @@ If the helper address is missing, wrong, blocked by ACL, or placed on the wrong 
 
 ## 19.11 Cisco IOS DHCP Server Basics
 
-Cisco routers and Layer 3 switches can provide DHCP service in small networks and labs. In larger enterprises, DHCP is often centralized on Windows or Linux servers, but understanding Cisco DHCP configuration is useful for CCNA and Packet Tracer.
+Cisco routers and Layer 3 switches can provide DHCP service in small networks and labs. In larger enterprises, DHCP is often centralized on Windows or Linux servers, but understanding Cisco DHCP configuration is useful for CCNA and practical router/switch administration.
 
 Example Cisco IOS DHCP Configuration
 

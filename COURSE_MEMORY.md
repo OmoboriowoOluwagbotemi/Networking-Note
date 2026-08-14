@@ -12,6 +12,8 @@ Cisco Packet Tracer practice sections should not be included inside the 20 theor
 
 The publishable 20-lesson edition is located in `Network_Engineering_Foundation_20_Lessons/`.
 
+Quality review note: the 20-lesson edition should remain beginner friendly while preserving technical correctness. Merged lessons must not accidentally drop their second or later source topics. Lesson 14 must include both VLAN configuration/trunking and STP. Lesson 19 must include both wireless deployment and wireless/network security. Lesson 20 must include access control, hardening, essential services, VPNs, power resilience, troubleshooting, documentation, monitoring, change management, and career direction.
+
 ## Source Curriculum Map
 
 | Lesson | Title |

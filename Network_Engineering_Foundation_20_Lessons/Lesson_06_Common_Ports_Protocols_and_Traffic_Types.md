@@ -718,7 +718,6 @@ If a visitor goes to the correct building but the room is locked, the building a
 
 Different departments also have different security rules. The public reception area may be open, but the finance office, server room, and security office require authorization. In the same way, a network may allow HTTPS to a public web server but block SMB, SQL Server, SSH, and RDP from ordinary users.
 
-## 11. CISCO PACKET TRACER / PRACTICAL LAB
 
 ## 12. QUICK-RECAP CHEAT SHEET
 
