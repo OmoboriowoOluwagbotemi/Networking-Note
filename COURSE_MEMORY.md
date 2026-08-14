@@ -12,7 +12,7 @@ Cisco Packet Tracer practice sections should not be included inside the 20 theor
 
 The publishable 20-lesson edition is located in `Network_Engineering_Foundation_20_Lessons/`.
 
-The practical lab edition is located in `Hands on labs/Lesson_Aligned_Packet_Tracer_Labs/`. It contains 20 scenario-based Cisco Packet Tracer labs, one aligned to each theory lesson, following the Villa University and Nova Care pattern: scenario, devices, topology, addressing, step-by-step tasks, copyable commands, verification, troubleshooting checklist, and student deliverables.
+The practical lab edition is located in `Hands on labs/Lesson_Aligned_Packet_Tracer_Labs/`. It contains 20 scenario-based Cisco Packet Tracer labs, one aligned to each theory lesson. Each lab must follow the Villa University and Nova Care pattern as a folder containing `Topology.md`, `Problem.md`, and `Solution.md`, instead of one combined lab document.
 
 Quality review note: the 20-lesson edition should remain beginner friendly while preserving technical correctness. Merged lessons must not accidentally drop their second or later source topics. Lesson 14 must include both VLAN configuration/trunking and STP. Lesson 19 must include both wireless deployment and wireless/network security. Lesson 20 must include access control, hardening, essential services, VPNs, power resilience, troubleshooting, documentation, monitoring, change management, and career direction.
 
