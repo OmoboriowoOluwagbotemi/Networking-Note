@@ -4,6 +4,20 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL TOPOLOGY: TRUNKS AND STP LOOP PREVENTION
+
+```mermaid
+flowchart TB
+    SW1["Switch 1<br/>Root Bridge"] ---|"Trunk VLANs 10,20,30"| SW2["Switch 2"]
+    SW2 ---|"Redundant trunk"| SW3["Switch 3"]
+    SW3 ---|"Redundant trunk"| SW1
+    SW3 -. "STP blocks one path<br/>to prevent a loop" .- Blocked["Blocked / Discarding Port"]
+    PC10["PC VLAN 10"] --> SW2
+    PC20["PC VLAN 20"] --> SW3
+```
+
+The diagram shows why trunk redundancy needs STP: the physical triangle gives backup paths, while STP creates a loop-free logical path.
+
 ---
 
 ## VLAN Configuration and Trunking

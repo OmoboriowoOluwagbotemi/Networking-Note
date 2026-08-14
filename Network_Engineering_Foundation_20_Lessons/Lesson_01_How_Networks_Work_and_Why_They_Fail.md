@@ -4,6 +4,22 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: BASIC NETWORK AND FAILURE POINTS
+
+```mermaid
+flowchart LR
+    User["User Device"] --> Access["Access Switch / Wi-Fi"]
+    Access --> Gateway["Default Gateway"]
+    Gateway --> Firewall["Firewall / Internet Edge"]
+    Firewall --> Cloud["Internet / Cloud Services"]
+    Access --> Printer["Printer / Local Server"]
+    User -. "Possible failure: cable, Wi-Fi, IP" .- Access
+    Gateway -. "Possible failure: gateway, route" .- Firewall
+    Firewall -. "Possible failure: DNS, ISP, security rule" .- Cloud
+```
+
+This diagram gives students a simple mental model: a network problem may begin at the user device, access layer, gateway, security edge, service, or provider path.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

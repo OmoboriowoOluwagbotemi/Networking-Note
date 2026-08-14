@@ -4,6 +4,19 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: IPv6 ADDRESS STRUCTURE
+
+```mermaid
+flowchart LR
+    IPv6["2001:db8:100:10::25/64"] --> Prefix["Network Prefix<br/>2001:db8:100:10::/64"]
+    IPv6 --> Interface["Interface ID<br/>::25"]
+    Prefix --> LAN["One IPv6 LAN / VLAN"]
+    Interface --> Host["One host interface"]
+    LL["fe80::/10 Link-local"] --> Local["Required for local-link IPv6 operation"]
+```
+
+The diagram separates the IPv6 prefix from the interface identifier and reminds students that link-local addressing is normal in IPv6.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

@@ -4,6 +4,25 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL TOPOLOGY: THREE WAYS TO ROUTE BETWEEN VLANS
+
+```mermaid
+flowchart TB
+    subgraph Direct["Direct Router Interfaces"]
+      SWA["Switch access ports"] -->|"VLAN 10 cable"| R10["Router G0/0<br/>192.168.10.1"]
+      SWA -->|"VLAN 20 cable"| R20["Router G0/1<br/>192.168.20.1"]
+      SWA -->|"VLAN 30 cable"| R30["Router G0/2<br/>192.168.30.1"]
+    end
+    subgraph ROAS["Router-on-a-Stick"]
+      SWB["Switch trunk"] -->|"802.1Q trunk"| R["Router G0/0.10 / .20 / .30"]
+    end
+    subgraph SVI["Layer 3 Switch"]
+      L3["SVI VLAN 10 / 20 / 30<br/>ip routing"]
+    end
+```
+
+This topology places the beginner physical-interface method beside router-on-a-stick and SVI routing so students can compare the designs visually.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

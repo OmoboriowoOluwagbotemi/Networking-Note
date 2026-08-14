@@ -4,6 +4,22 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL TOPOLOGY: SECURE ENTERPRISE WI-FI
+
+```mermaid
+flowchart LR
+    Laptop["Wireless Client"] --> AP["Access Point"]
+    AP --> Switch["Access Switch"]
+    Switch --> WLC["WLAN Controller"]
+    Switch --> RADIUS["RADIUS / 802.1X Server"]
+    Switch --> Firewall["Firewall"]
+    Firewall --> Internet["Internet"]
+    AP --> Guest["Guest SSID -> Guest VLAN"]
+    AP --> Staff["Staff SSID -> Staff VLAN"]
+```
+
+This topology connects RF access, SSIDs, VLAN mapping, authentication, and security policy in one enterprise wireless view.
+
 ---
 
 ## Wireless Fundamentals and Deployment

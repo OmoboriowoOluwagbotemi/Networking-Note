@@ -4,6 +4,22 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: DEVICE ROLES IN AN ENTERPRISE PATH
+
+```mermaid
+flowchart LR
+    PC["End Devices"] --> SW["Access Switch"]
+    AP["Wireless AP"] --> SW
+    SW --> L3["Layer 3 Switch / Router"]
+    L3 --> FW["Firewall"]
+    FW --> LB["Load Balancer"]
+    LB --> Servers["Application Servers"]
+    FW --> Internet["Internet / Cloud"]
+    Sensor["IDS/IPS Sensor"] -. "Inspect / block traffic" .- FW
+```
+
+The diagram separates endpoint devices from infrastructure devices and shows where appliances normally appear in a real traffic path.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

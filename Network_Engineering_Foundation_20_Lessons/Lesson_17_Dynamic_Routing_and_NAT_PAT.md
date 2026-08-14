@@ -4,6 +4,20 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: ROUTING AND NAT/PAT AT THE EDGE
+
+```mermaid
+flowchart LR
+    LAN["Office LAN<br/>Private IPs"] --> Edge["Edge Router / Firewall"]
+    Edge -->|"Dynamic routing learns paths"| WAN["WAN / ISP"]
+    Edge -->|"PAT translates many private sessions"| Public["One Public IP"]
+    Public --> Internet["Internet Services"]
+    ISP1["ISP / AS 1"] <-->|"BGP peering"| IXP["Internet Exchange Point"]
+    IXP <-->|"BGP peering"| ISP2["ISP / AS 2"]
+```
+
+The visual separates internal routing from NAT/PAT translation and shows how provider networks exchange routes at a high level.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

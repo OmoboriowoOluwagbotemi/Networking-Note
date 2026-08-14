@@ -4,6 +4,22 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: SECURE AND RESILIENT NETWORK OPERATIONS
+
+```mermaid
+flowchart TB
+    Users["Users and Branches"] --> Access["Access Control<br/>ACLs, AAA, 802.1X"]
+    Access --> VPN["VPN / Remote Access"]
+    VPN --> Core["Core Services<br/>DNS, DHCP, NTP, Syslog, SNMP"]
+    Core --> Monitor["Monitoring and Baselines"]
+    Monitor --> Change["Change Management<br/>Rollback and Documentation"]
+    Power["UPS / Inverter / Generator / Solar"] --> Core
+    Incident["Incident / Fault"] --> Troubleshoot["Diagnose, Document, Decide"]
+    Troubleshoot --> Change
+```
+
+The diagram shows the operational view of networking: secure access, reliable services, power resilience, monitoring, documentation, and controlled troubleshooting all support availability.
+
 ---
 
 ## Access Control, Hardening, and Essential Services

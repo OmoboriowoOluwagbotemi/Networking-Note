@@ -4,6 +4,21 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: ROUTE SELECTION LOGIC
+
+```mermaid
+flowchart TD
+    Packet["Packet arrives at router"] --> Lookup["Check routing table"]
+    Lookup --> Match{"Matching routes found?"}
+    Match -->|No| Drop["Drop packet"]
+    Match -->|Yes| Prefix["Choose longest prefix match"]
+    Prefix --> AD["If needed, compare administrative distance"]
+    AD --> Metric["If needed, compare metric"]
+    Metric --> Forward["Forward to next hop / exit interface"]
+```
+
+This diagram gives students a simple route-selection order before they study static routes, default routes, and floating static routes.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

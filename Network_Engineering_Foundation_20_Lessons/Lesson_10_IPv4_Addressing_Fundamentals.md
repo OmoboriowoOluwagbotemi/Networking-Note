@@ -4,6 +4,19 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: IPv4 ADDRESS DECISION
+
+```mermaid
+flowchart TD
+    Host["Host IP + Subnet Mask"] --> Decision{"Destination in same subnet?"}
+    Decision -->|Yes| Local["Send directly using ARP for destination MAC"]
+    Decision -->|No| Gateway["Send to default gateway MAC"]
+    Gateway --> Router["Router forwards toward remote network"]
+    Local --> Switch["Switch delivers within local VLAN"]
+```
+
+This diagram is the foundation for understanding subnet masks, default gateways, ARP, and routing.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

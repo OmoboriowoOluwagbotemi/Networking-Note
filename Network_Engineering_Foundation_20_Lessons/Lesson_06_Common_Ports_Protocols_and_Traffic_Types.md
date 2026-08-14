@@ -4,6 +4,19 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: IP ADDRESS PLUS PORT NUMBER
+
+```mermaid
+flowchart LR
+    Client["Client<br/>192.168.10.25"] --> Packet["Destination IP: 172.16.1.10<br/>Destination Port: 443"]
+    Packet --> Server["Server<br/>172.16.1.10"]
+    Server --> Web["HTTPS Service<br/>TCP 443"]
+    Server --> SSH["SSH Service<br/>TCP 22"]
+    Server --> DNS["DNS Service<br/>UDP/TCP 53"]
+```
+
+The IP address gets traffic to the correct host; the port number gets traffic to the correct service on that host.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

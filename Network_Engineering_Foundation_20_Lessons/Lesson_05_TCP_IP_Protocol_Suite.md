@@ -4,6 +4,19 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: TCP/IP PROTOCOL ROLES
+
+```mermaid
+flowchart TB
+    App["Application Protocols<br/>HTTP, DNS, DHCP, SMTP, SSH"] --> Transport["Transport<br/>TCP reliable sessions / UDP fast delivery"]
+    Transport --> Internet["Internet Layer<br/>IP addressing and routing"]
+    Internet --> Link["Network Access<br/>Ethernet, Wi-Fi, ARP, frames"]
+    ICMP["ICMP<br/>Testing and control messages"] --> Internet
+    ARP["ARP<br/>IPv4-to-MAC resolution"] --> Link
+```
+
+This diagram helps students see that TCP/IP is a family of protocols, not just TCP and IP.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

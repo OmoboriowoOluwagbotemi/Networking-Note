@@ -14,6 +14,8 @@ The publishable 20-lesson edition is located in `Network_Engineering_Foundation_
 
 Quality review note: the 20-lesson edition should remain beginner friendly while preserving technical correctness. Merged lessons must not accidentally drop their second or later source topics. Lesson 14 must include both VLAN configuration/trunking and STP. Lesson 19 must include both wireless deployment and wireless/network security. Lesson 20 must include access control, hardening, essential services, VPNs, power resilience, troubleshooting, documentation, monitoring, change management, and career direction.
 
+Visual standard: each lesson in the 20-lesson edition should include a relevant diagram or topology view near the beginning when it improves student understanding. Diagrams should be simple, technically correct, and aligned with the lesson topic rather than decorative.
+
 ## Source Curriculum Map
 
 | Lesson | Title |

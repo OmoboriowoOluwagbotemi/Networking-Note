@@ -4,6 +4,20 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: SWITCH MAC LEARNING
+
+```mermaid
+flowchart TB
+    PC1["PC1<br/>MAC A"] -->|"Frame enters Fa0/1"| SW["Switch"]
+    PC2["PC2<br/>MAC B"] -->|"Frame enters Fa0/2"| SW
+    SW --> Table["MAC Address Table<br/>MAC A -> Fa0/1<br/>MAC B -> Fa0/2"]
+    SW --> Decision{"Destination known?"}
+    Decision -->|Yes| Forward["Forward out correct port"]
+    Decision -->|No| Flood["Flood except incoming port"]
+```
+
+Students should understand that a switch learns from source MAC addresses and forwards based on destination MAC addresses.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

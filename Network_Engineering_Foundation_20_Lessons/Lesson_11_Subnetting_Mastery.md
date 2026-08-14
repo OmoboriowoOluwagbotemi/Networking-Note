@@ -4,6 +4,18 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: SUBNET RANGE STRUCTURE
+
+```mermaid
+flowchart LR
+    Block["192.168.10.0/26"] --> Net["Network Address<br/>192.168.10.0"]
+    Block --> Hosts["Usable Hosts<br/>192.168.10.1 - 192.168.10.62"]
+    Block --> Broadcast["Broadcast Address<br/>192.168.10.63"]
+    Next["Next Subnet<br/>192.168.10.64/26"] -. "Block size 64" .-> Block
+```
+
+This view helps students see that every IPv4 subnet has a beginning, a usable range, and an ending broadcast address.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

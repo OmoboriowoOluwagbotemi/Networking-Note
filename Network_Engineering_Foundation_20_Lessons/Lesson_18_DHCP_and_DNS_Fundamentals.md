@@ -4,6 +4,23 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: DHCP AND DNS TOGETHER
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant DHCP as DHCP Server
+    participant DNS as DNS Resolver
+    participant Web as Web Server
+    Client->>DHCP: Discover / Request IP settings
+    DHCP-->>Client: Offer / ACK IP, gateway, DNS
+    Client->>DNS: Resolve www.example.com
+    DNS-->>Client: Return server IP address
+    Client->>Web: Connect to service using IP and port
+```
+
+DHCP gives the client usable network settings; DNS helps the client find services by name.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

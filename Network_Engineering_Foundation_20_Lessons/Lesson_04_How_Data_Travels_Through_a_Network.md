@@ -4,6 +4,27 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: END-TO-END DATA JOURNEY
+
+```mermaid
+sequenceDiagram
+    participant App as Source Application
+    participant PC as Source Host
+    participant SW as Switch
+    participant R as Router
+    participant FW as Firewall
+    participant S as Destination Server
+    App->>PC: Create data
+    PC->>PC: Encapsulate data into segment, packet, frame, bits
+    PC->>SW: Send Ethernet frame
+    SW->>R: Forward frame toward default gateway
+    R->>FW: Route packet toward remote network
+    FW->>S: Permit traffic and forward to server
+    S->>S: Decapsulate and deliver to application
+```
+
+The sequence shows that data is prepared on the sender, forwarded by network devices, and unpacked at the receiver.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

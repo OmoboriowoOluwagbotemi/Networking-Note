@@ -4,6 +4,21 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: CHOOSING PHYSICAL MEDIA
+
+```mermaid
+flowchart LR
+    Need["Connectivity Requirement"] --> Distance{"Distance?"}
+    Distance -->|"Desk / room"| Copper["UTP / STP Copper"]
+    Distance -->|"Building backbone"| MMF["Multi-mode Fiber"]
+    Distance -->|"Long distance / campus / provider"| SMF["Single-mode Fiber"]
+    Copper --> Test["Cable tester / link lights"]
+    MMF --> Test
+    SMF --> Test
+```
+
+The diagram connects media choice to distance, environment, and testing, which is the main Layer 1 decision students must learn.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

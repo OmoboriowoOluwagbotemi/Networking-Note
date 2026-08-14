@@ -4,6 +4,18 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: ETHERNET FRAME DELIVERY
+
+```mermaid
+flowchart LR
+    PC1["PC1<br/>Source MAC"] --> Frame["Ethernet Frame<br/>Dst MAC + Src MAC + Type + Data + FCS"]
+    Frame --> SW["Switch<br/>Learns source MAC<br/>Forwards by destination MAC"]
+    SW --> PC2["PC2<br/>Destination MAC"]
+    SW -. "Unknown destination" .-> Flood["Flood within VLAN"]
+```
+
+This visual separates the Ethernet frame from IP routing and shows why switches care about MAC addresses.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

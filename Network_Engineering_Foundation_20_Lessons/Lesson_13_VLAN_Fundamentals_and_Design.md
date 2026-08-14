@@ -4,6 +4,20 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL TOPOLOGY: VLAN SEGMENTATION
+
+```mermaid
+flowchart TB
+    SW["Access Switch"]
+    Staff["VLAN 10 Staff<br/>192.168.10.0/24"] --> SW
+    Voice["VLAN 20 Voice<br/>192.168.20.0/24"] --> SW
+    Servers["VLAN 30 Servers<br/>192.168.30.0/24"] --> SW
+    Guest["VLAN 50 Guest<br/>192.168.50.0/24"] --> SW
+    SW --> Gateway["Router / Firewall / Layer 3 Switch<br/>Inter-VLAN policy"]
+```
+
+This topology shows that VLANs can share one physical switch while remaining separate logical networks.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

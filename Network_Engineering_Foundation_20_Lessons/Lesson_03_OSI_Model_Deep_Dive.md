@@ -4,6 +4,22 @@
 
 This lesson is part of the FEMTECT Network Engineering Foundation course. It is written to help students build strong networking fundamentals through clear explanations, real enterprise context, practical troubleshooting logic, and certification-aware technical depth.
 
+## VISUAL DIAGRAM: OSI MODEL LAYERS
+
+```mermaid
+flowchart TB
+    L7["Layer 7: Application<br/>HTTP, DNS, DHCP, SSH"]
+    L6["Layer 6: Presentation<br/>Format, encryption, compression"]
+    L5["Layer 5: Session<br/>Session control"]
+    L4["Layer 4: Transport<br/>TCP / UDP, ports"]
+    L3["Layer 3: Network<br/>IP addressing and routing"]
+    L2["Layer 2: Data Link<br/>Ethernet, MAC, switching"]
+    L1["Layer 1: Physical<br/>Cable, fiber, radio, bits"]
+    L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
+```
+
+This vertical view helps students remember that troubleshooting can move from physical signals upward to applications, or from applications downward to the network path.
+
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 

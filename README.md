@@ -34,6 +34,7 @@ The current publishable edition is organized in the folder:
 ## Lesson Components
 
 - Technical explanations from first principles
+- Visual diagrams or topology views where they help understanding
 - Enterprise examples and practical scenarios
 - Cisco IOS, Windows, and Linux commands where relevant
 - Practical references to commands and troubleshooting where relevant
