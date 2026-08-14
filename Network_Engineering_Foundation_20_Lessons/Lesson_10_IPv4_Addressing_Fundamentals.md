@@ -362,7 +362,7 @@ Example public IPv4 addresses include:
 1.1.1.1
 ```
 
-Public addressing matters because internet communication requires globally reachable addressing at some point. However, most internal enterprise devices do not use public IPv4 addresses directly. They usually use private IPv4 addresses internally and share one or more public IP addresses through NAT or PAT. NAT and PAT will be covered later in Lesson 18.
+Public addressing matters because internet communication requires globally reachable addressing at some point. However, most internal enterprise devices do not use public IPv4 addresses directly. They usually use private IPv4 addresses internally and share one or more public IP addresses through NAT or PAT. NAT and PAT will be covered later in Lesson 17.
 
 Public IP addresses should be protected carefully. A device with a public IP address is more exposed to internet scanning, attacks, and misconfiguration risk than a device hidden behind private addressing and firewall policy.
 

@@ -78,7 +78,7 @@ Broadcast Control Example
 | CCTV Cameras | 30 | Broadcasts stay inside VLAN 30 |
 | Guest Wi-Fi | 40 | Broadcasts stay inside VLAN 40 |
 
-VLANs do not automatically route traffic between groups. If a staff PC in VLAN 10 needs to reach a server in VLAN 30, a router, Layer 3 switch, or firewall must route between those VLANs. Inter-VLAN routing will be covered in Lesson 16.
+VLANs do not automatically route traffic between groups. If a staff PC in VLAN 10 needs to reach a server in VLAN 30, a router, Layer 3 switch, or firewall must route between those VLANs. Inter-VLAN routing will be covered in Lesson 15.
 
 ## 13.4 VLANs and IP Subnets
 
@@ -360,7 +360,7 @@ Example:
 
 If a user is placed in the wrong VLAN, the user may receive an IP address from the wrong DHCP scope. If DHCP relay is missing for a VLAN, devices may fail to receive addresses and may fall back to APIPA in IPv4.
 
-The default gateway for a VLAN may be on a router interface, router subinterface, firewall interface, or Layer 3 switch SVI. The details of inter-VLAN routing will be covered in Lesson 16, but students should understand the design relationship now:
+The default gateway for a VLAN may be on a router interface, router subinterface, firewall interface, or Layer 3 switch SVI. The details of inter-VLAN routing will be covered in Lesson 15, but students should understand the design relationship now:
 
 ```text
 VLAN -> Subnet -> Gateway -> Routing/Policy

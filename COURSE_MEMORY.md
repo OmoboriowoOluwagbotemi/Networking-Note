@@ -2,7 +2,7 @@
 
 ## Current Course Direction
 
-The course is now being revised into a 20-lesson Network Engineering Foundation training path. The goal of the training is to give students a solid, practical foundation in networking engineering for IT support, junior network administration, junior network engineering, CCNA 200-301 preparation, and CompTIA Network+ N10-009 preparation.
+The course is now a 20-lesson Network Engineering Foundation training path. The goal of the training is to give students a solid, practical foundation in networking engineering for IT support, junior network administration, junior network engineering, CCNA 200-301 preparation, and CompTIA Network+ N10-009 preparation.
 
 The current writing standard no longer uses rigid separate What / Why / How / Where headings. Lessons should use paragraph-led explanations that are detailed, technically correct, beginner friendly, and easy to teach in class. Each topic should still explain the concept, its purpose, its operation, its enterprise use, and its troubleshooting relevance, but those ideas should be woven naturally into instructor-style prose.
 
@@ -16,241 +16,44 @@ Quality review note: the 20-lesson edition should remain beginner friendly while
 
 Visual standard: each lesson in the 20-lesson edition should include a relevant diagram or topology view near the beginning when it improves student understanding. Diagrams should be simple, technically correct, and aligned with the lesson topic rather than decorative.
 
-## Source Curriculum Map
+Knowledge-flow standard: the 20 lessons are sequential. The intended flow is network purpose and devices, OSI model, data movement, TCP/IP and ports, physical media, Ethernet and switching, IPv4/subnetting/IPv6, VLANs/trunks/STP/inter-VLAN routing, routing/NAT/DHCP/DNS, wireless/security, then secure operations/resilience/troubleshooting/documentation.
 
-| Lesson | Title |
-|---|---|
-| 1 | How Networks Work and Why They Fail |
-| 2 | Network Devices and Appliances |
-| 3 | OSI Model Deep Dive |
-| 4 | How Data Travels Through a Network |
-| 5 | TCP/IP Protocol Suite |
-| 6 | Common Ports, Protocols, and Traffic Types |
-| 7 | Cabling and Physical Media |
-| 8 | Ethernet Fundamentals |
-| 9 | Enterprise Switching Fundamentals |
-| 10 | IPv4 Addressing Fundamentals |
-| 11 | Subnetting Mastery |
-| 12 | IPv6 Addressing and Practical Subnetting |
-| 13 | VLAN Fundamentals and Design |
-| 14 | VLAN Configuration and Trunking |
-| 15 | Spanning Tree Protocol |
-| 16 | Inter-VLAN Routing |
-| 17 | How Routers Work, Static and Default Routing |
-| 18 | Dynamic Routing and NAT/PAT |
-| 19 | DHCP and DNS Fundamentals |
-| 20 | Wireless Fundamentals and Deployment |
-| 21 | Wireless and Network Security Foundations |
-| 22 | Access Control, Hardening, and Essential Services |
-| 23 | VPNs and Remote Access Security |
-| 24 | Power and Resilience |
-| 25 | Diagnose, Document, Decide |
+## Active 20-Lesson Course Map
 
-## Remaining Lesson Notes From User Curriculum
+| Lesson | Title | Main Knowledge Role |
+|---|---|---|
+| 1 | How Networks Work and Why They Fail | Introduces network purpose, network types, architectures, topologies, and basic Windows connectivity checks. |
+| 2 | Network Devices and Appliances | Introduces the hardware and appliances students will see throughout the rest of the course. |
+| 3 | OSI Model Deep Dive | Gives students the seven-layer mental model before packet movement is traced end to end. |
+| 4 | How Data Travels Through a Network | Uses OSI and TCP/IP ideas to follow real traffic from source to destination. |
+| 5 | TCP/IP Protocol Suite | Builds protocol understanding with TCP, UDP, IP, ICMP, ARP, and the TCP handshake. |
+| 6 | Common Ports, Protocols, and Traffic Types | Connects applications and services to port numbers and traffic behavior. |
+| 7 | Cabling and Physical Media | Grounds students in Layer 1 media, connectors, fiber, copper, and testing. |
+| 8 | Ethernet Fundamentals | Explains local LAN framing, MAC addressing, duplex, speed, and Ethernet behavior. |
+| 9 | Enterprise Switching Fundamentals | Teaches MAC learning, forwarding, filtering, flooding, switch ports, and basic port security. |
+| 10 | IPv4 Addressing Fundamentals | Introduces IPv4 structure, binary/decimal logic, public/private addressing, APIPA, and classful history. |
+| 11 | Subnetting Mastery | Builds subnet calculation skill, CIDR, block-size method, host ranges, and VLSM basics. |
+| 12 | IPv6 Addressing and Practical Subnetting | Introduces IPv6 notation, address types, /64 LAN design, SLAAC, DHCPv6, and Neighbor Discovery. |
+| 13 | VLAN Fundamentals and Design | Explains VLANs as logical Layer 2 networks and enterprise segmentation units. |
+| 14 | VLAN Configuration, Trunking, and Spanning Tree | Teaches VLAN implementation, trunking, 802.1Q, allowed VLANs, and loop prevention. |
+| 15 | Inter-VLAN Routing | Explains routing between VLANs using direct router interfaces first, then router-on-a-stick and Layer 3 switching. |
+| 16 | Router Operation, Static Routes, and Default Routes | Explains routing tables, route selection, static routes, default routes, and floating static routes. |
+| 17 | Dynamic Routing and NAT/PAT | Introduces RIP, OSPF, BGP overview, ISP peering context, static NAT, dynamic NAT, and PAT. |
+| 18 | DHCP and DNS Fundamentals | Teaches automatic addressing, name resolution, DHCP relay, scopes, reservations, leases, and DNS records. |
+| 19 | Wireless Networking, Deployment, and Security | Covers RF, Wi-Fi standards, channels, AP/WLC design, SSIDs, guest networks, WPA, 802.1X, and security foundations. |
+| 20 | Secure Operations, VPNs, Resilience, and Professional Troubleshooting | Closes the course with ACLs, AAA, hardening, services, VPNs, power resilience, documentation, monitoring, change control, and career direction. |
 
-### Lesson 3: OSI Model Deep Dive
+## Active Knowledge Flow Review
 
-- Data Communication Process
-- Unicast, Broadcast, Multicast
-- Encapsulation and Decapsulation, including PDU at each layer
-- Packet Journey from Source to Destination
+The sequence is technically sound for beginner network engineering students. Lessons 1 and 2 define the environment and devices before students are asked to reason about traffic. Lesson 3 teaches the OSI model first, then Lesson 4 applies that model to the actual data journey. Lessons 5 and 6 place protocols and ports on top of that foundation.
 
-### Lesson 4: How Data Travels Through a Network
+The course then moves from physical connectivity to Layer 2 operation in Lessons 7 through 9. Lessons 10 through 12 build IP addressing skill before the course asks students to design VLANs and inter-VLAN routing. Lessons 13 through 15 are therefore correctly placed because VLANs require switching knowledge and inter-VLAN routing requires addressing knowledge.
 
-- All Seven Layers and Their Functions
-- PDU Names per Layer
-- Real-World Examples Mapped to Each Layer
-
-### Lesson 5: TCP/IP Protocol Suite
-
-- TCP
-- UDP, including reliability and use cases
-- IP, including IPv4/IPv6 overview
-- ICMP
-- ARP and the ARP Process
-- The TCP Three-Way Handshake
-
-### Lesson 6: Common Ports, Protocols, and Traffic Types
-
-- Well-Known Ports: FTP, SSH, Telnet, SMTP, DNS, DHCP, TFTP, HTTP, NTP, SNMP, LDAP, HTTPS, SMB, Syslog, SMTPS, LDAPS, SQL Server, RDP, SIP
-
-### Lesson 7: Cabling and Physical Media
-
-- UTP
-- STP
-- CAT5e and CAT6
-- RJ45 Wiring Standards, including T568A and T568B
-- Cable Testing Tools, including cable tester
-- Single-mode fiber
-- Multi-mode fiber
-- Choosing media for cost, distance, and local realities
-
-### Lesson 8: Ethernet Fundamentals
-
-- Ethernet Frame Structure
-- MAC Addressing
-- Collision Domains
-- Broadcast Domains
-- Duplex and Speed / Auto-Negotiation
-
-### Lesson 9: Enterprise Switching Fundamentals
-
-- MAC Address Table / CAM Table
-- Frame Switching Process: flood, forward, filter
-- Switch Port Modes
-- Basic Port Security Concepts
-
-### Lesson 10: IPv4 Addressing Fundamentals
-
-- Binary, Decimal, and Hex Conversion
-- IPv4 Structure, including network vs. host portion
-- Public vs. Private Addressing, APIPA
-- Class of IP Address
-
-### Lesson 11: Subnetting Mastery
-
-- Network, Broadcast, and Host Addresses
-- CIDR Notation
-- Fast Subnetting Techniques, including block-size / "magic number" method
-- VLSM Fundamentals
-
-### Lesson 12: IPv6 Addressing and Practical Subnetting (basic)
-
-- IPv6 Address Structure and Abbreviation Rules
-- Address Types: Global Unicast, Link-Local, Multicast, Anycast
-- SLAAC and DHCPv6 Concepts, basic
-
-### Lesson 13: VLAN Fundamentals and Design
-
-- VLAN Design and Broadcast Control
-- Enterprise Segmentation Strategy
-- Voice VLANs and Native VLAN Concepts
-- Case Study: Segmenting shop floor, back office, and guest Wi-Fi
-
-### Lesson 14: VLAN Configuration and Trunking
-
-- Access Ports vs. Trunk Ports
-- 802.1Q Tagging
-- Trunk Negotiation and Allowed-VLAN Lists
-- Verification Commands
-
-### Lesson 15: Spanning Tree Protocol
-
-- Why Layer 2 Loops Occur
-- Root Bridge Election and BPDUs
-- Port States and Roles
-
-### Lesson 16: Inter-VLAN Routing
-
-- Router-on-a-Stick
-- Switch Virtual Interfaces / Layer 3 Switching
-- Troubleshooting Inter-VLAN Connectivity
-
-### Lesson 17: How Routers Work, Static and Default Routing
-
-- Routing Table Components
-- Administrative Distance
-- Longest-Prefix Match and Route Selection
-- Static Routes, Default Routes, Floating Static Routes
-
-### Lesson 18: Dynamic Routing and NAT/PAT
-
-- RIP, brief
-- OSPF vs. BGP Overview
-- How Nigerian ISPs Peer via IXPN, real-world context
-- Static NAT, Dynamic NAT, PAT / NAT Overload
-- Getting a Whole Office Online on One Public IP
-
-### Lesson 19: DHCP and DNS Fundamentals
-
-- DHCP Operation: Discover, Offer, Request, Ack
-- Scope Design, Reservations, Lease Time, Exclusions
-- DHCP Relay / IP Helper
-- Name Resolution Process
-- Record Types: A, AAAA, CNAME, MX, TXT, NS, PTR
-- Forward vs. Reverse Zones
-- Authoritative vs. Recursive
-
-### Lesson 20: Wireless Fundamentals and Deployment
-
-- RF Basics
-- 2.4GHz, 5GHz, and 6GHz Bands
-- 802.11 Standards: a/b/g/n/ac/ax/be
-- Channel Planning and Overlap
-- Autonomous vs. Lightweight APs, WLAN Controllers
-- Site Survey Concepts, SSID Design and Guest Networks
-
-### Lesson 21: Wireless and Network Security Foundations
-
-- WPA2 vs. WPA3
-- Enterprise 802.1X Authentication
-- CIA Triad and Defense-in-Depth
-- Common Attack Types: DoS/DDoS, MITM, Spoofing, Social Engineering
-- Malware Categories
-
-### Lesson 22: Access Control, Hardening, and Essential Services
-
-- Standard vs. Extended ACLs
-- Wildcard Masks
-- Placement Logic
-- AAA Concepts
-- Port Security
-- DHCP Snooping
-- Dynamic ARP Inspection
-- Device Hardening, including disabling unused services and using SSH over Telnet
-- NTP, Syslog, SNMP, SSH
-
-### Lesson 23: VPNs and Remote Access Security
-
-- Site-to-Site VPN
-- Client-to-Site VPN
-- IPsec Basics
-- Network Access Control Concepts
-
-### Lesson 24: Power and Resilience
-
-- Keeping Network Gear Alive on Unstable Power: UPS, inverter, and solar integration
-- Disaster Recovery and Business Continuity Concepts
-
-### Lesson 25: Diagnose, Document, Decide
-
-- Full end-to-end troubleshooting case study, Layer 1-3 combined fault
-- Network Documentation Standards and Diagramming
-- Baseline Metrics and Performance Monitoring
-- Change and Configuration Management
-- Handover writeup and portfolio piece for job/internship applications
-- Guided career branch point: Network Engineering, Cybersecurity, IT Support, or Cloud
+Lessons 16 through 18 are correctly sequenced after inter-VLAN routing because students can now understand routers, static/default routes, dynamic routing, NAT/PAT, DHCP, and DNS as enterprise services. Lesson 19 combines wireless deployment and security foundations after students understand VLANs, IP addressing, DHCP, and authentication concepts. Lesson 20 is correctly placed last because it integrates secure operations, VPNs, resilience, troubleshooting, documentation, monitoring, change control, and professional decision-making.
 
 ## Completed Lessons
 
-| Lesson | Title | Status | Notes |
-|---|---|---|---|
-| 1 | How Networks Work and Why They Fail | Revised to match technical in-depth style | Foundation lesson introducing network purpose, network types, architecture models, topologies, Windows basic troubleshooting commands, and why networks fail. |
-| 2 | Network Devices and Appliances | Completed | Expanded end devices, servers, switches, routers, APs/WLCs, firewalls, IDS/IPS, load balancers, proxies/content filters, NICs, transceivers, placement, troubleshooting scope, and practical commands. |
-| 3 | OSI Model Deep Dive | Completed | Explained data communication process, source/destination addressing, unicast/broadcast/multicast, encapsulation/decapsulation, PDU names, packet journey, device inspection behavior, and troubleshooting the data path. |
-| 4 | How Data Travels Through a Network | Completed | Explained all seven OSI layers, functions, PDU names, OSI troubleshooting, OSI-to-TCP/IP mapping, real-world layer examples, cybersecurity relevance, cloud relevance, and practical commands. |
-| 5 | TCP/IP Protocol Suite | Completed | Explained TCP/IP suite, IP with IPv4/IPv6 overview, TCP reliability, TCP three-way handshake, UDP reliability tradeoffs and use cases, ICMP diagnostics, ARP process, troubleshooting, security, and cloud relevance. |
-| 6 | Common Ports, Protocols, and Traffic Types | Completed | Explained common service ports and traffic types: FTP, SSH, Telnet, SMTP/SMTPS, DNS, DHCP, TFTP, HTTP/HTTPS, NTP, SNMP, LDAP/LDAPS, SMB, Syslog, SQL Server, RDP, SIP, secure alternatives, troubleshooting, and cloud/security relevance. |
-| 7 | Cabling and Physical Media | Completed | Explained UTP, STP, CAT5e, CAT6, RJ45/T568A/T568B, straight-through and crossover cabling, cable testing tools, single-mode and multi-mode fiber, media selection, physical troubleshooting, and local installation realities. |
-| 8 | Ethernet Fundamentals | Completed | Explained Ethernet standards, frame structure, MAC addressing, local delivery, collision domains, broadcast domains, duplex, speed, auto-negotiation, Ethernet troubleshooting, cybersecurity relevance, and cloud relevance. |
-| 9 | Enterprise Switching Fundamentals | Completed | Explained enterprise switch roles, MAC/CAM tables, dynamic and static MAC entries, frame switching process, flood/forward/filter behavior, access and trunk port modes, basic port security, violation modes, troubleshooting, cybersecurity relevance, and cloud relevance. |
-| 10 | IPv4 Addressing Fundamentals | Completed | Explained binary, decimal, hexadecimal, IPv4 address structure, octets, network vs. host portions, subnet mask basics, local vs. remote destination decisions, public and private addressing, APIPA, special IPv4 addresses, classful addressing, host configuration, troubleshooting, cybersecurity relevance, and cloud relevance. |
-| 11 | Subnetting Mastery | Completed | Explained subnetting, network addresses, broadcast addresses, valid host ranges, CIDR notation, subnet mask binary logic, block-size/magic-number method, host subnet identification, /27 and /30 worked examples, borrowing bits, subnet size selection, VLSM fundamentals, enterprise subnet design, troubleshooting, cybersecurity relevance, and cloud relevance. |
-| 12 | IPv6 Addressing and Practical Subnetting | Completed | Explained IPv6 structure, hextets, hexadecimal notation, abbreviation and expansion rules, prefix length, /64 LAN subnetting, global unicast, link-local, multicast, anycast, SLAAC, DHCPv6, Neighbor Discovery, ICMPv6, configuration, troubleshooting, cybersecurity relevance, and cloud relevance. |
-| 13 | VLAN Fundamentals and Design | Completed | Explained VLANs as logical Layer 2 networks, VLANs as broadcast domains, VLAN-to-subnet mapping, VLAN membership, access VLANs, trunks in design, VLAN IDs and names, VLAN 1/default VLAN, voice VLANs, native VLAN concept, enterprise segmentation strategy, DHCP/gateway relationships, wireless SSID mapping, shop floor/back office/guest Wi-Fi case study, troubleshooting, cybersecurity relevance, and cloud relevance. |
-| 14 | VLAN Configuration and Trunking | Completed | Explained VLAN creation, access port configuration, voice VLAN configuration, trunk ports, IEEE 802.1Q tagging, native VLAN behavior, allowed VLAN lists, trunk negotiation/DTP, two-switch VLAN configuration, verification commands, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
-| 15 | Spanning Tree Protocol | Completed | Explained why Layer 2 loops occur, broadcast storms, MAC flapping, STP design goal, BPDUs, Bridge ID, root bridge election, path cost, STP port roles, STP port states, STP loop prevention process, STP variants, PortFast, BPDU Guard, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
-| 16 | Inter-VLAN Routing | Completed | Explained why devices in different VLANs need Layer 3 routing, default gateways per VLAN, router-on-a-stick, router subinterfaces, 802.1Q encapsulation, packet journey, router-on-a-stick limitations, SVIs, Layer 3 switching, firewall policy, IPv6 inter-VLAN routing, troubleshooting, verification commands, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
-| 17 | How Routers Work, Static and Default Routing | Completed | Explained routing, router packet forwarding, routing table components, connected and local routes, static routes, default routes, longest-prefix match, administrative distance, route selection order, floating static routes, static routing use cases, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
-| 18 | Dynamic Routing and NAT/PAT | Completed | Explained dynamic routing, routing protocols, convergence, RIP, OSPF, BGP, OSPF vs. BGP, Nigerian ISP peering through IXPN, NAT terminology, static NAT, dynamic NAT, PAT/NAT overload, office internet access using one public IP, NAT verification and troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
-| 19 | DHCP and DNS Fundamentals | Completed | Explained DHCP and DNS purpose, DHCP DORA, scope design, reservations, lease time, exclusions, DHCP options, DHCP relay/IP helper, Cisco IOS DHCP basics, Windows/Linux verification, DNS hierarchy, record types, forward and reverse zones, authoritative vs. recursive DNS, caching/TTL, DHCP-DNS integration, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
-| 20 | Wireless Fundamentals and Deployment | Completed | Explained WLAN purpose, RF basics, signal strength, noise, SNR, interference, 2.4/5/6 GHz bands, channels and channel width, channel planning, 802.11 a/b/g/n/ac/ax/be, SSID/BSSID, wireless association, APs, autonomous vs. lightweight APs, WLCs, SSID design, guest networks, SSID-to-VLAN mapping, roaming, site surveys, capacity planning, AP placement, Windows/Linux/Cisco verification, troubleshooting, Packet Tracer labs, cybersecurity relevance, and cloud relevance. |
-| 21 | Wireless and Network Security Foundations | Completed | Explained network security, risk terminology, CIA triad, security control categories, defense-in-depth, Zero Trust, least privilege, wireless security evolution, WPA2 vs. WPA3, Personal vs. Enterprise authentication, 802.1X, EAP, RADIUS, wireless attacks, DoS/DDoS, MITM, spoofing, social engineering, password attacks, malware categories, indicators of compromise, logging, incident response, Windows/Linux/Cisco verification, enterprise case study, Packet Tracer labs, career relevance, and cloud security. |
-| 22 | Access Control, Hardening, and Essential Services | Completed | Explained standard and extended ACLs, wildcard masks, placement and direction, AAA, RADIUS vs. TACACS+, port security, DHCP snooping, DAI, device hardening, SSH, NTP, Syslog, SNMPv3, troubleshooting, labs, and enterprise operations. |
-| 23 | VPNs and Remote Access Security | Completed | Explained VPN purpose, tunneling, site-to-site and client-to-site designs, full vs. split tunnel, IPsec, ESP/AH, IKEv2, SAs, cryptography, NAT-T, policy- vs. route-based VPNs, routing/NAT/DNS/MTU, MFA, NAC, posture, troubleshooting, labs, cloud, and career relevance. |
-| 24 | Power and Resilience | Completed | Explained electrical and power-quality fundamentals, load measurement, PoE demand, UPS topologies and runtime, batteries, inverters, solar and generator integration, PDUs, cooling, monitoring, graceful shutdown, availability, SPOFs, high availability, BIA, RTO/RPO/MTD, backups, recovery sites, runbooks, testing, and business continuity. |
-| 25 | Diagnose, Document, Decide | Completed | Integrated the course through a Layer 1-3 troubleshooting case, structured diagnosis, packet evidence, escalation, physical/logical documentation, IPAM and source of truth, baselines and performance metrics, monitoring, capacity planning, change/configuration management, RCA, incident reporting, handover, portfolio development, and guided Network Engineering, Cybersecurity, IT Support, and Cloud career branches. |
-
+All 20 publishable lessons in `Network_Engineering_Foundation_20_Lessons/` are complete in the current edition. Future work should focus on whole-course editorial consistency, cross-reference review, print formatting, separate practical lab materials, instructor resources, or assessment development rather than adding unplanned curriculum topics.
 ## Concepts Already Introduced
 
 - Structured troubleshooting from problem definition through hypothesis, implementation, verification, prevention, and documentation.
@@ -1933,8 +1736,10 @@ Visual standard: each lesson in the 20-lesson edition should include a relevant 
 
 ## Continuity Notes For Future Lessons
 
-- All 25 curriculum lessons are complete. Lesson 25 integrates the textbook through diagnosis, documentation, monitoring, controlled change, handover, portfolio evidence, and career planning. Future work should focus on whole-course editorial consistency, cross-reference review, print formatting, lab-answer separation, instructor resources, or assessment development rather than adding unplanned curriculum topics.
+- All 20 publishable lessons are complete in the current edition. Lesson 20 integrates secure operations, VPNs, resilience, troubleshooting, documentation, monitoring, controlled change, handover, portfolio evidence, and career direction. Future work should focus on whole-course editorial consistency, cross-reference review, print formatting, separate lab materials, instructor resources, or assessment development rather than adding unplanned curriculum topics.
 - Avoid re-explaining all network types in detail unless used as revision or comparison.
 - Maintain the term "end device" alongside "host" because both appear in CCNA and Network+ contexts.
 - When discussing VLANs later, reference that each VLAN is a separate broadcast domain and that switches forward broadcasts only within the relevant VLAN.
 - When discussing routing later, avoid full routing table depth until Lesson 17, but reference that routers forward packets using destination IP addresses and routing tables.
+
+

@@ -26,3 +26,11 @@ The writing style in this edition uses paragraph-led teaching. It avoids rigid W
 18. [DHCP and DNS Fundamentals](Lesson_18_DHCP_and_DNS_Fundamentals.md)
 19. [Wireless Networking, Deployment, and Security](Lesson_19_Wireless_Networking_Deployment_and_Security.md)
 20. [Secure Operations, VPNs, Resilience, and Professional Troubleshooting](Lesson_20_Secure_Operations_VPNs_Resilience_and_Professional_Troubleshooting.md)
+
+## Knowledge Flow
+
+The course is sequential. Lessons 1 and 2 establish what networks are and which devices build them. Lessons 3 and 4 explain the OSI model and then use that model to follow data through a network. Lessons 5 and 6 introduce the TCP/IP protocol suite, ports, protocols, and traffic types.
+
+Lessons 7 through 9 move into LAN foundations: physical media, Ethernet, and switching. Lessons 10 through 12 build Layer 3 addressing skill with IPv4, subnetting, and IPv6. Lessons 13 through 15 then use that addressing and switching knowledge to teach VLAN design, VLAN configuration, trunking, STP, and inter-VLAN routing.
+
+Lessons 16 through 18 expand routing and network services with router operation, static/default routing, dynamic routing, NAT/PAT, DHCP, and DNS. Lesson 19 adds wireless deployment and network security foundations. Lesson 20 closes the course with secure operations, VPNs, resilience, troubleshooting, documentation, monitoring, change control, and professional decision-making.

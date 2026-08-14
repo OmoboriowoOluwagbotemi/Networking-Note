@@ -343,7 +343,7 @@ What Changes at Each Routed Hop
 
 Important Note About NAT
 
-NAT can change IP addresses and sometimes port numbers. For example, when many office users access the Internet through one public IP address, the firewall or router may translate private source IP addresses into a public IP address. NAT will be explained in Lesson 18.
+NAT can change IP addresses and sometimes port numbers. For example, when many office users access the Internet through one public IP address, the firewall or router may translate private source IP addresses into a public IP address. NAT will be explained in Lesson 17.
 
 ## 4.10 DEVICE INSPECTION OF THE SAME TRAFFIC
 

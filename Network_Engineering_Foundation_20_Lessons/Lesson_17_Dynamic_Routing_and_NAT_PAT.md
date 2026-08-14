@@ -25,7 +25,7 @@ The visual separates internal routing from NAT/PAT translation and shows how pro
 
 Dynamic routing is the process where routers automatically exchange routing information and learn network paths from one another using routing protocols. NAT, or Network Address Translation, is the process of translating one IP address into another as traffic passes through a router or firewall. PAT, or Port Address Translation, is a form of NAT that allows many internal devices to share one public IP address by using different port numbers.
 
-In Lesson 17, static routes, default routes, longest-prefix match, administrative distance, and floating static routes were explained. Static routing is manually configured. It is useful, but it does not scale well when many routers and many networks are involved. Dynamic routing solves this by allowing routers to learn, update, and remove routes automatically.
+In Lesson 16, static routes, default routes, longest-prefix match, administrative distance, and floating static routes were explained. Static routing is manually configured. It is useful, but it does not scale well when many routers and many networks are involved. Dynamic routing solves this by allowing routers to learn, update, and remove routes automatically.
 
 NAT and PAT solve a different but related problem. Many organizations use private IPv4 addresses internally, such as `192.168.10.0/24`, `10.10.0.0/16`, or `172.16.0.0/12`. These private addresses are not directly routed on the public internet. NAT allows private internal devices to communicate with public networks by translating private addresses to public addresses.
 

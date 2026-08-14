@@ -45,7 +45,7 @@ Where switching is used, technicians must know how to verify it. A network engin
 
 ## 9.3 SWITCHES IN THE ENTERPRISE LAN
 
-A switch connects devices inside the same local network or VLAN. It does not normally make routing decisions unless it is a Layer 3 switch. A Layer 2 switch focuses on Ethernet frames and MAC addresses. A Layer 3 switch can also route between VLANs using Switch Virtual Interfaces, but inter-VLAN routing will be covered later in Lesson 16.
+A switch connects devices inside the same local network or VLAN. It does not normally make routing decisions unless it is a Layer 3 switch. A Layer 2 switch focuses on Ethernet frames and MAC addresses. A Layer 3 switch can also route between VLANs using Switch Virtual Interfaces, but inter-VLAN routing will be covered later in Lesson 15.
 
 In the access layer, switches connect end devices such as laptops, desktops, printers, IP phones, wireless access points, and CCTV cameras. In the distribution layer, switches aggregate access switches and may enforce VLAN, routing, redundancy, and policy decisions. In a collapsed core design, one pair of powerful switches may perform both distribution and core roles for a smaller organization.
 
@@ -165,7 +165,7 @@ There are two common flooding situations. The first is broadcast traffic. A fram
 
 The second is unknown unicast traffic. If the switch receives a unicast frame but does not know the destination MAC address, it floods the frame out all ports in the same VLAN except the incoming port. The destination device should receive the frame if it is somewhere in that VLAN. When the destination replies, the switch learns the destination's source MAC address.
 
-Flooding is normal, but excessive flooding can indicate a problem. Unknown unicast flooding may happen when the MAC address table has aged out, when devices are silent, when a topology problem exists, or when the switch table is overloaded. Broadcast storms can happen during Layer 2 loops, which will be covered in Lesson 15 on Spanning Tree Protocol.
+Flooding is normal, but excessive flooding can indicate a problem. Unknown unicast flooding may happen when the MAC address table has aged out, when devices are silent, when a topology problem exists, or when the switch table is overloaded. Broadcast storms can happen during Layer 2 loops, which will be covered in Lesson 14 with Spanning Tree Protocol.
 
 ### Filter
 

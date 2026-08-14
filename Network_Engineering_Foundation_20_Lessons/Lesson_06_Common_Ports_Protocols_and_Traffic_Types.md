@@ -271,7 +271,7 @@ DHCP automatically assigns IP configuration to network devices. It commonly uses
 
 DHCP exists because manually configuring IP addresses on every device is inefficient and error-prone. DHCP can assign IP address, subnet mask, default gateway, DNS servers, lease time, and other options.
 
-Technically, DHCP uses a process often remembered as DORA: Discover, Offer, Request, Acknowledge. This process will be explained deeply in Lesson 19. In this lesson, students should understand DHCP as the service that gives clients their network settings.
+Technically, DHCP uses a process often remembered as DORA: Discover, Offer, Request, Acknowledge. This process will be explained deeply in Lesson 18. In this lesson, students should understand DHCP as the service that gives clients their network settings.
 
 DHCP Characteristics
 

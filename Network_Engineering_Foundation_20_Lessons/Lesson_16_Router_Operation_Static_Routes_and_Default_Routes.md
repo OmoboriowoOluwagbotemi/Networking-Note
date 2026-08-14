@@ -26,7 +26,7 @@ This diagram gives students a simple route-selection order before they study sta
 
 Routing is the process of forwarding packets from one IP network to another. A router receives a packet, examines the destination IP address, checks its routing table, selects the best matching route, and forwards the packet toward the destination.
 
-In Lesson 16, inter-VLAN routing introduced the idea that devices in different VLANs need Layer 3 routing to communicate. A host sends remote traffic to its default gateway. That gateway may be a router subinterface, firewall interface, or Layer 3 switch SVI. Lesson 17 expands that idea beyond VLANs and explains how routers make forwarding decisions across many networks.
+In Lesson 15, inter-VLAN routing introduced the idea that devices in different VLANs need Layer 3 routing to communicate. A host sends remote traffic to its default gateway. That gateway may be a router subinterface, firewall interface, or Layer 3 switch SVI. This lesson expands that idea beyond VLANs and explains how routers make forwarding decisions across many networks.
 
 Routing exists because the world is not one flat IP network. An enterprise may have multiple VLANs, branch offices, data centers, cloud networks, VPN users, internet links, and service provider connections. Each network has its own IP prefix. Routers connect those networks and decide where traffic should go.
 
@@ -130,7 +130,7 @@ Common Cisco Route Codes
 | `D` | EIGRP route |
 | `B` | BGP route |
 
-Dynamic routing protocols will be introduced in Lesson 18. In this lesson, the focus is connected, local, static, default, and floating static routes.
+Dynamic routing protocols will be introduced in Lesson 17. In this lesson, the focus is connected, local, static, default, and floating static routes.
 
 ## 17.5 Connected and Local Routes
 
@@ -442,7 +442,7 @@ Common use cases include:
 | Firewall routing | Explicit paths to internal networks |
 | Backup path | Floating static route |
 
-Static routing is not always the best solution. In large networks with many routes and changing paths, dynamic routing is easier to scale. Lesson 18 will introduce dynamic routing concepts.
+Static routing is not always the best solution. In large networks with many routes and changing paths, dynamic routing is easier to scale. Lesson 17 will introduce dynamic routing concepts.
 
 ## 17.14 Common Static Routing Mistakes
 
