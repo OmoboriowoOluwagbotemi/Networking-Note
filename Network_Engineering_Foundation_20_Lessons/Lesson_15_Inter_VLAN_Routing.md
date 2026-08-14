@@ -7,7 +7,7 @@ This lesson is part of the FEMTECT Network Engineering Foundation course. It is 
 
 ## DEFINITION AND TECHNICAL IN-DEPTH KNOWLEDGE
 
-### 16.1 Inter-VLAN Routing
+### 15.1 Inter-VLAN Routing
 
 Inter-VLAN routing is the process of allowing devices in different VLANs to communicate through a Layer 3 device. VLANs separate traffic at Layer 2. Routing connects different Layer 3 networks. Since each VLAN normally maps to a different IP subnet, devices in different VLANs need routing to communicate.
 
@@ -15,14 +15,15 @@ In Lessons 13 and 14, VLANs were explained as separate broadcast domains. A staf
 
 Inter-VLAN routing exists because enterprises need both separation and controlled communication. Guest Wi-Fi should be separated from staff systems, but staff PCs may need to reach servers. IP phones may need to reach call-control systems. CCTV cameras may need to reach an NVR. Management laptops may need to reach switch management IP addresses. VLANs create boundaries; routing and policy decide which boundaries can be crossed.
 
-There are two common ways to perform inter-VLAN routing:
+There are three important ways to understand inter-VLAN routing:
 
+- A router with one physical interface per VLAN.
 - Router-on-a-stick.
 - Layer 3 switching using Switch Virtual Interfaces.
 
-For CCNA and CompTIA Network+, students must understand why inter-VLAN routing is needed, how router-on-a-stick works, how SVIs work, how default gateways relate to VLANs, and how to troubleshoot inter-VLAN connectivity.
+The first method is the easiest for beginners to visualize because each VLAN gets its own physical cable to the router. Router-on-a-stick improves that design by using one trunk cable and subinterfaces. Layer 3 switching improves it again by allowing a multilayer switch to route between VLANs internally. Students should understand the physical-interface method first because it makes the purpose of a gateway very clear.
 
-### 16.2 Technical and Business Importance of Inter-VLAN Routing
+### 15.2 Technical and Business Importance of Inter-VLAN Routing
 
 Inter-VLAN routing matters because most real enterprise networks use multiple VLANs. A network with VLANs but no routing between required VLANs is segmented, but isolated. Users may be able to communicate with devices inside their own VLAN, but not with servers, printers, management systems, or internet gateways in other VLANs.
 
@@ -30,7 +31,7 @@ Inter-VLAN routing also matters for security. The goal is not to allow every VLA
 
 In troubleshooting, inter-VLAN routing is a common failure point. A user may have the correct IP address and VLAN assignment but still fail to reach another subnet because the default gateway is wrong, the SVI is down, a router subinterface is missing, a trunk is not carrying the VLAN, routing is disabled, or an access control rule blocks the traffic.
 
-## 16.3 Routing Requirement Between VLANs
+## 15.3 Routing Requirement Between VLANs
 
 A VLAN is a Layer 2 broadcast domain. An IP subnet is a Layer 3 network. In good design, each VLAN usually maps to one IP subnet.
 
@@ -55,7 +56,7 @@ Devices in different VLANs need Layer 3 routing to communicate.
 
 VLANs do not route by themselves. Switches operating only at Layer 2 do not move traffic between VLANs.
 
-## 16.4 Default Gateway Per VLAN
+## 15.4 Default Gateway Per VLAN
 
 Each VLAN/subnet needs a default gateway if devices in that VLAN must reach other networks. The gateway IP address must be in the same subnet as the hosts.
 
@@ -88,7 +89,135 @@ Default Gateway Design Table
 
 The gateway is usually configured manually on servers and network devices, and delivered through DHCP to client devices.
 
-## 16.5 Router-on-a-Stick
+## 15.5 Inter-VLAN Routing Using One Router Interface Per VLAN
+
+The most basic way to route between VLANs is to give each VLAN its own physical connection to the router. This design is sometimes called the legacy inter-VLAN routing method. It is not the most scalable method, but it is excellent for learning because the cabling directly shows the relationship between a VLAN, an IP subnet, and a router gateway.
+
+Assume a switch has three VLANs:
+
+| VLAN | Name | Subnet | Router Gateway |
+|---:|---|---|---|
+| 10 | STAFF | 192.168.10.0/24 | 192.168.10.1 |
+| 20 | SALES | 192.168.20.0/24 | 192.168.20.1 |
+| 30 | SERVERS | 192.168.30.0/24 | 192.168.30.1 |
+
+In the direct-interface method, the switch does not send all VLANs to the router over one trunk. Instead, the switch uses three separate access ports. One access port belongs to VLAN 10, one access port belongs to VLAN 20, and one access port belongs to VLAN 30. Each access port connects by its own Ethernet cable to a different physical router interface.
+
+The physical design looks like this:
+
+```text
+Switch Fa0/1  access VLAN 10  ---- cable ---- Router G0/0  192.168.10.1/24
+Switch Fa0/2  access VLAN 20  ---- cable ---- Router G0/1  192.168.20.1/24
+Switch Fa0/3  access VLAN 30  ---- cable ---- Router G0/2  192.168.30.1/24
+```
+
+This means VLAN 10 has a physical path to router interface `G0/0`, VLAN 20 has a physical path to router interface `G0/1`, and VLAN 30 has a physical path to router interface `G0/2`. The router is connected to all three networks at the same time. Because the router has one IP address in each subnet, it can route traffic between those subnets.
+
+For example, a staff PC in VLAN 10 may have this configuration:
+
+```text
+IP Address:      192.168.10.25
+Subnet Mask:     255.255.255.0
+Default Gateway: 192.168.10.1
+```
+
+A server in VLAN 30 may have this configuration:
+
+```text
+IP Address:      192.168.30.10
+Subnet Mask:     255.255.255.0
+Default Gateway: 192.168.30.1
+```
+
+When the staff PC sends traffic to the server, the PC sees that `192.168.30.10` is not in its own subnet. It sends the frame to its default gateway, `192.168.10.1`. The switch forwards that frame through the VLAN 10 access link to router interface `G0/0`. The router receives the packet, checks the destination IP address, sees that `192.168.30.0/24` is directly connected on `G0/2`, and sends the traffic out the VLAN 30 router interface. The switch then delivers the frame to the server in VLAN 30.
+
+In this design, each router interface is a gateway for exactly one VLAN. There is no 802.1Q trunk between the switch and router, and there are no router subinterfaces. The switch ports connected to the router are normal access ports.
+
+Switch configuration example:
+
+```text
+enable
+configure terminal
+vlan 10
+ name STAFF
+vlan 20
+ name SALES
+vlan 30
+ name SERVERS
+exit
+
+interface fastEthernet0/1
+ description Link to Router G0/0 - VLAN 10 Gateway
+ switchport mode access
+ switchport access vlan 10
+ no shutdown
+exit
+
+interface fastEthernet0/2
+ description Link to Router G0/1 - VLAN 20 Gateway
+ switchport mode access
+ switchport access vlan 20
+ no shutdown
+exit
+
+interface fastEthernet0/3
+ description Link to Router G0/2 - VLAN 30 Gateway
+ switchport mode access
+ switchport access vlan 30
+ no shutdown
+end
+show vlan brief
+```
+
+Router configuration example:
+
+```text
+enable
+configure terminal
+interface gigabitEthernet0/0
+ description Gateway for VLAN 10 STAFF
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+exit
+
+interface gigabitEthernet0/1
+ description Gateway for VLAN 20 SALES
+ ip address 192.168.20.1 255.255.255.0
+ no shutdown
+exit
+
+interface gigabitEthernet0/2
+ description Gateway for VLAN 30 SERVERS
+ ip address 192.168.30.1 255.255.255.0
+ no shutdown
+end
+show ip interface brief
+show ip route
+```
+
+The router will automatically know these three networks because they are directly connected:
+
+```text
+192.168.10.0/24
+192.168.20.0/24
+192.168.30.0/24
+```
+
+No static route is needed for the router to route between these directly connected VLAN networks. The hosts only need the correct default gateway. VLAN 10 hosts use `192.168.10.1`, VLAN 20 hosts use `192.168.20.1`, and VLAN 30 hosts use `192.168.30.1`.
+
+This method is simple, but it does not scale well. If a business has 20 VLANs, the router would need 20 physical interfaces and the switch would need 20 access links to the router. That is expensive, wastes ports, creates more cabling, and becomes harder to manage. This limitation is the reason router-on-a-stick became a better option for small networks, and Layer 3 switching became the preferred option in many enterprise LANs.
+
+Direct Physical Interface Method Summary
+
+| Component | Purpose |
+|---|---|
+| One access switch port per VLAN | Carries traffic for only one VLAN to the router |
+| One router physical interface per VLAN | Acts as the default gateway for that VLAN |
+| No trunk needed | Each cable carries only one VLAN |
+| No subinterfaces needed | Each gateway is configured on a real router interface |
+| Main limitation | Poor scalability when many VLANs exist |
+
+## 15.6 Router-on-a-Stick
 
 Router-on-a-stick is an inter-VLAN routing design where one physical router interface connects to a switch trunk and uses subinterfaces to route between multiple VLANs.
 
@@ -153,7 +282,7 @@ Router-on-a-Stick Summary
 | `encapsulation dot1Q` | Maps subinterface to VLAN tag |
 | Host default gateway | Points to router subinterface IP |
 
-## 16.6 Router-on-a-Stick Packet Journey
+## 15.7 Router-on-a-Stick Packet Journey
 
 Assume PC1 in VLAN 10 wants to reach Server1 in VLAN 30.
 
@@ -189,7 +318,7 @@ Step 8: The switch receives the tagged frame, places it in VLAN 30, and forwards
 
 This process shows why router-on-a-stick depends on correct VLANs, trunking, dot1Q encapsulation, IP addressing, and default gateways.
 
-## 16.7 Router-on-a-Stick Advantages and Limitations
+## 15.8 Router-on-a-Stick Advantages and Limitations
 
 Router-on-a-stick is simple and useful, especially in small environments and labs. It requires only one router interface and one switch trunk to route multiple VLANs.
 
@@ -206,7 +335,7 @@ Router-on-a-Stick Comparison
 
 In larger enterprise LANs, Layer 3 switching is often preferred for internal inter-VLAN routing.
 
-## 16.8 Switch Virtual Interfaces
+## 15.9 Switch Virtual Interfaces
 
 A Switch Virtual Interface, or SVI, is a logical Layer 3 interface on a Layer 3 switch. An SVI provides a gateway IP address for a VLAN directly on the switch.
 
@@ -268,23 +397,24 @@ interface vlan 20
 end
 ```
 
-## 16.9 Router-on-a-Stick vs Layer 3 Switching
+## 15.10 Inter-VLAN Routing Design Comparison
 
-Router-on-a-stick and Layer 3 switching both provide inter-VLAN routing, but they are used in different situations.
+The three designs solve the same routing problem in different ways. The direct physical-interface method is the easiest to understand because each VLAN has its own router interface and cable. Router-on-a-stick reduces cabling by using one trunk and router subinterfaces. Layer 3 switching is usually the most scalable option for enterprise campus networks.
 
-| Feature | Router-on-a-Stick | Layer 3 Switching with SVIs |
-|---|---|---|
-| Routing Device | External router | Layer 3 switch |
-| VLAN Gateway | Router subinterface | SVI |
-| Link to Switch | 802.1Q trunk to router | Internal switch fabric |
-| Performance | Limited by router link/interface | Usually faster for LAN routing |
-| Common Use | Labs, small branches | Enterprise distribution/collapsed core |
-| Scalability | Lower | Higher |
-| Configuration Focus | Subinterfaces and dot1Q | SVIs and `ip routing` |
+| Feature | Direct Router Interfaces | Router-on-a-Stick | Layer 3 Switching with SVIs |
+|---|---|---|---|
+| Routing Device | External router | External router | Layer 3 switch |
+| VLAN Gateway | Router physical interface | Router subinterface | SVI |
+| Link to Switch | One access link per VLAN | One 802.1Q trunk to router | Internal switch fabric |
+| 802.1Q Required Between Switch and Router | No | Yes | Not for local SVI routing |
+| Performance | Limited by router ports and links | Limited by router trunk/interface | Usually faster for LAN routing |
+| Common Use | Learning and very small networks | Labs and small branches | Enterprise distribution/collapsed core |
+| Scalability | Low | Moderate | High |
+| Configuration Focus | Access ports and router physical interfaces | Subinterfaces and dot1Q | SVIs and `ip routing` |
 
 For CCNA, students should be comfortable with both designs. In real enterprise networks, Layer 3 switching is very common for internal VLAN routing, while firewalls may route or filter traffic between security zones.
 
-## 16.10 Inter-VLAN Routing and Firewalls
+## 15.11 Inter-VLAN Routing and Firewalls
 
 Not all inter-VLAN routing should happen freely on a Layer 3 switch. Some VLANs require security policy between them. In those cases, a firewall may route between VLANs or sit between major security zones.
 
@@ -306,7 +436,7 @@ Security principle:
 Routing enables communication. Policy controls communication.
 ```
 
-## 16.11 IPv6 Inter-VLAN Routing
+## 15.12 IPv6 Inter-VLAN Routing
 
 IPv6 also needs inter-VLAN routing. Each VLAN may have an IPv6 `/64` prefix and a gateway address on a router subinterface or SVI.
 
@@ -327,7 +457,7 @@ ipv6 unicast-routing
 
 At this course level, the core idea is simple: VLAN segmentation applies to IPv6 too, and a Layer 3 device is required to route between IPv6 prefixes.
 
-## 16.12 Inter-VLAN Routing Troubleshooting
+## 15.13 Inter-VLAN Routing Troubleshooting
 
 Inter-VLAN troubleshooting should be systematic. Because inter-VLAN routing depends on both Layer 2 and Layer 3, the technician must check VLANs, trunks, IP addressing, gateways, and routing.
 
@@ -358,8 +488,28 @@ Common Inter-VLAN Routing Problems
 | Guest reaches internal network | Policy missing or wrong | Firewall/ACL rules |
 | IPv6 works locally but not across VLANs | IPv6 routing or RA issue | `ipv6 unicast-routing`, SVI IPv6 |
 
-## 16.13 Verification Commands
+## 15.14 Verification Commands
 
+### Cisco IOS Direct Physical Interface Checks
+
+On the switch, verify that the router-facing ports are access ports in the correct VLANs:
+
+```text
+show vlan brief
+show interfaces status
+show running-config interface fastEthernet0/1
+show running-config interface fastEthernet0/2
+show running-config interface fastEthernet0/3
+```
+
+On the router, verify that each physical interface is up and has the correct gateway IP address:
+
+```text
+show ip interface brief
+show ip route connected
+ping 192.168.10.25
+ping 192.168.30.10
+```
 ### Cisco IOS Router-on-a-Stick Commands
 
 ```text
@@ -403,7 +553,7 @@ show ipv6 neighbors
 ping ipv6 <destination>
 ```
 
-## 16.14 Windows, Linux, and Cisco IOS Practical Checks
+## 15.15 Windows, Linux, and Cisco IOS Practical Checks
 
 ### Windows Checks
 
@@ -443,7 +593,7 @@ show running-config interface <interface-id>
 
 Cisco IOS verifies the switch and routing side of the path. Use these commands to prove whether the issue is VLAN membership, trunking, gateway configuration, routing, or policy.
 
-## 16.16 Cybersecurity Relevance
+## 15.16 Cybersecurity Relevance
 
 Inter-VLAN routing is a security control point. Once routing exists, VLAN boundaries can be crossed. This is useful for business communication, but dangerous if unrestricted.
 
@@ -461,7 +611,7 @@ Examples:
 
 Inter-VLAN routing should be paired with least privilege. Do not route everything everywhere simply because it is technically possible.
 
-## 16.17 Cloud Networking Relevance
+## 15.17 Cloud Networking Relevance
 
 Cloud networks use the same principle: subnets are separated, and routing connects them. In a public cloud, a route table may decide whether a subnet can reach another subnet, an internet gateway, a NAT gateway, a firewall, or a VPN.
 
@@ -469,11 +619,12 @@ In private cloud and virtualization environments, VLANs may still exist undernea
 
 Understanding inter-VLAN routing helps students understand cloud route tables, subnet gateways, network security groups, firewall appliances, and hybrid VPN routing.
 
-## 17. KEY TERMS / GLOSSARY
+## 15.18 KEY TERMS / GLOSSARY
 
 | Term | Meaning |
 |---|---|
 | Inter-VLAN Routing | Routing traffic between different VLANs/subnets. |
+| Legacy Inter-VLAN Routing | Inter-VLAN routing design using one physical router interface per VLAN. |
 | Router-on-a-Stick | Inter-VLAN routing design using router subinterfaces over one trunk. |
 | Subinterface | Logical interface created under a physical router interface. |
 | `encapsulation dot1Q` | Cisco command that maps a router subinterface to a VLAN tag. |
@@ -485,19 +636,19 @@ Understanding inter-VLAN routing helps students understand cloud route tables, s
 | Gateway VLAN | VLAN whose SVI or router subinterface acts as host gateway. |
 | Policy Control | Rules that permit or deny traffic between VLANs or networks. |
 
-## 18. COMPARISON TABLES
+## 15.19 COMPARISON TABLES
 
-### 18.1 Router-on-a-Stick vs Layer 3 Switching
+### 15.19.1 Direct Router Interfaces vs Router-on-a-Stick vs Layer 3 Switching
 
-| Feature | Router-on-a-Stick | Layer 3 Switching |
-|---|---|---|
-| Gateway Type | Router subinterface | SVI |
-| Link Type | Trunk to router | Internal switch routing |
-| Key Command | `encapsulation dot1Q` | `interface vlan`, `ip routing` |
-| Performance | Lower for large LANs | Higher for LAN routing |
-| Common Use | Labs, small sites | Enterprise campus/distribution |
+| Feature | Direct Router Interfaces | Router-on-a-Stick | Layer 3 Switching |
+|---|---|---|---|
+| Gateway Type | Router physical interface | Router subinterface | SVI |
+| Link Type | One access cable per VLAN | One trunk to router | Internal switch routing |
+| Key Command | `ip address` on router interface | `encapsulation dot1Q` | `interface vlan`, `ip routing` |
+| Performance | Low to moderate | Moderate | High |
+| Common Use | Learning and very small networks | Labs, small sites | Enterprise campus/distribution |
 
-### 18.2 Layer 2 VLAN vs Layer 3 Gateway
+### 15.19.2 Layer 2 VLAN vs Layer 3 Gateway
 
 | Feature | VLAN | Gateway/SVI/Subinterface |
 |---|---|---|
@@ -507,29 +658,32 @@ Understanding inter-VLAN routing helps students understand cloud route tables, s
 | Device Function | Switching | Routing |
 | Failure Symptom | Wrong subnet/DHCP | Cannot reach remote VLANs |
 
-### 18.3 Common Inter-VLAN Faults
+### 15.19.3 Common Inter-VLAN Faults
 
 | Fault | Result |
 |---|---|
 | Wrong access VLAN | Host may get wrong IP subnet |
 | Missing trunk VLAN | VLAN fails across switches |
+| Wrong router access link | Direct-interface VLAN cannot reach its physical gateway |
 | Missing router subinterface | Router-on-a-stick VLAN cannot route |
 | SVI down | Hosts cannot reach gateway |
 | `ip routing` disabled | Layer 3 switch does not route |
 | ACL/firewall block | Routing exists but traffic denied |
 
-## 19. REAL-WORLD EXAMPLE / ANALOGY
+## 15.20 REAL-WORLD EXAMPLE / ANALOGY
 
 Think of VLANs as separate departments in a building. Each department has its own internal room space. Inter-VLAN routing is the controlled hallway or security desk that allows approved movement between departments.
 
 Without the hallway, departments are isolated. With an uncontrolled hallway, everyone can go everywhere. A good network uses routing for required movement and policy to control who is allowed through.
 
-## 20. QUICK-RECAP CHEAT SHEET
+## 15.21 QUICK-RECAP CHEAT SHEET
 
 - VLANs separate Layer 2 broadcast domains.
 - Devices in different VLANs usually belong to different IP subnets.
 - Different VLANs need Layer 3 routing to communicate.
 - Each VLAN/subnet needs a default gateway.
+- The simplest inter-VLAN routing design uses one router physical interface and one switch access link per VLAN.
+- With three VLANs, VLAN 10, VLAN 20, and VLAN 30 can each use a separate cable from an access switch port to a different router interface.
 - Router-on-a-stick uses one router physical interface with subinterfaces.
 - Router-on-a-stick requires a trunk between switch and router.
 - `encapsulation dot1Q <vlan-id>` maps a subinterface to a VLAN.
@@ -548,9 +702,9 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.1 Theory Questions
 
-1. Explain the main networking concept covered in this lesson and describe its role in a real enterprise network.
-2. Describe two technical problems that can occur when this lesson's concept is poorly designed or incorrectly configured.
-3. Explain how a network technician or junior network engineer would verify that this part of the network is working correctly.
+1. Explain inter-VLAN routing and describe why devices in different VLANs need a Layer 3 gateway.
+2. Explain the direct physical-interface method using three VLANs, three switch access links, and three router interfaces.
+3. Compare the direct physical-interface method, router-on-a-stick, and Layer 3 switch SVI routing.
 4. Describe one security, reliability, or performance concern related to this topic.
 5. Explain how this topic connects to CCNA, Network+, IT support, or junior network engineering work.
 
@@ -618,7 +772,7 @@ This assessment is intentionally focused. Students should answer clearly, use co
 
 ### 7.3 Scenario-Based Questions
 
-1. A user or department reports a connectivity problem related to this lesson's topic. Write the first five checks you would perform, the commands or tools you would use, and the evidence you expect to collect.
+1. A company creates VLAN 10, VLAN 20, and VLAN 30 on a switch and connects three separate switch access ports to three router interfaces. Explain the addressing, gateway configuration, and traffic flow when a VLAN 10 PC reaches a VLAN 30 server.
 2. You are asked to explain this topic to a new IT support intern before a hands-on lab. Write a short technical explanation that connects the concept to real devices, real traffic flow, and troubleshooting.
 
 ### 7.4 Answer Guide
