@@ -576,14 +576,6 @@ Cloud addressing must be planned carefully. If the cloud network overlaps with t
 
 This is why enterprise engineers document private address ranges and avoid overlapping networks when connecting branches, data centers, VPN users, and cloud environments.
 
-## 10.22 INTERVIEW AND EXAM RELEVANCE
-
-In IT support interviews, IPv4 questions often focus on practical troubleshooting. An interviewer may ask what it means when a Windows PC has a `169.254.x.x` address, why a device can ping an IP address but not a website name, or what settings are required for a host to reach the internet.
-
-In network engineering interviews, questions may focus on network and host portions, subnet masks, private addressing, default gateways, classful ranges, and how a host decides whether a destination is local or remote.
-
-For CCNA, students must be comfortable with binary and subnet-mask logic before moving into subnetting. For Network+, students should know IPv4 address structure, private ranges, APIPA, loopback, default gateway behavior, and common troubleshooting commands.
-
 ## 11. KEY TERMS / GLOSSARY
 
 | Term | Meaning |

@@ -501,14 +501,6 @@ Example cloud segmentation:
 
 Understanding VLANs helps students understand cloud subnets, security zones, hybrid connectivity, and zero-trust segmentation.
 
-## 13.20 Interview and Exam Relevance
-
-In IT support interviews, VLAN questions often focus on symptoms. An interviewer may ask why a user gets the wrong IP address after moving desks, why guest Wi-Fi should be separated from staff Wi-Fi, or why a phone and PC on the same port may use different VLANs.
-
-In network engineering interviews, VLAN questions may include broadcast domains, access ports, trunk ports, native VLANs, voice VLANs, VLAN-to-subnet mapping, segmentation strategy, and troubleshooting.
-
-For CCNA, students should know that each VLAN is a separate broadcast domain and that devices in different VLANs need Layer 3 routing to communicate. For Network+, students should understand VLAN purpose, segmentation, performance benefits, security relevance, and common troubleshooting symptoms.
-
 ## 14. KEY TERMS / GLOSSARY
 
 | Term | Meaning |

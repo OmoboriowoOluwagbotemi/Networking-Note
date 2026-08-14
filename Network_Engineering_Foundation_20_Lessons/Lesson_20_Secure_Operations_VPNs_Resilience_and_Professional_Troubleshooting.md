@@ -1373,7 +1373,6 @@ Cloud VPN design still requires:
 
 Route-based VPNs and BGP are common in resilient hybrid designs. Encryption does not replace cloud security groups, IAM, or workload hardening.
 
-## 23.32 IT Support, Interview, and Exam Relevance
 
 IT support staff frequently diagnose failed authentication, missing routes, wrong DNS, expired certificates, MFA problems, and endpoint posture failures. Network engineers troubleshoot peer negotiation, routing, NAT, SAs, and performance. Cybersecurity teams review remote access policy and logs.
 
@@ -2455,7 +2454,6 @@ Availability attacks include DDoS, ransomware, destructive configuration changes
 
 Cloud services reduce some local power responsibilities but do not remove resilience planning. Customers still design for availability zones, regions, Internet paths, identity dependencies, backups, quotas, and provider outages. The shared-responsibility model means the provider protects facility infrastructure while the customer remains responsible for appropriate architecture and data protection.
 
-## 24.37 IT Support, Interview, and Exam Relevance
 
 IT support staff may check UPS alarms, coordinate shutdown, verify service recovery, document incidents, and escalate electrical faults. Network engineers calculate network loads, identify service dependencies, design redundancy, monitor power systems, and participate in DR tests.
 

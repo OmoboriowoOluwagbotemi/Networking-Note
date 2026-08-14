@@ -536,14 +536,6 @@ In cloud networking, IPv6 security groups, route tables, internet gateways, fire
 
 IPv6 also reduces some NAT pressure, but it does not remove the need for segmentation, least privilege, logging, and access control.
 
-## 12.22 INTERVIEW AND EXAM RELEVANCE
-
-In IT support interviews, IPv6 questions often focus on recognition and troubleshooting. An interviewer may ask what a `fe80::` address means, why a device has multiple IPv6 addresses, or what `::1` is used for.
-
-In network engineering interviews, questions may include abbreviation rules, `/64` subnetting, link-local next hops, Neighbor Discovery, SLAAC, DHCPv6, and the difference between unicast, multicast, and anycast.
-
-For CCNA, students should know how to read, shorten, expand, configure, and verify IPv6 addresses. For Network+, students should understand address types, IPv6 notation, SLAAC, DHCPv6, and common troubleshooting behavior.
-
 ## 13. KEY TERMS / GLOSSARY
 
 | Term | Meaning |

@@ -558,14 +558,6 @@ A hypervisor host may connect to a physical switch using a trunk. Virtual machin
 
 Public cloud networking often presents subnets, route tables, and security groups instead of physical VLAN commands. Still, the same design thinking applies: separate traffic by function, carry only what is required, and verify the control points.
 
-## 14.19 Interview and Exam Relevance
-
-In IT support interviews, VLAN configuration questions often sound practical: "A user moved desks and now gets the wrong IP address. What do you check?" The answer should include switch port VLAN assignment, DHCP scope, and gateway.
-
-In network engineering interviews, questions may focus on access ports, trunk ports, 802.1Q tags, native VLAN mismatch, DTP, allowed VLAN lists, and show commands.
-
-For CCNA, students should know how to create VLANs, assign access ports, configure trunks, understand 802.1Q tagging, and verify with `show vlan brief` and `show interfaces trunk`. For Network+, students should understand VLAN purpose, trunking concepts, tagged vs. untagged traffic, and troubleshooting symptoms.
-
 ## 15. KEY TERMS / GLOSSARY
 
 | Term | Meaning |
@@ -1155,14 +1147,6 @@ Public cloud networks usually hide physical STP from customers. Cloud providers 
 In a data center, redundant switches, hypervisor uplinks, storage networks, and firewall pairs may require loop prevention or alternative redundancy designs. Some modern data centers use Layer 3 links, MLAG/vPC, EVPN, or software-defined fabrics to reduce reliance on classic STP. Even then, understanding STP helps engineers understand why Layer 2 loops are dangerous.
 
 For hybrid cloud, a local switching loop can break access to cloud applications before the traffic ever leaves the building. Cloud troubleshooting still begins with the local network.
-
-## 15.21 Interview and Exam Relevance
-
-In IT support interviews, STP questions may focus on symptoms. An interviewer may ask what could cause the whole office network to suddenly slow down after someone connected a small switch. The answer should include the possibility of a Layer 2 loop and STP behavior.
-
-In network engineering interviews, STP questions may include root bridge election, BPDUs, port roles, port states, PortFast, BPDU Guard, and how to verify STP with show commands.
-
-For CCNA, students should understand root bridge election, bridge priority, BPDUs, root ports, designated ports, blocked or alternate ports, and basic STP verification. For Network+, students should understand why STP exists and how it prevents switching loops.
 
 ## 16. KEY TERMS / GLOSSARY
 

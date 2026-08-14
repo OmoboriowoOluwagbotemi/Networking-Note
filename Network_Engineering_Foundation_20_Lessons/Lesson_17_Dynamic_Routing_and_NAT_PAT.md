@@ -503,14 +503,6 @@ Example cloud NAT design:
 
 The same concepts from this lesson apply in cloud: route learning, default routes, next hops, NAT translation, and security policy.
 
-## 18.22 Interview and Exam Relevance
-
-In IT support interviews, NAT questions often focus on office internet access. An interviewer may ask how many office users can share one public IP address or why users can ping IP addresses but not browse websites.
-
-In network engineering interviews, questions may include OSPF vs BGP, route convergence, BGP peering, static NAT, dynamic NAT, PAT overload, NAT troubleshooting, and how to read NAT translation tables.
-
-For CCNA, students should understand OSPF at a practical level, BGP at a high level, and NAT/PAT configuration and verification. For Network+, students should know routing protocol purpose, NAT types, PAT, and common troubleshooting symptoms.
-
 ## 19. KEY TERMS / GLOSSARY
 
 | Term | Meaning |

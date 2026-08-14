@@ -2,7 +2,7 @@
 
 This edition reorganizes the FEMTECT networking curriculum into 20 main lessons. The goal is to give students a solid, practical foundation in Network Engineering while keeping the material beginner friendly, technically correct, and useful for real IT support, network administration, and junior network engineering work.
 
-The writing style in this edition uses paragraph-led teaching. It avoids rigid What / Why / How / Where lesson headings and instead explains each concept naturally, with technical depth, enterprise examples, commands, comparison tables, glossary terms, review questions, and exam reminders where appropriate.
+The writing style in this edition uses paragraph-led teaching. It avoids rigid What / Why / How / Where lesson headings and instead explains each concept naturally, with technical depth, enterprise examples, commands, comparison tables, glossary terms, and focused review questions where appropriate.
 
 ## Lesson List
 

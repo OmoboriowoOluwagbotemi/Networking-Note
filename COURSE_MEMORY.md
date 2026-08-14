@@ -268,7 +268,7 @@ Quality review note: the 20-lesson edition should remain beginner friendly while
 - Incident reports, timelines, shift/project handovers, verification matrices, and professional escalation.
 - Portfolio case-study structure, sanitization, reproducibility, and evidence valued by employers.
 - Career branch guidance for Network Engineering, Cybersecurity, IT Support, and Cloud.
-- Evidence-based 90-day development planning and STAR interview communication.
+- Evidence-based 90-day development planning and professional communication.
 - Network power resilience and complete service-path dependency analysis.
 - Voltage, current, watts, VA, watt-hours, power factor, AC/DC conversion, and preliminary energy calculations.
 - Blackouts, brownouts, sags, surges, transients, noise, frequency variation, earthing, and surge protection.

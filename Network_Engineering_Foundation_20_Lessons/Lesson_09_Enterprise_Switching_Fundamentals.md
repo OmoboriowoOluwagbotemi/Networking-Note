@@ -386,14 +386,6 @@ A virtual machine has a virtual NIC. That virtual NIC has a MAC address. Traffic
 
 In enterprise hybrid networks, physical switches connect users, servers, wireless access points, firewalls, WAN routers, SD-WAN appliances, and cloud connectivity devices. A cloud application may fail for users because of a local switch port, VLAN, trunk, or uplink issue before traffic ever reaches the internet or cloud provider.
 
-## 9.13 INTERVIEW AND EXAM RELEVANCE
-
-In IT support interviews, switching questions often test practical thinking. An interviewer may ask what a switch does, how it learns MAC addresses, what happens when the destination MAC is unknown, or why a user connected to the wrong VLAN cannot reach the correct network.
-
-In network engineering interviews, the questions become deeper. The interviewer may ask about CAM tables, trunk ports, access ports, port security, MAC address aging, unknown unicast flooding, and how to troubleshoot an access switch port.
-
-For CCNA, students should remember that switches learn source MAC addresses, forward known unicasts, flood broadcasts and unknown unicasts, and filter frames when appropriate. For Network+, students should understand the role of switches, VLAN-aware switching behavior at a high level, port security concepts, and troubleshooting symptoms related to access-layer connectivity.
-
 ## 10. KEY TERMS / GLOSSARY
 
 | Term | Meaning |

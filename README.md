@@ -39,7 +39,6 @@ The current publishable edition is organized in the folder:
 - Practical references to commands and troubleshooting where relevant
 - Troubleshooting and cybersecurity relevance
 - Cloud and career context
-- CCNA and Network+ exam reminders
 - Glossary and comparison tables
 - Quick-reference cheat sheet
 - Lesson assessment with 5 theory questions, 10 multiple-choice questions, and 2 scenario-based questions

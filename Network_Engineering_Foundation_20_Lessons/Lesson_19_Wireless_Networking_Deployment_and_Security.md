@@ -598,16 +598,6 @@ Cloud Wireless Concepts
 
 Cloud-managed WLANs are common in branch offices, schools, retail stores, and distributed organizations.
 
-## 20.29 Interview and Exam Relevance
-
-In IT support interviews, wireless questions often focus on practical troubleshooting. Candidates may be asked what to check when a laptop connects to Wi-Fi but has no internet, why a client gets APIPA, why guest Wi-Fi should be separated, or why Wi-Fi is slow in one area.
-
-In network engineering interviews, wireless questions may focus on RF design, channel planning, AP placement, SSID-to-VLAN mapping, WLCs, guest isolation, roaming, and site surveys.
-
-For CCNA, students should know AP roles, WLC concepts, CAPWAP at a high level, WLAN security basics, SSID-to-VLAN design, and wireless troubleshooting logic.
-
-For CompTIA Network+ N10-009, students should know wireless standards, bands, channel planning, antenna/RF concepts, SSIDs, encryption concepts, guest networks, and troubleshooting.
-
 ## 21. KEY TERMS / GLOSSARY
 
 | Term | Definition |
@@ -1451,16 +1441,6 @@ Cloud Security Examples
 | Incident Response | Isolate workload, revoke keys, preserve snapshots |
 
 Cloud security follows a shared responsibility model. The provider secures parts of the cloud infrastructure, while the customer remains responsible for areas such as identities, data, configurations, applications, and access policies, depending on the service model.
-
-## 21.34 Interview and Exam Relevance
-
-In IT support interviews, security questions may involve phishing, malware symptoms, compromised accounts, Wi-Fi authentication, Windows Firewall, endpoint protection, safe escalation, and user communication.
-
-In network engineering interviews, questions may involve WPA2 vs WPA3, 802.1X roles, RADIUS, segmentation, DoS/DDoS, spoofing, MITM, logging, and defense-in-depth.
-
-For CCNA, students should understand wireless authentication methods, WPA2/WPA3 concepts, AAA/RADIUS relationships, common attacks, segmentation, and secure network management.
-
-For CompTIA Network+ N10-009, students should understand the CIA triad, security controls, common attacks, malware categories, wireless security, authentication, segmentation, and practical troubleshooting.
 
 ## 22. KEY TERMS / GLOSSARY
 

@@ -639,14 +639,6 @@ Cloud subnets must not overlap with on-premises networks if VPN or private conne
 
 VLSM thinking helps cloud engineers allocate space cleanly and leave room for future regions, availability zones, and environments such as development, testing, and production.
 
-## 11.21 INTERVIEW AND EXAM RELEVANCE
-
-In IT support interviews, subnetting questions may be practical. An interviewer may ask why a PC with IP `192.168.30.70/26` cannot reach gateway `192.168.30.1`, or what APIPA means when DHCP fails.
-
-In network engineering interviews, subnetting questions may require fast calculation. The interviewer may ask for the network address, broadcast address, valid host range, or number of usable hosts for a given prefix.
-
-For CCNA, students should be able to subnet without relying only on calculators. The block-size method is especially useful for exam speed. For Network+, students should understand subnet masks, CIDR notation, address ranges, private addressing, and how subnetting affects troubleshooting.
-
 ## 12. KEY TERMS / GLOSSARY
 
 | Term | Meaning |

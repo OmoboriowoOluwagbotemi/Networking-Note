@@ -684,16 +684,6 @@ Cloud DNS examples:
 
 In hybrid networks, DNS design is critical. An on-premises user may need to resolve a cloud server name. A cloud workload may need to resolve an on-premises Active Directory domain controller. If DNS forwarding or private zones are wrong, the VPN may be up and routing may work, but applications still fail because names do not resolve.
 
-## 19.27 Interview and Exam Relevance
-
-In IT support interviews, DHCP and DNS questions are extremely common because they appear in daily troubleshooting. A support technician must know how to check IP configuration, identify APIPA, renew a DHCP lease, verify DNS servers, flush DNS cache, and test name resolution.
-
-In network engineering interviews, questions may focus on DHCP relay, multiple VLAN scopes, rogue DHCP, DNS zones, authoritative vs recursive DNS, split DNS, and troubleshooting name resolution across routed networks.
-
-For CCNA, students should remember DHCP operation, DHCP relay using `ip helper-address`, DHCP server configuration basics, DNS purpose, record types, and troubleshooting commands.
-
-For CompTIA Network+ N10-009, students should remember DHCP, DNS, common ports, record types, name resolution, lease behavior, reservations, scope configuration, and service troubleshooting.
-
 ## 20. KEY TERMS / GLOSSARY
 
 | Term | Definition |

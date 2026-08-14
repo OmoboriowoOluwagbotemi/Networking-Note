@@ -469,14 +469,6 @@ In private cloud and virtualization environments, VLANs may still exist undernea
 
 Understanding inter-VLAN routing helps students understand cloud route tables, subnet gateways, network security groups, firewall appliances, and hybrid VPN routing.
 
-## 16.18 Interview and Exam Relevance
-
-In IT support interviews, inter-VLAN routing questions often sound like troubleshooting scenarios. A user can ping someone in the same department but cannot reach the server VLAN. The technician should check the gateway, VLAN assignment, trunk, SVI or router subinterface, and policy.
-
-In network engineering interviews, questions may include router-on-a-stick, dot1Q subinterfaces, SVIs, `ip routing`, default gateways, trunk allowed VLANs, and inter-VLAN troubleshooting.
-
-For CCNA, students should know both router-on-a-stick and SVI-based inter-VLAN routing. For Network+, students should understand that VLANs segment traffic and routing is required for communication between VLANs.
-
 ## 17. KEY TERMS / GLOSSARY
 
 | Term | Meaning |

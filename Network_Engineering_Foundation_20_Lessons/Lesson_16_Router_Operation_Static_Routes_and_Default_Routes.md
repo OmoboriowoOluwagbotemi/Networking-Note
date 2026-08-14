@@ -551,14 +551,6 @@ Example cloud route table:
 
 The same concepts apply: longest-prefix match, default route, next hop, and policy. Cloud engineers must also avoid overlapping routes between office networks, cloud VPCs/VNets, VPNs, and partner networks.
 
-## 17.20 Interview and Exam Relevance
-
-In IT support interviews, routing questions may focus on default gateways, traceroute, and why a host can reach local devices but not remote networks.
-
-In network engineering interviews, routing questions may include routing table interpretation, static route syntax, longest-prefix match, administrative distance, default routes, floating static routes, and return-path troubleshooting.
-
-For CCNA, students should know how to configure and verify IPv4 static routes, default routes, and floating static routes. They should also understand route selection order. For Network+, students should understand routing tables, next hops, default routes, and troubleshooting tools such as ping and traceroute.
-
 ## 18. KEY TERMS / GLOSSARY
 
 | Term | Meaning |
