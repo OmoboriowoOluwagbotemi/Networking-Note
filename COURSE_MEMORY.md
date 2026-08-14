@@ -1,5 +1,13 @@
 # Course Memory: Professional Networking Course
 
+## Current Course Direction
+
+The course is now being revised into a 20-lesson Network Engineering Foundation training path. The goal of the training is to give students a solid, practical foundation in networking engineering for IT support, junior network administration, junior network engineering, CCNA 200-301 preparation, and CompTIA Network+ N10-009 preparation.
+
+The current writing standard no longer uses rigid separate What / Why / How / Where headings. Lessons should use paragraph-led explanations that are detailed, technically correct, beginner friendly, and easy to teach in class. Each topic should still explain the concept, its purpose, its operation, its enterprise use, and its troubleshooting relevance, but those ideas should be woven naturally into instructor-style prose.
+
+The publishable 20-lesson edition is located in `Network_Engineering_Foundation_20_Lessons/`.
+
 ## Source Curriculum Map
 
 | Lesson | Title |
