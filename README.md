@@ -58,7 +58,7 @@ Cisco Packet Tracer practice should remain in the separate lab materials, not in
 
 ## Hands-on Practice
 
-The `Hands on labs` folder contains separate case-study assignments such as Villa University, Nova Network, Mount Carmel School VLANs, Unilorin School Inter-VLAN Routing, SwiftMart OSPF and NAT/PAT, and Oakridge DHCP/DNS Services. Each case is organized with topology, problem, and solution files so students can first attempt the task before checking the step-by-step answer.
+The `Hands on labs` folder contains separate case-study assignments such as Villa University, Nova Network, Mount Carmel School VLANs, Unilorin School Inter-VLAN Routing, SwiftMart RIP and NAT/PAT, and Oakridge DHCP/DNS Services. Each case is organized with topology, problem, and solution files so students can first attempt the task before checking the step-by-step answer.
 
 ## Course Memory
 
@@ -73,3 +73,4 @@ This material is suitable for classroom instruction, guided self-study, lab prep
 Copyright (c) 2026 FEMTECT. All rights reserved.
 
 The course is published for viewing and educational reference. No permission is granted to reproduce, redistribute, sell, or create derivative commercial editions without written authorization from the copyright owner.
+

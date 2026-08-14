@@ -1,4 +1,4 @@
-﻿# SwiftMart OSPF and NAT/PAT - Solution
+﻿# SwiftMart RIP and NAT/PAT - Solution
 
 ## Purpose of This Solution
 
@@ -33,14 +33,26 @@ For each PC or server:
 Open the CLI of the required Cisco device and use the commands below. If your Packet Tracer device uses different interface names, first run show ip interface brief or show interfaces status, then replace the interface name with the correct one.
 
 ~~~text
-! R1 OSPF
-router ospf 1
-network 192.168.180.0 0.0.0.255 area 0
-network 10.0.0.0 0.0.0.3 area 0
-! R2 OSPF and PAT
-router ospf 1
-network 192.168.181.0 0.0.0.255 area 0
-network 10.0.0.0 0.0.0.3 area 0
+! R1 RIP
+enable
+configure terminal
+router rip
+version 2
+no auto-summary
+network 192.168.180.0
+network 10.0.0.0
+end
+show ip route
+show ip protocols
+
+! R2 RIP and PAT
+enable
+configure terminal
+router rip
+version 2
+no auto-summary
+network 192.168.181.0
+network 10.0.0.0
 exit
 access-list 1 permit 192.168.180.0 0.0.0.255
 access-list 1 permit 192.168.181.0 0.0.0.255
@@ -55,13 +67,14 @@ ip nat outside
 exit
 ip nat inside source list 1 interface g0/2 overload
 end
-show ip ospf neighbor
+show ip route
+show ip protocols
 show ip nat translations
 ~~~
 
 ## Step 4: Verify the Network
 
-OSPF neighbors must form, routes must appear, and NAT translations should appear after inside hosts ping the outside server.
+RIP-learned routes must appear in the routing table, and NAT translations should appear after inside hosts ping the outside server.
 
 ## Step 5: Troubleshoot If It Fails
 
@@ -84,6 +97,9 @@ OSPF neighbors must form, routes must appear, and NAT translations should appear
 ## Expected Final Result
 
 At the end of the case study, the required devices should be connected, correctly addressed, correctly configured, and successfully verified using the commands or tests stated above. If the scenario expects isolation, such as VLAN separation before inter-VLAN routing, the failed ping is also correct evidence when it matches the requirement.
+
+
+
 
 
 

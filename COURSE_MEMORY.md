@@ -42,7 +42,7 @@ Knowledge-flow standard: the 20 lessons are sequential. The intended flow is net
 | 14 | VLAN Configuration, Trunking, and Spanning Tree | Teaches VLAN implementation, trunking, 802.1Q, allowed VLANs, and loop prevention. |
 | 15 | Inter-VLAN Routing | Explains routing between VLANs using direct router interfaces first, then router-on-a-stick and Layer 3 switching. |
 | 16 | Router Operation, Static Routes, and Default Routes | Explains routing tables, route selection, static routes, default routes, and floating static routes. |
-| 17 | Dynamic Routing and NAT/PAT | Introduces RIP, OSPF, BGP overview, ISP peering context, static NAT, dynamic NAT, and PAT. |
+| 17 | Dynamic Routing and NAT/PAT | Focuses on RIP dynamic routing, route advertisement, hop count, RIPv2, verification, troubleshooting, static NAT, dynamic NAT, and PAT. |
 | 18 | DHCP and DNS Fundamentals | Teaches automatic addressing, name resolution, DHCP relay, scopes, reservations, leases, and DNS records. |
 | 19 | Wireless Networking, Deployment, and Security | Covers RF, Wi-Fi standards, channels, AP/WLC design, SSIDs, guest networks, WPA, 802.1X, and security foundations. |
 | 20 | Secure Operations, VPNs, Resilience, and Professional Troubleshooting | Closes the course with ACLs, AAA, hardening, services, VPNs, power resilience, documentation, monitoring, change control, and career direction. |
@@ -361,11 +361,6 @@ All 20 publishable lessons in `Network_Engineering_Foundation_20_Lessons/` are c
 - Dynamic routing as automatic route learning through routing protocols.
 - Routing protocols exchange reachability information, select best paths, detect failures, and converge after topology changes.
 - RIP as a simple distance-vector routing protocol that uses hop count and has a 15-hop usable maximum.
-- OSPF as a link-state interior gateway protocol that uses cost and areas, commonly inside enterprise networks.
-- BGP as a path-vector exterior gateway protocol used between autonomous systems, ISPs, cloud providers, and large networks.
-- OSPF vs. BGP: OSPF is internal and cost-based; BGP is external and policy-based.
-- IXPN as a Nigerian Internet Exchange Point that enables direct peering, keeps local traffic local, reduces latency and transit cost, and improves resilience.
-- Official IXPN figures verified during Lesson 18 preparation: 130+ connected networks, 170 connected ports, 13 POPs, and 2.5 Tbps peak traffic.
 - NAT as translation of IP address information between private/internal addressing and public/external addressing.
 - NAT terminology introduced: inside local, inside global, outside local, and outside global.
 - Static NAT as a fixed one-to-one mapping between an internal private address and a public address.
@@ -747,13 +742,10 @@ All 20 publishable lessons in `Network_Engineering_Foundation_20_Lessons/` are c
 - Routing protocol
 - Convergence
 - RIP
-- OSPF
-- BGP
 - IGP
 - EGP
 - Autonomous system
 - Peering
-- IXP
 - NAT
 - PAT
 - NAT overload
@@ -1091,8 +1083,6 @@ All 20 publishable lessons in `Network_Engineering_Foundation_20_Lessons/` are c
 - Static routing vs. dynamic routing table.
 - Routing protocol functions table.
 - RIP summary table.
-- OSPF vs. BGP table.
-- IXPN real-world context table.
 - NAT terminology table.
 - Static NAT summary table.
 - PAT translation example table.
@@ -1100,7 +1090,7 @@ All 20 publishable lessons in `Network_Engineering_Foundation_20_Lessons/` are c
 - Static NAT vs. dynamic NAT vs. PAT table.
 - Common NAT problems table.
 - Cloud NAT design table.
-- RIP vs. OSPF vs. BGP table.
+- RIP key characteristics table.
 - Dynamic routing vs. static routing comparison table.
 - NAT troubleshooting commands table.
 - DHCP and DNS placement table.
@@ -1633,13 +1623,10 @@ All 20 publishable lessons in `Network_Engineering_Foundation_20_Lessons/` are c
 - Routing Protocol
 - Convergence
 - RIP
-- OSPF
-- BGP
 - IGP
 - EGP
 - Autonomous System
 - Peering
-- IXP
 - NAT
 - PAT
 - NAT Overload
@@ -1745,5 +1732,6 @@ All 20 publishable lessons in `Network_Engineering_Foundation_20_Lessons/` are c
 - Maintain the term "end device" alongside "host" because both appear in CCNA and Network+ contexts.
 - When discussing VLANs later, reference that each VLAN is a separate broadcast domain and that switches forward broadcasts only within the relevant VLAN.
 - When discussing routing later, avoid full routing table depth until Lesson 17, but reference that routers forward packets using destination IP addresses and routing tables.
+
 
 
