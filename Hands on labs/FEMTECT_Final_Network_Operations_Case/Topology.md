@@ -11,6 +11,18 @@ A small organization reports that users cannot reach a server after a change. St
 
 User VLANs connect through SW1 and R1 to R2 and the server network.
 
+## Topology Picture
+
+~~~mermaid
+flowchart LR
+  Users["User VLAN10 PCs"] --- SW1["SW1<br/>Access Switch"]
+  Admin["Admin VLAN20 PCs"] --- SW1
+  SW1 --- R1["R1<br/>Gateway + SSH"]
+  R1 ---|"WAN 10.20.20.0/30"| R2["R2<br/>Server Router"]
+  R2 --- SW2["Server Switch"]
+  SW2 --- Server["Application Server<br/>172.20.20.0/24"]
+~~~
+
 ## Devices Required
 
 2 routers, 2 switches, 4 PCs, 1 server
@@ -33,4 +45,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

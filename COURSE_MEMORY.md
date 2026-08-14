@@ -14,6 +14,8 @@ The publishable 20-lesson edition is located in `Network_Engineering_Foundation_
 
 The practical lab edition is located directly under `Hands on labs/`. It contains separate scenario-based Cisco Packet Tracer case-study folders, one aligned to each theory lesson, plus the existing `Villa_University` and `Nova_Network` cases. Do not place the lesson-aligned labs inside one generic parent folder. Each lab should follow the Villa University and Nova Care pattern as its own folder containing `Topology.md`, `Problem.md`, and `Solution.md`.
 
+Every hands-on lab `Topology.md` file should include a `## Topology Picture` section with a visual diagram before the device list. Mermaid diagrams are acceptable because they render directly on GitHub without requiring separate image files.
+
 Quality review note: the 20-lesson edition should remain beginner friendly while preserving technical correctness. Merged lessons must not accidentally drop their second or later source topics. Lesson 14 must include both VLAN configuration/trunking and STP. Lesson 19 must include both wireless deployment and wireless/network security. Lesson 20 must include access control, hardening, essential services, VPNs, power resilience, troubleshooting, documentation, monitoring, change management, and career direction.
 
 Visual standard: each lesson in the 20-lesson edition should include a relevant diagram or topology view near the beginning when it improves student understanding. Diagrams should be simple, technically correct, and aligned with the lesson topic rather than decorative.

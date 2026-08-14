@@ -11,6 +11,17 @@ A clinic workstation must reach a server on a different network. Students trace 
 
 PC1--SW1--R1--R2--SW2--WEB1
 
+## Topology Picture
+
+~~~mermaid
+flowchart LR
+  PC1["PC1<br/>192.168.50.10"] --- SW1["SW1<br/>LAN Switch"]
+  SW1 --- R1["R1<br/>192.168.50.1 / 10.10.10.1"]
+  R1 ---|"10.10.10.0/30"| R2["R2<br/>10.10.10.2 / 172.16.50.1"]
+  R2 --- SW2["SW2<br/>Server Switch"]
+  SW2 --- WEB1["WEB1<br/>172.16.50.10"]
+~~~
+
 ## Devices Required
 
 2 routers, 2 switches, 1 PC, 1 server
@@ -33,4 +44,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

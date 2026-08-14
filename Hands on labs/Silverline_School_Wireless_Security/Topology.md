@@ -11,6 +11,23 @@ A school needs two wireless networks: Staff and Guest. Staff should use stronger
 
 Router connects to switch. AP connects to switch. Laptops join Staff-WiFi and Guest-WiFi.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  R1["R1 Gateway"]
+  SW1["SW1 VLAN Switch"]
+  AP1["AP / Wireless Router<br/>Staff-WiFi + Guest-WiFi"]
+  Staff["Staff Laptop<br/>VLAN30"]
+  Guest["Guest Laptop<br/>VLAN40"]
+  Server["Server VLAN99"]
+  R1 --- SW1
+  SW1 --- AP1
+  SW1 --- Server
+  Staff -. WPA2 .- AP1
+  Guest -. WPA2 .- AP1
+~~~
+
 ## Devices Required
 
 1 wireless router or AP, 1 switch, 1 router, 2 laptops, 1 server
@@ -33,4 +50,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

@@ -11,6 +11,19 @@ A company server hosts web, DNS, and file-transfer services. Students enable ser
 
 PC1 and SRV1 connect to SW1.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  PC1["PC1<br/>192.168.70.10"]
+  SW1["SW1"]
+  SRV1["SRV1<br/>192.168.70.20<br/>HTTP DNS FTP"]
+  PC1 --- SW1
+  SRV1 --- SW1
+  PC1 -->|"DNS 53"| SRV1
+  PC1 -->|"HTTP 80 / FTP 21"| SRV1
+~~~
+
 ## Devices Required
 
 1 switch, 1 PC, 1 server
@@ -33,4 +46,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

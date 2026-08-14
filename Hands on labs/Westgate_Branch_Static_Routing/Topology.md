@@ -11,6 +11,19 @@ A branch office must reach headquarters through a primary link and keep a backup
 
 Branch LAN--R1--R2--HQ LAN, with optional backup R1--R3--R2 path.
 
+## Topology Picture
+
+~~~mermaid
+flowchart LR
+  PC1["Branch PC<br/>192.168.160.10"] --- SW1["Branch Switch"]
+  SW1 --- R1["R1 Branch"]
+  R1 ---|"Primary 10.0.12.0/30"| R2["R2 HQ"]
+  R1 -. "Backup 10.0.13.0/30" .- R3["R3 Backup"]
+  R3 -. "10.0.23.0/30" .- R2
+  R2 --- SW2["HQ Switch"]
+  SW2 --- PC2["HQ PC<br/>192.168.170.10"]
+~~~
+
 ## Devices Required
 
 3 routers, 2 switches, 2 PCs
@@ -33,4 +46,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

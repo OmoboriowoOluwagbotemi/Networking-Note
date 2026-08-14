@@ -11,6 +11,21 @@ A support technician must configure PCs correctly and identify when a host is in
 
 PCs connect to SW1. SW1 connects to R1.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  R1["R1 Gateway<br/>192.168.110.1/24"]
+  SW1["SW1"]
+  PC1["PC1<br/>192.168.110.10"]
+  PC2["PC2<br/>192.168.110.11"]
+  PC3["PC3<br/>wrong IP first<br/>then 192.168.110.12"]
+  R1 --- SW1
+  PC1 --- SW1
+  PC2 --- SW1
+  PC3 --- SW1
+~~~
+
 ## Devices Required
 
 1 router, 1 switch, 3 PCs
@@ -33,4 +48,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

@@ -11,6 +11,21 @@ A school has one switch but four user groups must be separated: Guests, Parents,
 
 One central switch connects to eight PCs grouped into four colored departments, two PCs per department.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  SW1["SCHOOL_SW1<br/>One 2960 Switch"]
+  G["Guests VLAN 10<br/>PC1-PC2<br/>192.168.10.10-11"]
+  P["Parents VLAN 20<br/>PC3-PC4<br/>192.168.20.12-13"]
+  T["Teachers VLAN 30<br/>PC5-PC6<br/>192.168.30.14-15"]
+  S["Students VLAN 40<br/>PC7-PC8<br/>192.168.40.16-17"]
+  G --- SW1
+  P --- SW1
+  T --- SW1
+  S --- SW1
+~~~
+
 ## Devices Required
 
 1 switch, 8 PCs
@@ -33,4 +48,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

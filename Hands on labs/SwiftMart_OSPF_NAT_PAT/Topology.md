@@ -11,6 +11,16 @@ A small office has multiple internal networks and one public internet link. Stud
 
 Inside LANs connect through R1 and R2. R2 connects to an Internet server network.
 
+## Topology Picture
+
+~~~mermaid
+flowchart LR
+  PC1["LAN1 PC<br/>192.168.180.0/24"] --- SW1["LAN1 Switch"] --- R1["R1 OSPF"]
+  R1 ---|"10.0.0.0/30"| R2["R2 OSPF + PAT"]
+  R2 --- SW2["LAN2 Switch<br/>192.168.181.0/24"]
+  R2 ---|"Public side<br/>203.0.113.1"| ISP["Internet Server<br/>203.0.113.10"]
+~~~
+
 ## Devices Required
 
 2 routers, 2 switches, 2 PCs, 1 server
@@ -33,4 +43,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

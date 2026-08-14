@@ -11,6 +11,18 @@ A school ICT room has a web server and DNS server. Students observe ARP, ICMP, D
 
 PC1 and SERVER1 connect to SW1.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  PC1["PC1<br/>192.168.60.10<br/>DNS: 192.168.60.20"]
+  SW1["SW1"]
+  SERVER1["SERVER1<br/>HTTP + DNS<br/>192.168.60.20"]
+  PC1 --- SW1
+  SERVER1 --- SW1
+  PC1 -->|"ping, DNS, HTTP"| SERVER1
+~~~
+
 ## Devices Required
 
 1 switch, 1 PC, 1 server
@@ -33,4 +45,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

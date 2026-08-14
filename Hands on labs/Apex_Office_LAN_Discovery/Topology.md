@@ -11,6 +11,21 @@ Femtect Support has been asked to check a small office where four staff computer
 
 PC1, PC2, PC3, and PC4 connect to SW1.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  SW1["SW1<br/>Cisco 2960 Switch"]
+  PC1["PC1<br/>192.168.17.10/24"]
+  PC2["PC2<br/>192.168.17.11/24"]
+  PC3["PC3<br/>192.168.17.12/24"]
+  PC4["PC4<br/>192.168.17.13/24"]
+  PC1 --- SW1
+  PC2 --- SW1
+  PC3 --- SW1
+  PC4 --- SW1
+~~~
+
 ## Devices Required
 
 1 Cisco 2960 switch, 4 PCs
@@ -33,4 +48,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

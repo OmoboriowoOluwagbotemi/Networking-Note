@@ -11,6 +11,27 @@ A new branch office needs PCs, a server, a switch, a router, an access point, an
 
 Branch PCs and AP connect to SW1. SW1 connects to R1. R1 connects to a server network.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  R1["R1<br/>Branch Router"]
+  SW1["SW1<br/>Access Switch"]
+  AP1["AP1<br/>Wireless Access Point"]
+  PC1["PC1<br/>192.168.20.10"]
+  PC2["PC2<br/>192.168.20.11"]
+  PC3["PC3<br/>192.168.20.12"]
+  LAP1["Laptop1<br/>Wireless Client"]
+  SRV1["SRV1<br/>192.168.30.10"]
+  PC1 --- SW1
+  PC2 --- SW1
+  PC3 --- SW1
+  AP1 --- SW1
+  LAP1 -. Wi-Fi .- AP1
+  SW1 ---|"192.168.20.0/24"| R1
+  R1 ---|"192.168.30.0/24"| SRV1
+~~~
+
 ## Devices Required
 
 1 router, 1 switch, 1 server, 3 PCs, 1 access point, 1 laptop
@@ -33,4 +54,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

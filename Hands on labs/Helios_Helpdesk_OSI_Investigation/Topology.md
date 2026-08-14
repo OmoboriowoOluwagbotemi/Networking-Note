@@ -11,6 +11,18 @@ A helpdesk trainee must prove which OSI layers are involved when a PC opens a we
 
 PC1 and WEB1 connect to SW1.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  PC1["PC1<br/>192.168.40.10"]
+  SW1["SW1<br/>Layer 2 Switch"]
+  WEB1["WEB1<br/>HTTP Server<br/>192.168.40.20"]
+  PC1 --- SW1
+  SW1 --- WEB1
+  PC1 -->|"HTTP request<br/>Simulation Mode PDU"| WEB1
+~~~
+
 ## Devices Required
 
 1 switch, 1 PC, 1 server
@@ -33,4 +45,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

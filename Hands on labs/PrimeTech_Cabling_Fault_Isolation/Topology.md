@@ -11,6 +11,17 @@ A newly installed training room has intermittent connectivity. Students must cho
 
 PC1 and PC2 connect to SW1. PC3 and PC4 connect to SW2. SW1 connects to SW2.
 
+## Topology Picture
+
+~~~mermaid
+flowchart LR
+  PC1["PC1<br/>192.168.80.10"] --- SW1["SW1"]
+  PC2["PC2<br/>192.168.80.11"] --- SW1
+  SW1 ---|"uplink under test"| SW2["SW2"]
+  SW2 --- PC3["PC3<br/>192.168.80.12"]
+  SW2 --- PC4["PC4<br/>192.168.80.13"]
+~~~
+
 ## Devices Required
 
 2 switches, 4 PCs
@@ -33,4 +44,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

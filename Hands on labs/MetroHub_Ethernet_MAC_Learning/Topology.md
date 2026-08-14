@@ -11,6 +11,20 @@ A network technician must prove how a switch learns MAC addresses and forwards E
 
 PC1, PC2, and PC3 connect to SW1.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  SW1["SW1<br/>MAC Address Table"]
+  PC1["PC1<br/>192.168.90.10"]
+  PC2["PC2<br/>192.168.90.11"]
+  PC3["PC3<br/>192.168.90.12"]
+  PC1 --- SW1
+  PC2 --- SW1
+  PC3 --- SW1
+  PC1 -->|"ARP broadcast then ICMP"| PC2
+~~~
+
 ## Devices Required
 
 1 switch, 3 PCs
@@ -33,4 +47,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

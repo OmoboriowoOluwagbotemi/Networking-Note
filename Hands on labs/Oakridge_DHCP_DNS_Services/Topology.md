@@ -11,6 +11,21 @@ A company wants automatic addressing and name resolution for two departments. Th
 
 Router-on-a-stick connects VLAN10 Users, VLAN20 Admin, and VLAN99 Servers.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  R1["R1 Router-on-a-Stick<br/>DHCP Relay"]
+  SW1["SW1<br/>VLAN 10,20,99"]
+  Users["VLAN10 Users<br/>DHCP Clients"]
+  Admin["VLAN20 Admin<br/>DHCP Clients"]
+  Server["VLAN99 Server<br/>DHCP + DNS<br/>192.168.99.10"]
+  R1 ---|"Trunk"| SW1
+  SW1 --- Users
+  SW1 --- Admin
+  SW1 --- Server
+~~~
+
 ## Devices Required
 
 1 router, 1 switch, 1 server, 4 PCs
@@ -33,4 +48,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

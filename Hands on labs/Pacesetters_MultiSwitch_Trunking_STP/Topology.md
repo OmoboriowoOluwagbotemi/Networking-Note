@@ -11,6 +11,18 @@ The school now has two floors. VLANs must work across two switches, and students
 
 SW1 connects to SW2 using two links. PCs for each VLAN exist on both switches.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  SW1["SW1<br/>Floor 1"]
+  SW2["SW2<br/>Floor 2"]
+  SW1 ===|"Trunk Fa0/23<br/>VLANs 10,20,30,40"| SW2
+  SW1 ===|"Redundant trunk Fa0/24<br/>STP blocks one path"| SW2
+  SW1 --- F1["Floor 1 PCs<br/>VLAN 10/20/30/40"]
+  SW2 --- F2["Floor 2 PCs<br/>VLAN 10/20/30/40"]
+~~~
+
 ## Devices Required
 
 2 switches, 8 PCs
@@ -33,4 +45,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

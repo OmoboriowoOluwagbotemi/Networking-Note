@@ -13,6 +13,23 @@ Method A: four switch access ports connect to four router interfaces, one per VL
 
 Accuracy note for Packet Tracer: the direct-router-interface method requires a router model or added module with enough Ethernet interfaces for the VLANs being tested. If your selected router has only two or three Ethernet interfaces, test two or three VLANs with the direct method first, then complete all four VLANs with the router-on-a-stick method.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  R1["R1<br/>Inter-VLAN Gateway"]
+  SW1["SCHOOL_SW1<br/>VLAN Access Switch"]
+  V10["VLAN 10 Guests<br/>192.168.10.0/24"]
+  V20["VLAN 20 Parents<br/>192.168.20.0/24"]
+  V30["VLAN 30 Teachers<br/>192.168.30.0/24"]
+  V40["VLAN 40 Students<br/>192.168.40.0/24"]
+  R1 ---|"direct interfaces or trunk subinterfaces"| SW1
+  SW1 --- V10
+  SW1 --- V20
+  SW1 --- V30
+  SW1 --- V40
+~~~
+
 ## Devices Required
 
 1 router, 1 switch, 4 PCs minimum
@@ -35,4 +52,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

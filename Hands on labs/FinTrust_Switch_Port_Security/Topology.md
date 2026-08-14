@@ -11,6 +11,19 @@ A finance office wants each desk port protected so unknown devices cannot easily
 
 PC1 and PC2 connect to SW1. Later, replace PC2 with RoguePC on the same port.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  SW1["SW1<br/>Port Security"]
+  PC1["PC1 Authorized<br/>Fa0/1"]
+  PC2["PC2 Authorized<br/>Fa0/2"]
+  Rogue["RoguePC Test<br/>Fa0/2 replacement"]
+  PC1 --- SW1
+  PC2 --- SW1
+  Rogue -. violation test .- SW1
+~~~
+
 ## Devices Required
 
 1 switch, 2 authorized PCs, 1 unauthorized PC for testing
@@ -33,4 +46,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 

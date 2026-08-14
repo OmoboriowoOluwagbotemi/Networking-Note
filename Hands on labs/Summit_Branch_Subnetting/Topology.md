@@ -11,6 +11,22 @@ A branch received 192.168.120.0/24 and must divide it into Admin, Sales, and Sup
 
 R1 connects separately to Admin-SW, Sales-SW, and Support-SW.
 
+## Topology Picture
+
+~~~mermaid
+flowchart TD
+  R1["R1<br/>Three Department Gateways"]
+  ASW["Admin-SW<br/>192.168.120.0/26"]
+  SSW["Sales-SW<br/>192.168.120.64/26"]
+  SUPSW["Support-SW<br/>192.168.120.128/26"]
+  R1 ---|".1"| ASW
+  R1 ---|".65"| SSW
+  R1 ---|".129"| SUPSW
+  ASW --- A1["Admin PCs"]
+  SSW --- S1["Sales PCs"]
+  SUPSW --- U1["Support PCs"]
+~~~
+
 ## Devices Required
 
 1 router, 3 switches, 6 PCs
@@ -33,4 +49,6 @@ Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to
 2. Screenshot showing device names and labels clearly.
 3. Screenshot or written table showing the addressing plan.
 4. Screenshot of link lights after the topology is fully connected.
+
+
 
