@@ -10,7 +10,7 @@ The current publishable edition is organized in the folder:
 
 The scenario-based Cisco Packet Tracer practical assignments are organized in:
 
-[Hands on Labs](Hands%20on%20labs/README.md)
+[Hands on Labs](Hands_on_Labs/README.md)
 
 ## Course Lessons
 
@@ -58,7 +58,7 @@ Cisco Packet Tracer practice should remain in the separate lab materials, not in
 
 ## Hands-on Practice
 
-The `Hands on labs` folder contains separate case-study assignments such as Villa University, Nova Network, Mount Carmel School VLANs, Unilorin School Inter-VLAN Routing, SwiftMart RIP and NAT/PAT, and Oakridge DHCP/DNS Services. Each case is organized with topology, problem, and solution files so students can first attempt the task before checking the step-by-step answer.
+The `Hands_on_Labs` folder contains separate case-study assignments such as Villa University, Nova Network, Mount Carmel School VLANs, Unilorin School Inter-VLAN Routing, SwiftMart RIP and NAT/PAT, and Oakridge DHCP/DNS Services. Each case is organized with topology, problem, and solution files so students can first attempt the task before checking the step-by-step answer.
 
 ## Course Memory
 

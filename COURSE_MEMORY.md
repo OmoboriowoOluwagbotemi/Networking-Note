@@ -12,7 +12,7 @@ Cisco Packet Tracer practice sections should not be included inside the 20 theor
 
 The publishable 20-lesson edition is located in `Network_Engineering_Foundation_20_Lessons/`.
 
-The practical lab edition is located directly under `Hands on labs/`. It contains separate scenario-based Cisco Packet Tracer case-study folders, one aligned to each theory lesson, plus the existing `Villa_University` and `Nova_Network` cases. Do not place the lesson-aligned labs inside one generic parent folder. Each lab should follow the Villa University and Nova Care pattern as its own folder containing `Topology.md`, `Problem.md`, and `Solution.md`.
+The practical lab edition is located directly under `Hands_on_Labs/`. It contains separate scenario-based Cisco Packet Tracer case-study folders, one aligned to each theory lesson, plus the existing `Villa_University` and `Nova_Network` cases. Do not place the lesson-aligned labs inside one generic parent folder. Each lab should follow the Villa University and Nova Care pattern as its own folder containing `Topology.md`, `Problem.md`, and `Solution.md`.
 
 Every hands-on lab `Topology.md` file should include a `## Topology Picture` section with a visual diagram before the device list. Mermaid diagrams are acceptable because they render directly on GitHub without requiring separate image files.
 
