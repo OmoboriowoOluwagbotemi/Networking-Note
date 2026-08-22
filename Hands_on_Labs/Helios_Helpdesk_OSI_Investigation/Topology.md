@@ -1,53 +1,62 @@
-﻿# Helios Helpdesk OSI Investigation - Topology
+# Helios Helpdesk Network Investigation — Topology
 
-## Aligned Theory Lesson
+## Aligned learning
 
-Lesson 3
+- Primary: Lesson 1 — How Networks Work and How to Isolate Failure
+- Extension: Lesson 3 — OSI Model Deep Dive
+- Extension: Lesson 4 — How Data Travels Through a Network
 
-## Scenario Context
-
-A helpdesk trainee must prove which OSI layers are involved when a PC opens a web page from a local server. Students build a small network, generate HTTP traffic, and inspect PDUs in Simulation Mode.
-
-## Physical Topology Requirement
-
-PC1 and WEB1 connect to SW1.
-
-## Topology Picture
+## Intended topology
 
 ~~~mermaid
-flowchart TD
-  PC1["PC1<br/>192.168.40.10"]
-  SW1["SW1<br/>Layer 2 Switch"]
-  WEB1["WEB1<br/>HTTP Server<br/>192.168.40.20"]
+flowchart LR
+  PC1["PC1<br/>Intended: 192.168.40.10/24"]
+  SW1["SW1<br/>Layer 2 access switch"]
+  WEB1["WEB1<br/>Intended: 192.168.40.20/24<br/>HTTP service"]
   PC1 --- SW1
   SW1 --- WEB1
-  PC1 -->|"HTTP request<br/>Simulation Mode PDU"| WEB1
 ~~~
 
-## Devices Required
+## Devices
 
-1 switch, 1 PC, 1 server
+- One Cisco 2960 switch
+- One PC
+- One server
 
-## Addressing Plan
+## Intended addressing
 
-PC1 192.168.40.10/24, WEB1 192.168.40.20/24. No gateway required.
+| Device | IPv4 address | Mask | Gateway |
+|---|---:|---:|---|
+| PC1 | 192.168.40.10 | 255.255.255.0 | Not required |
+| WEB1 | 192.168.40.20 | 255.255.255.0 | Not required |
 
-## Physical Layout Guide
+Both endpoints are in the same local network. A router, DNS server, VLAN, trunk, or internet connection is not required.
 
-Arrange the Packet Tracer workspace so the topology is easy to read. Put network infrastructure devices such as switches, routers, access points, and servers near the top or center of the workspace. Put user devices below them in clear groups. Use Packet Tracer notes, labels, and colored shapes to identify departments, VLANs, networks, or roles.
+## Baseline build
 
-## Cabling Guide
+For guided practice, students may build and validate the intended topology before the instructor introduces a fault. For independent assessment, provide a prebuilt faulty Packet Tracer file so students cannot infer the answer from the build instructions.
 
-Use copper straight-through cables for PC-to-switch, server-to-switch, switch-to-router, and most modern switch-to-switch Packet Tracer connections unless a specific lab instruction says otherwise. If a router-to-router Ethernet link does not come up with straight-through, use crossover or the automatic cable option.
+Use copper straight-through cabling between each endpoint and SW1. Label devices clearly.
 
-## Topology Evidence Students Must Submit
+## Instructor fault injection
 
-1. Screenshot of the complete physical topology.
-2. Screenshot showing device names and labels clearly.
-3. Screenshot or written table showing the addressing plan.
-4. Screenshot of link lights after the topology is fully connected.
+After saving a validated baseline, introduce one fault from the instructor solution:
 
+- incorrect PC1 address;
+- disabled HTTP service; or
+- disconnected/disabled access link.
 
+Save the faulty assessment copy separately. Do not tell students which layer or component contains the fault.
 
+## Evidence expectations
 
+Students submit:
 
+- one annotated topology image;
+- recorded before-state values;
+- hypothesis and disproof test;
+- relevant Simulation Mode event with interpretation;
+- change and rollback record; and
+- proof that the original HTTP task works after correction.
+
+Screenshots are supporting evidence, not a replacement for reasoning.
