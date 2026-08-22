@@ -120,7 +120,7 @@ Write a ticket update containing:
 
 ## Required deliverables
 
-1. Completed Evidence Worksheet.
+1. Completed [Evidence Worksheet](Evidence_Worksheet.md).
 2. Faulty Packet Tracer file preserved as Helios-Before.pkt.
 3. Repaired Packet Tracer file saved as Helios-Validated.pkt.
 4. One annotated topology image.
