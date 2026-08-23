@@ -1,4 +1,4 @@
-﻿# FEMTECH Network Engineering Foundation Course
+﻿# FEMTECT Network Engineering Foundation Course
 
 A complete 20-lesson networking course designed for beginners, IT support professionals, and aspiring network engineers.
 
@@ -12,13 +12,9 @@ The scenario-based Cisco Packet Tracer practical assignments are organized in:
 
 [Hands on Labs](Hands_on_Labs/README.md)
 
-The first instructor delivery model is available in:
-
-[Lesson 1 Instructor Delivery Card](Instructor_Guides/Lesson_01_Instructor_Delivery_Card.md)
-
 ## Course Lessons
 
-1. [How Networks Work and How to Isolate Failure](Network_Engineering_Foundation_20_Lessons/Lesson_01_How_Networks_Work_and_Why_They_Fail.md)
+1. [How Networks Work and Why They Fail](Network_Engineering_Foundation_20_Lessons/Lesson_01_How_Networks_Work_and_Why_They_Fail.md)
 2. [Network Devices and Appliances](Network_Engineering_Foundation_20_Lessons/Lesson_02_Network_Devices_and_Appliances.md)
 3. [OSI Model Deep Dive](Network_Engineering_Foundation_20_Lessons/Lesson_03_OSI_Model_Deep_Dive.md)
 4. [How Data Travels Through a Network](Network_Engineering_Foundation_20_Lessons/Lesson_04_How_Data_Travels_Through_a_Network.md)
