@@ -6,7 +6,7 @@ The writing style in this edition uses paragraph-led teaching. It avoids rigid W
 
 ## Lesson List
 
-1. [How Networks Work and How to Isolate Failure](Lesson_01_How_Networks_Work_and_Why_They_Fail.md)
+1. [How Networks Work and Why They Fail](Lesson_01_How_Networks_Work_and_Why_They_Fail.md)
 2. [Network Devices and Appliances](Lesson_02_Network_Devices_and_Appliances.md)
 3. [OSI Model Deep Dive](Lesson_03_OSI_Model_Deep_Dive.md)
 4. [How Data Travels Through a Network](Lesson_04_How_Data_Travels_Through_a_Network.md)

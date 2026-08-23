@@ -1,101 +1,74 @@
-# Helios Helpdesk Network Investigation — Instructor Solution
+﻿# Helios Helpdesk OSI Investigation - Solution
 
-> Keep this file unavailable to students until the assessed investigation closes.
+## Purpose of This Solution
 
-## Purpose
+This solution explains how to complete this case study in Cisco Packet Tracer. It follows the same practical style as the Villa University and Nova Care case studies: build the topology first, configure devices carefully, verify each stage, and document the evidence.
 
-The exercise measures evidence-led troubleshooting. A student should not receive credit merely for finding and correcting the visible fault.
+## Step 1: Build the Topology
 
-## Approved fault variants
+1. Open Cisco Packet Tracer.
+2. Create a new blank project.
+3. Save the file using the case-study name.
+4. Add the required devices: 1 switch, 1 PC, 1 server.
+5. Build this topology: PC1 and WEB1 connect to SW1.
+6. Label all devices clearly.
+7. Add Packet Tracer notes for networks, VLANs, departments, or device roles where appropriate.
 
-Use one variant for guided practice and a different variant for independent assessment.
+## Step 2: Apply the Addressing Plan
 
-### Variant A: Incorrect PC1 address
+Use this addressing plan:
 
-Change PC1 from 192.168.40.10/24 to 192.168.50.10/24.
+PC1 192.168.40.10/24, WEB1 192.168.40.20/24. No gateway required.
 
-Expected evidence:
+For each PC or server:
 
-- physical links are active;
-- PC1 and WEB1 are in different IP networks;
-- no router or gateway exists;
-- ping and HTTP fail;
-- correcting PC1 to 192.168.40.10/24 restores local communication.
+1. Click the device.
+2. Click Desktop.
+3. Click IP Configuration.
+4. Enter the IP address, subnet mask, default gateway, and DNS server if the lab requires them.
+5. Close the window and move to the next device.
 
-### Variant B: HTTP service disabled
+## Step 3: Configure Cisco Devices
 
-Keep addressing correct and disable HTTP on WEB1.
+Open the CLI of the required Cisco device and use the commands below. If your Packet Tracer device uses different interface names, first run show ip interface brief or show interfaces status, then replace the interface name with the correct one.
 
-Expected evidence:
+~~~text
+enable
+configure terminal
+hostname SW1
+interface range fastEthernet0/1 - 2
+description OSI_LAB_ENDPOINTS
+no shutdown
+end
+show mac address-table
+copy running-config startup-config
+~~~
 
-- physical link and IP addressing are correct;
-- PC1 can ping WEB1;
-- the browser request fails;
-- Simulation Mode or server inspection shows the application service is unavailable;
-- enabling HTTP restores the page without changing IP settings.
+## Step 4: Verify the Network
 
-### Variant C: Access link disconnected
+Successful browser page from WEB1. In Simulation Mode, the event list should show ARP, TCP, and HTTP traffic.
 
-Disconnect PC1 from SW1 or disable the relevant switch port.
+## Step 5: Troubleshoot If It Fails
 
-Expected evidence:
+- Check cable type and link lights before changing IP settings.
+- Confirm every PC has the correct IP address, subnet mask, and default gateway when a gateway is required.
+- Confirm switch access ports are in the correct VLAN when VLANs are used.
+- Confirm trunk links allow the required VLANs when traffic crosses switches or router subinterfaces.
+- Confirm router interfaces are up/up before testing routes.
+- Use ping first, then use tracert or traceroute when traffic crosses routers.
+- Record the exact command output that proves the lab works.
 
-- link state fails before an IP or application test can succeed;
-- the student identifies the physical/access failure without resetting addressing;
-- restoring the intended link resolves the first dependency;
-- the student still validates IP and HTTP after restoration.
+## Step 6: Save and Submit Evidence
 
-Do not inject several faults during the first guided attempt. Multiple faults can be used later only when the student has mastered the single-fault method.
+1. A saved Packet Tracer file named after the case-study name.
+2. Screenshot of the completed physical topology.
+3. Screenshot of the addressing table or PC IP settings.
+4. Screenshot of successful verification tests.
+5. Short explanation of the problem, the configuration used, and the final result.
 
-## Expected investigation logic
+## Expected Final Result
 
-1. Restate the required outcome: PC1 must open the authorised page on WEB1.
-2. Confirm the written scope and intended addressing.
-3. Capture link state, addressing, ping, HTTP state, and browser result.
-4. Select one hypothesis supported by evidence.
-5. Run a test capable of disproving that hypothesis.
-6. Record the before-state and rollback.
-7. Correct one confirmed fault.
-8. Repeat the original browser task.
-9. Add reachability, addressing, and Simulation Mode validation.
-10. Write a concise closure update.
+At the end of the case study, the required devices should be connected, correctly addressed, correctly configured, and successfully verified using the commands or tests stated above. If the scenario expects isolation, such as VLAN separation before inter-VLAN routing, the failed ping is also correct evidence when it matches the requirement.
 
-## Interpretation guide
 
-| Observation | Supported conclusion | Conclusion not yet supported |
-|---|---|---|
-| Link is down | Physical/access connectivity is unavailable | IP configuration is definitely wrong |
-| PC1 and WEB1 are in different /24 networks with no router | They cannot communicate through the intended local design | The switch is faulty |
-| Ping succeeds | IP reachability and ICMP response exist | HTTP is working |
-| Ping succeeds but HTTP fails | Investigate TCP/HTTP or application state | Readdress both endpoints |
-| Browser page opens | The original HTTP task works | Every network service is healthy |
-| ARP appears before local IP traffic | PC1 is resolving the local destination MAC address | DNS caused the ARP exchange |
 
-## Model ticket update
-
-> HEL-NET-001 affected only PC1’s access to the internal portal on WEB1. Baseline evidence showed active switch links and WEB1 at 192.168.40.20/24, while PC1 was incorrectly configured as 192.168.50.10/24. With no router in scope, the endpoints could not communicate locally. After recording the original value, I changed PC1 to the approved 192.168.40.10/24 address. PC1 then reached WEB1, the HTTP page opened, and Simulation Mode showed ARP followed by successful TCP/HTTP communication. No gateway, VLAN, or unrelated device was changed. Recommend closure after instructor confirmation.
-
-Adapt the details to the injected variant. Do not accept a copied model that contradicts the student’s evidence.
-
-## Common weak behaviours
-
-- changing settings before recording the baseline;
-- using random changes instead of a hypothesis;
-- claiming that ping proves HTTP;
-- adding an unnecessary gateway or router;
-- submitting screenshots without interpretation;
-- describing the symptom as the root cause;
-- failing to repeat the original browser task; and
-- hiding an unsuccessful test.
-
-## Assessment answer key for Lesson 1
-
-Multiple-choice answers:
-
-1. C
-2. A
-3. D
-4. B
-5. C
-
-Short and scenario responses should be marked for technical accuracy, narrow interpretation of evidence, safe sequencing, and clarity. Accept alternative valid hypotheses when the proposed test could genuinely disprove them.
