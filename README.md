@@ -12,6 +12,10 @@ The scenario-based Cisco Packet Tracer practical assignments are organized in:
 
 [Hands on Labs](Hands_on_Labs/README.md)
 
+The formatted PDF edition of the 20 theory lessons is available in:
+
+[PDF Lessons](output/pdf/Network_Engineering_Foundation_20_Lessons/README.md)
+
 ## Course Lessons
 
 1. [How Networks Work and Why They Fail](Network_Engineering_Foundation_20_Lessons/Lesson_01_How_Networks_Work_and_Why_They_Fail.md)
